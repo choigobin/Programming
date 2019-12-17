@@ -1,0 +1,9 @@
+
+public class Exam_03 {
+	public static void main(String[] args) {
+		int bun = 10;
+		char irum ='k';
+		int kor = 95;
+		int eng=88,mat=77;
+	}
+}

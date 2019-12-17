@@ -1,0 +1,13 @@
+
+public class Exam_03 {
+	public static void main(String[] args) {
+		int bun = 10;
+		char irum ='k';
+		int kor = 95;
+		int eng=88,mat=77;
+		//총점 계산
+		int tot = kor+eng+mat;
+		//평균
+		double ave=tot/3.;//tot/3 -> 정수 나머지 버림 //tot/3. -> 실수 나머지 살림
+	}
+}

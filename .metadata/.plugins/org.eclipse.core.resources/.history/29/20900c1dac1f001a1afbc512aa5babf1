@@ -1,0 +1,18 @@
+/*		
+ 		*
+ 		**
+ 		***
+ 		****
+ 		*****
+ */
+// 이스케이프문자 "\n"
+public class Exam_05 {
+
+	public static void main(String[] args) {
+		System.out.print("*\n");
+		System.out.print("*");
+		System.out.print("*\n");
+
+	}
+
+}

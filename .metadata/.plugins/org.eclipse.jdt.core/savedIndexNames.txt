@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+C:\Users\JSLHRD\eclipse-workspace\JavaExam40\.metadata\.plugins\org.eclipse.jdt.core
+42472840.index
+1972315422.index
