@@ -1,0 +1,12 @@
+/*	문자열 처리("") 및 자료형 입력
+ * 	문자열 처리 : String 클래스
+ * 	자료형 입력 : Scanner 클래스
+ */
+public class Exam_07 {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

@@ -1,0 +1,12 @@
+/* System.in.read()
+ * 1문자를 키보드로 입력 받아서 정수로 변환
+ * 
+ */
+public class Exam_04 {
+	public static void main(String[] args) throws Exception{
+		System.out.print("입력하세요 : ");
+		int ch = System.in.read();
+		System.out.println(ch);
+	}
+
+}
