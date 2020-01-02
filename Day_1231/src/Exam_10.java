@@ -24,7 +24,7 @@ public class Exam_10 {
 			}
 		}
 		scn.close();
-		System.out.println("«’∞Ë = "+sum+"\t∆Ú±’= "+(sum/cnt));
+		System.out.println("«’∞Ë = "+sum+"\t∆Ú±’= "+((double)sum/cnt));
 		
 	}
 }
