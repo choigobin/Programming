@@ -54,15 +54,36 @@ public class Exam_11 {
 			System.out.println();
 		}
 		//4
+		z=0;
 		for(int i=0;i<5;i++) {
-			for(int k=1;k<i;k++) {//0 1 3 4 5
-				
+			for(int k=0;k<i;k++) {//0 1 3 4 5
+				System.out.print(" ");
 			}
-			for(int y=9;y<i;y--) {//9 7 5 3 1
-				
+			for(int y=9;y>z;y--) {//9 7 5 3 1
+				System.out.print("*");
 			}
+			z+=2;
+			System.out.println();
 		}
-		
+		//5
+		for(int i=0;i<9;i++) {
+			if(i<5) {
+				for(int k=0; k<i; k++) {//0 1 2 3 4
+					System.out.print(" ");
+				}
+				for(int y=5;y>i;y--) {
+					System.out.print("*");
+				}
+			}else {
+				for(int k=8; k>i; k--) {//3 2 1 0
+					System.out.print(" ");
+				}
+				for(int y=3;y<i;y++) {
+					System.out.print("*");
+					}
+			}
+			System.out.println();
+		}
 		
 		
 		
