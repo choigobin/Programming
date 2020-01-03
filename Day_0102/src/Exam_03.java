@@ -20,9 +20,7 @@ public class Exam_03 {
 		int min = sc.nextInt();
 		sc.close();
 		int fee=0;
-		if(min<9) {
-			fee=0;
-		}else if(min<=30) {
+		if(min>=10 && min<=30) {
 			fee=500;
 		}else {
 			min-=21;
