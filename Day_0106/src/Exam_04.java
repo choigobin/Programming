@@ -13,7 +13,7 @@ import java.util.Scanner;
 public class Exam_04 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		int oman=0,man=0,ochun=0,chun=0,obak=0,bak=0,osib=0,sib=0,o=0,il=0,cnt=0,x;
+		/*int oman=0,man=0,ochun=0,chun=0,obak=0,bak=0,osib=0,sib=0,o=0,il=0,cnt=0,x;
 		while(cnt<10) {
 			System.out.print("입력 : ");
 			x = sc.nextInt();
@@ -53,8 +53,45 @@ public class Exam_04 {
 		System.out.println("10 : "+sib);
 		System.out.println("5 : "+o);
 		System.out.println("1 : "+il);
-		
-		
+		*/
+		int total[] = new int[10];
+		int sum[] = new int[10];
+		int cnt=0,x;
+		while(cnt<10) {
+			System.out.print("입력 : ");
+			x = sc.nextInt();
+			if(x==-999) break;
+			else if(x>=1 && x<=500000) {
+				int m=50000;
+				boolean sw=true;
+				for(int i=0;i<10;i++) {
+					sum[i]=x/m;
+					if(sw) {
+						x = x%m;//money=money-(s*m);
+						m=m/5;
+						sw=false;
+					}else {
+						x = x%m;
+						m=m/2;
+						sw=true;
+					}
+				}
+				for(int i=0;i<10;i++) {
+					total[i]+=sum[i];
+				}
+			}else System.out.println("입력 오류");
+		}
+		sc.close();
+		System.out.println("50,000 : "+total[0]);
+		System.out.println("10,000 : "+total[1]);
+		System.out.println("5,000 : "+total[2]);
+		System.out.println("1,000 : "+total[3]);
+		System.out.println("500 : "+total[4]);
+		System.out.println("100 : "+total[5]);
+		System.out.println("50 : "+total[6]);
+		System.out.println("10 : "+total[7]);
+		System.out.println("5 : "+total[8]);
+		System.out.println("1 : "+total[9]);
 		
 	}
 }
