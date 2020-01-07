@@ -28,7 +28,8 @@ public class Exam_08 {
 			}
 		}
 		sc.close();
-		int avg = sum/cnt;
+		double avg = (double)sum/cnt;
+		avg=(int)(avg*100+0.5)/100.;
 		int mvp = 100;
 		System.out.print("\n입력 자료 : ");
 		for(int i=0;i<cnt;i++) {
