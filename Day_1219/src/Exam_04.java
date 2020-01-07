@@ -14,7 +14,7 @@ public class Exam_04 {
 		Scanner s = new Scanner(System.in);
 		System.out.print("점수를 입력하세요 : ");
 		int score = s.nextInt();
-		
+		s.close();
 		String pass="";
 		if(score>=85) {
 			//System.out.println("합격");

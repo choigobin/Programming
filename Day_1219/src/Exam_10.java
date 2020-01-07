@@ -14,7 +14,7 @@ public class Exam_10 {
 		System.out.print("정수를 입력하시오 : ");
 		int c = s.nextInt();
 		int max,me,min;
-		
+		s.close();
 		/*
 		if(a>b) {
 			if(a>c) {

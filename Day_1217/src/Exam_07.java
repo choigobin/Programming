@@ -11,7 +11,7 @@ public class Exam_07 {
 		Scanner scn = new Scanner(System.in);
 		String name = scn.next();
 		System.out.println("¿Ã∏ß : " + name);
-		
+		scn.close();
 	}
 
 }

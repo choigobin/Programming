@@ -24,6 +24,7 @@ public class Exam_08 {
 		
 		int tot = kor+mat+eng;
 		double avg = tot/3.;
+		scn.close();
 		System.out.println("번호\t이름\t국어점수\t수학점수\t영어점수\t총점\t평균");
 		System.out.println(bun+"\t"+name+"\t"+kor+"\t"+mat+"\t"+eng+"\t"+tot+"\t"+avg);
 	}

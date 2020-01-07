@@ -28,6 +28,7 @@ public class Exam_07 {
 		int eng = s.nextInt();
 		System.out.print("¼öÇÐ : ");
 		int mat = s.nextInt();
+		s.close();
 		int tot = kor+eng+mat;
 		double avg = tot/3.;
 		avg = (int)(avg*100+0.5)/100.;
