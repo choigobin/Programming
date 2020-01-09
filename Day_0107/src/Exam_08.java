@@ -1,13 +1,13 @@
 import java.util.Scanner;
 
-/*	Å°º¸µå ÀÔ·Â(1~99)
- * 	ÀÔ·Â ÀÚ·á°¡ -99, ¶Ç´Â ÀÔ·ÂÀÚ·á °Ç¼ö°¡ 20ÀÏ ¶§ Á¾·á
- * 	ÀÔ·Â : 77
+/*	í‚¤ë³´ë“œ ì…ë ¥(1~99)
+ * 	ì…ë ¥ ìë£Œê°€ -99, ë˜ëŠ” ì…ë ¥ìë£Œ ê±´ìˆ˜ê°€ 20ì¼ ë•Œ ì¢…ë£Œ
+ * 	ì…ë ¥ : 77
  * 		. . .
- * 	ÀÔ·Â : -99
- * 	ÀÔ·Â ÀÚ·á : xx xx xx xx xx xx ... xx
- * 	Æò±Õ        : xx
- * 	Æò±Õ¿¡ °¡Àå °¡±î¿î ¼ö : xx
+ * 	ì…ë ¥ : -99
+ * 	ì…ë ¥ ìë£Œ : xx xx xx xx xx xx ... xx
+ * 	í‰ê·         : xx
+ * 	í‰ê· ì— ê°€ì¥ ê°€ê¹Œìš´ ìˆ˜ : xx
  */
 public class Exam_08 {
 	public static void main(String[] args) {
@@ -15,7 +15,7 @@ public class Exam_08 {
 		int num[] = new int[20];
 		int sum=0, cnt=0;
 		while(cnt<20) {
-			System.out.print("ÀÔ·Â : ");
+			System.out.print("ì…ë ¥ : ");
 			int x = sc.nextInt();
 			if(x==-99) {
 				break;
@@ -24,14 +24,14 @@ public class Exam_08 {
 				sum+=x;
 				cnt++;
 			}else {
-				System.out.println("ÀÔ·Â ¿À·ù");
+				System.out.println("ì…ë ¥ ì˜¤ë¥˜");
 			}
 		}
 		sc.close();
 		double avg = (double)sum/cnt;
 		avg=(int)(avg*100+0.5)/100.;
 		int mvp = 100;
-		System.out.print("\nÀÔ·Â ÀÚ·á : ");
+		System.out.print("\nì…ë ¥ ìë£Œ : ");
 		for(int i=0;i<cnt;i++) {
 			System.out.print(num[i]+" ");
 			if(mvp<avg) {
@@ -48,8 +48,8 @@ public class Exam_08 {
 				}
 			}
 		}
-		System.out.println("\nÆò±Õ        : "+avg);
-		System.out.println("Æò±Õ¿¡ °¡Àå °¡±î¿î ¼ö : "+mvp);
+		System.out.println("\ní‰ê·         : "+avg);
+		System.out.println("í‰ê· ì— ê°€ì¥ ê°€ê¹Œìš´ ìˆ˜ : "+mvp);
 		
 		
 		

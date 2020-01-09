@@ -2,17 +2,17 @@
 public class Exam_02 {
 
 	public static void main(String[] args) {
-		int a=(int)(7/5.); // Çüº¯È¯-°­Á¦Çüº¯È¯(µ¥ÀÌÅÍ°¡ Àß·Á³ª°¥ ¼ö ÀÖÀ½)
+		int a=(int)(7/5.); // í˜•ë³€í™˜-ê°•ì œí˜•ë³€í™˜(ë°ì´í„°ê°€ ì˜ë ¤ë‚˜ê°ˆ ìˆ˜ ìˆìŒ)
 		int b=7%5;
 		System.out.println("7/5=" + a);
 		System.out.println("7%5=" + b);
 		System.out.println("7/5=" + 7/5.);
 		System.out.println("7%5=" + 7%5);
 		
-		//int var = 3.14; int = 4byte, double = 8byte -> 4¹ÙÀÌÆ®¿¡ 8¹ÙÀÌÆ®°ªÀ» ³Ö¾î¼­ ¿¡·¯
+		//int var = 3.14; int = 4byte, double = 8byte -> 4ë°”ì´íŠ¸ì— 8ë°”ì´íŠ¸ê°’ì„ ë„£ì–´ì„œ ì—ëŸ¬
 		int var = (int)3.14;
-		double d =a;	//ÀÚµ¿Çüº¯È¯
-		double d2 = 90; //ÀÚµ¿Çüº¯È¯//90.//(double)90
+		double d =a;	//ìë™í˜•ë³€í™˜
+		double d2 = 90; //ìë™í˜•ë³€í™˜//90.//(double)90
 		System.out.println("d=" + d);
 		System.out.println("d2=" + d2);
 		System.out.println("var=" + var);

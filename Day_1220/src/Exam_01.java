@@ -1,9 +1,9 @@
 /*
-[¹İº¹¹®]
-1) for(ÃÊ±â°ª : Á¶°Ç½Ä : Áõ°¨½Ä){}
+[ë°˜ë³µë¬¸]
+1) for(ì´ˆê¸°ê°’ : ì¡°ê±´ì‹ : ì¦ê°ì‹){}
 	
 
-2) while(Á¶°Ç½Ä){}
+2) while(ì¡°ê±´ì‹){}
 
 
 
@@ -12,12 +12,12 @@ public class Exam_01 {
 	
 	public static void main(String[] args) {
 		
-		// 1 ~ 10 ±îÁö ÇÕ°è
+		// 1 ~ 10 ê¹Œì§€ í•©ê³„
 		int sum = 0;
 		for(int a = 0; a<=10; a++) {
-			sum=sum+a; // ´©ÀûÇü
+			sum=sum+a; // ëˆ„ì í˜•
 		}
-		System.out.println("1~10 ±îÁö ÇÕ°è :" + sum);
+		System.out.println("1~10 ê¹Œì§€ í•©ê³„ :" + sum);
 		
 		
 		

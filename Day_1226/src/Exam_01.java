@@ -1,18 +1,18 @@
-/*	»ó¼ö(Lutual) => Data(°ª){¼ýÀÚ(+,-,*)	=>{Á¤¼ö,½Ç¼ö
- * 						  {¹®ÀÚ => 1¹®±¸ ''
- * 						  {¹®ÀÚ¿­
- * 0x7 : 16Áø¼ö 7
- * 07  : 8Áø¼ö 7
- * 0b1 : 2Áø¼ö 1
+/*	ìƒìˆ˜(Lutual) => Data(ê°’){ìˆ«ìž(+,-,*)	=>{ì •ìˆ˜,ì‹¤ìˆ˜
+ * 						  {ë¬¸ìž => 1ë¬¸êµ¬ ''
+ * 						  {ë¬¸ìžì—´
+ * 0x7 : 16ì§„ìˆ˜ 7
+ * 07  : 8ì§„ìˆ˜ 7
+ * 0b1 : 2ì§„ìˆ˜ 1
  * 
- * 	º¯¼ö => ÀÓ½Ã±â¾ïÀå¼Ò ==> Ã¹±ÛÀÚ°¡ ¼ýÀÚX {Å¬·¡½º(ÀÎÅÍÆäÀÌ½º) - Ã¹±ÛÀÚ°¡ ´ë¹®ÀÚ ex)SoeulKorea
- * 		     ¤¤»ó¼ö¸¦ ±â¾ï	      »ç¿ëÀÚ Á¤ÀÇ¾î	 {º¯¼ö - Ã¹±ÛÀÚ°¡ ¼Ò¹®ÀÚex)seoulKorea(»ó¼ö ex.PI,SEOUL_KOREA)
- * 					  (<=>¿¹¾à¾î)	 {¸Þ¼Òµå - ()·Î ³¡³²
- * 	ÀÚ·áÇü => ±â¾ï°ø°£ÀÇ Å©±â,Type
- * 		{±âº»ÀÚ·áÇü	{³í¸® => boolean
- * 				{¼ýÀÚ =>{Á¤¼ö =>byte,short,char(=¹®ÀÚ),int,long //short(À½¼öO),char(À½¼öX)
- * 					  {½Ç¼ö =>float,double
- * 		{ÂüÁ¶Çü
+ * 	ë³€ìˆ˜ => ìž„ì‹œê¸°ì–µìž¥ì†Œ ==> ì²«ê¸€ìžê°€ ìˆ«ìžX {í´ëž˜ìŠ¤(ì¸í„°íŽ˜ì´ìŠ¤) - ì²«ê¸€ìžê°€ ëŒ€ë¬¸ìž ex)SoeulKorea
+ * 		     ã„´ìƒìˆ˜ë¥¼ ê¸°ì–µ	      ì‚¬ìš©ìž ì •ì˜ì–´	 {ë³€ìˆ˜ - ì²«ê¸€ìžê°€ ì†Œë¬¸ìžex)seoulKorea(ìƒìˆ˜ ex.PI,SEOUL_KOREA)
+ * 					  (<=>ì˜ˆì•½ì–´)	 {ë©”ì†Œë“œ - ()ë¡œ ëë‚¨
+ * 	ìžë£Œí˜• => ê¸°ì–µê³µê°„ì˜ í¬ê¸°,Type
+ * 		{ê¸°ë³¸ìžë£Œí˜•	{ë…¼ë¦¬ => boolean
+ * 				{ìˆ«ìž =>{ì •ìˆ˜ =>byte,short,char(=ë¬¸ìž),int,long //short(ìŒìˆ˜O),char(ìŒìˆ˜X)
+ * 					  {ì‹¤ìˆ˜ =>float,double
+ * 		{ì°¸ì¡°í˜•
  * 
  */
 public class Exam_01 {
@@ -25,8 +25,8 @@ public class Exam_01 {
 		
 		a=65;
 		ch='A';
-		ch=65;// charÇü Á¤¼öµµ ÀúÀå°¡´É
-		fi=3.14f; // ¼Ò¼öÁ¡ ÀûÀ¸¸é ÀÚµ¿À¸·Î ´õºí·Î ÀÎ½Ä Á¢¹Ì»ç f¸¦ ºÙ¿©¾ß ÇÃ·ÔÀ¸·Î ÀÎ½Ä
+		ch=65;// charí˜• ì •ìˆ˜ë„ ì €ìž¥ê°€ëŠ¥
+		fi=3.14f; // ì†Œìˆ˜ì  ì ìœ¼ë©´ ìžë™ìœ¼ë¡œ ë”ë¸”ë¡œ ì¸ì‹ ì ‘ë¯¸ì‚¬ fë¥¼ ë¶™ì—¬ì•¼ í”Œë¡¯ìœ¼ë¡œ ì¸ì‹
 		di=3.14;
 		
 		System.out.println("abc\n456");

@@ -1,10 +1,10 @@
 /* System.in.read()
- * 1¹®ÀÚ¸¦ Å°º¸µå·Î ÀÔ·Â ¹Ş¾Æ¼­ Á¤¼ö·Î º¯È¯
+ * 1ë¬¸ìë¥¼ í‚¤ë³´ë“œë¡œ ì…ë ¥ ë°›ì•„ì„œ ì •ìˆ˜ë¡œ ë³€í™˜
  * 
  */
 public class Exam_04 {
 	public static void main(String[] args) throws Exception{
-		System.out.print("1¹®ÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+		System.out.print("1ë¬¸ìë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
 		int ch1 = System.in.read(); //65(A) ,49(1), 13(\r), 10(\n)
 		int ch2 = System.in.read();
 		int ch3 = System.in.read();

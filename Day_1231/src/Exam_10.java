@@ -1,22 +1,22 @@
 import java.util.Scanner;
 
-/*	Å°º¸µåÀÔ·Â
- * 	ÀÚ·á ¹«Á¦ÇÑ ÀÔ·Â
- * 	ÀÔ·Â ¿¹½Ã
+/*	í‚¤ë³´ë“œì…ë ¥
+ * 	ìë£Œ ë¬´ì œí•œ ì…ë ¥
+ * 	ì…ë ¥ ì˜ˆì‹œ
  * 	10,80,60,90,95, ......-1
- * 	ÀÔ·Â ÀÚ·á Áß 50~90 »çÀÌÀÇ ÀÚ·á¸¸ »ç¿ë
- * 	´Ü, ÀÔ·Â ÀÚ·á¿¡ À½¼ö°¡ ÀÔ·ÂµÇ¸é Á¾·á¿Í µ¿½Ã¿¡ ÇÕ°è, Æò±Õ Ãâ·Â
+ * 	ì…ë ¥ ìë£Œ ì¤‘ 50~90 ì‚¬ì´ì˜ ìë£Œë§Œ ì‚¬ìš©
+ * 	ë‹¨, ì…ë ¥ ìë£Œì— ìŒìˆ˜ê°€ ì…ë ¥ë˜ë©´ ì¢…ë£Œì™€ ë™ì‹œì— í•©ê³„, í‰ê·  ì¶œë ¥
  */
 public class Exam_10 {
 	public static void main(String[] args) {
 		
 		Scanner scn = new Scanner(System.in);
-		int sum = 0; // ÇÕ°è
-		int var = 1; // ÀÔ·ÂÀÚ·á º¸°ü
-		int cnt = 0; // µ¥ÀÌÅÍ Ä«¿îÆ®
+		int sum = 0; // í•©ê³„
+		int var = 1; // ì…ë ¥ìë£Œ ë³´ê´€
+		int cnt = 0; // ë°ì´í„° ì¹´ìš´íŠ¸
 		
-		while(var>0){ //break¹® ¾È¾²°í ¹«ÇÑ·çÇÁ Å»Ãâ! => Á¶°Ç½Ä¿¡ break¸¦ ÁØ´Ù.
-			System.out.print("Á¤¼ö ÀÔ·Â = ");
+		while(var>0){ //breakë¬¸ ì•ˆì“°ê³  ë¬´í•œë£¨í”„ íƒˆì¶œ! => ì¡°ê±´ì‹ì— breakë¥¼ ì¤€ë‹¤.
+			System.out.print("ì •ìˆ˜ ì…ë ¥ = ");
 			var = scn.nextInt();
 			if(var>=50 && var<=90) {
 				sum+=var;
@@ -24,7 +24,8 @@ public class Exam_10 {
 			}
 		}
 		scn.close();
-		System.out.println("ÇÕ°è = "+sum+"\tÆò±Õ= "+((double)sum/cnt));
+		System.out.println("í•©ê³„ = "+sum+"\tí‰ê· = "+((double)sum/cnt));
 		
 	}
 }
+

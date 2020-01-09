@@ -8,7 +8,7 @@ public class Exam_06 {
 		int total=0;
 		
 		while(true) {
-			System.out.print("ÀÔ·Â : ");
+			System.out.print("ì…ë ¥ : ");
 			int m = sc.nextInt();
 			if(m==-99) {
 				break;
@@ -19,11 +19,11 @@ public class Exam_06 {
 					m %=mon[i];
 				}
 			}else {
-				System.out.println("ÀÔ·Â ¿À·ù");
+				System.out.println("ì…ë ¥ ì˜¤ë¥˜");
 			}
 		}
 		sc.close();
-		System.out.println("ÃÑ ±Ş¿© : "+total);
+		System.out.println("ì´ ê¸‰ì—¬ : "+total);
 		System.out.println("50,000\t10,000\t5,000\t1,000\t500\t100\t50\t10\t5\t1");
 		for(int i=0;i<10;i++) {
 			System.out.print(money[i]+"\t");

@@ -1,11 +1,11 @@
-/*	¹è¿­ÀÇ ¼±¾ğ°ú µ¿½Ã ÃÊ±âÈ­
+/*	ë°°ì—´ì˜ ì„ ì–¸ê³¼ ë™ì‹œ ì´ˆê¸°í™”
  * 	
  */
 public class Exam_04 {
 	public static void main(String[] args) {
 		int[] a = {45,84,2,54,32,45,32,4,86,2,4,5};
-		// ¹è¿­ ±æÀÌ -> ¹è¿­ÀÌ¸§.length
-		System.out.println("¹è¿­ ±æÀÌ : "+a.length);
+		// ë°°ì—´ ê¸¸ì´ -> ë°°ì—´ì´ë¦„.length
+		System.out.println("ë°°ì—´ ê¸¸ì´ : "+a.length);
 		for(int i=0;i<a.length;i++) {
 			System.out.println("a["+i+"] = "+a[i]);
 		}

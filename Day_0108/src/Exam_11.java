@@ -8,7 +8,7 @@ public class Exam_11 {
 	public static void main(String[] args) {
 		int[][] a = new int[5][5];
 		int cnt = 1;
-		// ÀÔ·Â
+		// ìž…ë ¥
 		for (int x = 0; x < a.length; x++) {
 			if (x % 2 == 0) {
 				for (int y = 0; y < a[0].length; y++) {
@@ -22,14 +22,14 @@ public class Exam_11 {
 				}
 			}
 		}
-		// Ãâ·Â
+		// ì¶œë ¥
 		for (int x = 0; x < a.length; x++) {
 			for (int y = 0; y < a[0].length; y++) {
 				System.out.print(a[x][y] + "\t");
 			}
 			System.out.println();
 		}
-		// ÃÊ±âÈ­
+		// ì´ˆê¸°í™”
 		System.out.println("-----------------------------------");
 		for (int x = 0; x < a.length; x++) {
 			for (int y = 0; y < a[0].length; y++) {
@@ -50,7 +50,7 @@ public class Exam_11 {
 				}
 			}
 		}
-		// Ãâ·Â
+		// ì¶œë ¥
 		for (int x = 0; x < a.length; x++) {
 			for (int y = 0; y < a[0].length; y++) {
 				System.out.print(a[x][y] + "\t");

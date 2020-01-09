@@ -1,4 +1,4 @@
-/*	¿À¸§Â÷¼ø Á¤·Ä
+/*	ì˜¤ë¦„ì°¨ìˆœ ì •ë ¬
  */
 public class Exam_07 {
 	public static void main(String[] args) {

@@ -1,20 +1,21 @@
 import java.io.IOException;
 
-/*	Ç¥ÁØ ÀÔ·Â
- * 	System.in.read(); -- 1¹®ÀÚ ÀÔ·Â -- Á¤¼ö·Î º¯È¯
- * 	¿¹¿ÜÃ³¸® ÇÊ¼ö ex.throws IOException
+/*	í‘œì¤€ ì…ë ¥
+ * 	System.in.read(); -- 1ë¬¸ì ì…ë ¥ -- ì •ìˆ˜ë¡œ ë³€í™˜
+ * 	ì˜ˆì™¸ì²˜ë¦¬ í•„ìˆ˜ ex.throws IOException
  * 	ASCII Code => A=65,a=97,0=48,LF(Line feed)=10,CR(Carrage return)=13
- * 	¿£ÅÍ => \r\n => 1310
+ * 	ì—”í„° => \r\n => 1310
  */
 public class Exam_02 {
 	public static void main(String[] args) throws IOException {
 		
-		System.out.print("1¹®ÀÚ ÀÔ·Â : ");
+		System.out.print("1ë¬¸ì ì…ë ¥ : ");
 		//int ch = System.in.read(); //A -- ASCII Code (A=65,a=97,0=48)
-		//Çüº¯È¯
+		//í˜•ë³€í™˜
 		char ch = (char)System.in.read();
 		System.out.println("ch="+ch);
 		
 		
 	}
 }
+

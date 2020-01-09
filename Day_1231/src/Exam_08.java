@@ -1,30 +1,30 @@
 import java.util.Scanner;
 
-/*	Å°º¸µåÀÔ·Â
- * 	50~90 »çÀÌÀÇ ÀÚ·á 10°³ ÀÔ·Â ÇÕ°è Ãâ·Â
- * 	ÀÔ·Â ¿¹½Ã
+/*	í‚¤ë³´ë“œì…ë ¥
+ * 	50~90 ì‚¬ì´ì˜ ìë£Œ 10ê°œ ì…ë ¥ í•©ê³„ ì¶œë ¥
+ * 	ì…ë ¥ ì˜ˆì‹œ
  * 	10,80,60,90,95, ......
  */
 public class Exam_08 {
 	public static void main(String[] args) {
 		
 		Scanner scn = new Scanner(System.in);
-		int sum = 0; // ÇÕ°è
-		int var; // ÀÔ·ÂÀÚ·á º¸°ü
-		int cnt=0; // µ¥ÀÌÅÍ Ä«¿îÆ®
+		int sum = 0; // í•©ê³„
+		int var; // ì…ë ¥ìë£Œ ë³´ê´€
+		int cnt=0; // ë°ì´í„° ì¹´ìš´íŠ¸
 		
 		while(true){
-			System.out.print("Á¤¼ö ÀÔ·Â = ");
+			System.out.print("ì •ìˆ˜ ì…ë ¥ = ");
 			var = scn.nextInt();
 			if(var>=50 && var<=90) {
 				sum+=var;
 				cnt++;
-				if(cnt==10) break; // cnt º¯µ¿½Ã¸¸ ¿¬»ê => ¼Óµµ°¡ ºü¸§
+				if(cnt==10) break; // cnt ë³€ë™ì‹œë§Œ ì—°ì‚° => ì†ë„ê°€ ë¹ ë¦„
 			}
-			//if(cnt==10) break; // cnt Ä«¿îÆ®¿Í °ü°è¾øÀÌ Ç×»ó ¿¬»êµÊ => ¼Óµµ°¡ ¶³¾îÁü
+			//if(cnt==10) break; // cnt ì¹´ìš´íŠ¸ì™€ ê´€ê³„ì—†ì´ í•­ìƒ ì—°ì‚°ë¨ => ì†ë„ê°€ ë–¨ì–´ì§
 		}
 		scn.close();
-		System.out.println("ÇÕ°è = "+sum);
+		System.out.println("í•©ê³„ = "+sum);
 		
 	}
 }

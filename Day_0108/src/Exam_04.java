@@ -1,18 +1,18 @@
 import java.util.Scanner;
 
-/* 	Å°º¸µå ÀÔ·Â (2 ~ 1024) ÀÔ·Â
- * 	ÀÔ·Â °ªÀ» 2Áø¼ö º¯È¯ÇØ¼­ Ãâ·Â
- * 	ÀÔ·Â °ªÀÌ -99 ÀÌ¸é Á¾·á
+/* 	í‚¤ë³´ë“œ ìž…ë ¥ (2 ~ 1024) ìž…ë ¥
+ * 	ìž…ë ¥ ê°’ì„ 2ì§„ìˆ˜ ë³€í™˜í•´ì„œ ì¶œë ¥
+ * 	ìž…ë ¥ ê°’ì´ -99 ì´ë©´ ì¢…ë£Œ
  * 
- * 	¿¹½Ã)
- * 	ÀÔ·Â : 10
- * 	2Áø¼ö : 1010
- * 	ÀÔ·Â : 1
- * 	ÀÔ·Â ¿À·ù
- * 	ÀÔ·Â : 127
- * 	2Áø¼ö : 1111111
- * 	ÀÔ·Â : -99
- * 	ÇÁ·Î±×·¥ Á¾·á
+ * 	ì˜ˆì‹œ)
+ * 	ìž…ë ¥ : 10
+ * 	2ì§„ìˆ˜ : 1010
+ * 	ìž…ë ¥ : 1
+ * 	ìž…ë ¥ ì˜¤ë¥˜
+ * 	ìž…ë ¥ : 127
+ * 	2ì§„ìˆ˜ : 1111111
+ * 	ìž…ë ¥ : -99
+ * 	í”„ë¡œê·¸ëž¨ ì¢…ë£Œ
  */
 public class Exam_04 {
 	public static void main(String[] args) {
@@ -20,10 +20,10 @@ public class Exam_04 {
 		char num[] = new char[11];
 		char str[] = {'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
 		while(true) {
-			System.out.print("10Áø¼ö : ");
+			System.out.print("10ì§„ìˆ˜ : ");
 			int a = sc.nextInt();
 			if(a==-99) {
-				System.out.println("ÇÁ·Î±×·¥ Á¾·á");
+				System.out.println("í”„ë¡œê·¸ëž¨ ì¢…ë£Œ");
 				break;
 				}
 			int jinsu = sc.nextInt();
@@ -42,13 +42,13 @@ public class Exam_04 {
 						break;
 					}
 				}
-				System.out.print(jinsu+"Áø¼ö : ");
+				System.out.print(jinsu+"ì§„ìˆ˜ : ");
 				for(int i=cnt-1;i>=0;i--) {
 					System.out.print(num[i]);
 				}
 				System.out.println();
 			}else {
-				System.out.println("ÀÔ·Â ¿À·ù");
+				System.out.println("ìž…ë ¥ ì˜¤ë¥˜");
 			}
 		}
 		sc.close();

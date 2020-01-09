@@ -1,13 +1,13 @@
 import java.util.Scanner;
 
-/*	Å°º¸µå·Î Á¤¼ö ÀÔ·Â
- * 	1. ÀÔ·Â ¹üÀ§ (2 ~ 100)
- * 	2. ÀÔ·ÂµÈ ¼ö¸¦ 2Áø¼ö·Î º¯È¯ Ãâ·Â
- * 	3. ÀÔ·Â¿¹½Ã
- * 		Á¤¼ö ÀÔ·Â : 101
- * 		ÀÔ·Â¿À·ù --> ÀçÀÔ·Â
- * 		Á¤¼ö ÀÔ·Â : 10
- * 		10Áø¼ö(10) : 2Áø¼ö(1010) --> Á¾·áÇÑ´Ù
+/*	í‚¤ë³´ë“œë¡œ ì •ìˆ˜ ì…ë ¥
+ * 	1. ì…ë ¥ ë²”ìœ„ (2 ~ 100)
+ * 	2. ì…ë ¥ëœ ìˆ˜ë¥¼ 2ì§„ìˆ˜ë¡œ ë³€í™˜ ì¶œë ¥
+ * 	3. ì…ë ¥ì˜ˆì‹œ
+ * 		ì •ìˆ˜ ì…ë ¥ : 101
+ * 		ì…ë ¥ì˜¤ë¥˜ --> ì¬ì…ë ¥
+ * 		ì •ìˆ˜ ì…ë ¥ : 10
+ * 		10ì§„ìˆ˜(10) : 2ì§„ìˆ˜(1010) --> ì¢…ë£Œí•œë‹¤
  */
 public class Exam_07 {
 	public static void main(String[] args) {
@@ -15,7 +15,7 @@ public class Exam_07 {
 		String binary ="";
 		int num;
 		while(true) {
-			System.out.print("Á¤¼ö ÀÔ·Â : ");
+			System.out.print("ì •ìˆ˜ ì…ë ¥ : ");
 			int var = scn.nextInt();
 			num = var;
 			if(var>1 && var<101) {
@@ -24,15 +24,15 @@ public class Exam_07 {
 					var=var/2;
 					binary = remainder+binary; 
 				}
-				System.out.println("10Áø¼ö("+num+") : 2Áø¼ö("+binary+")");
+				System.out.println("10ì§„ìˆ˜("+num+") : 2ì§„ìˆ˜("+binary+")");
 				scn.close();
 				break;
 			}
-			System.out.println("ÀÔ·Â¿À·ù");
+			System.out.println("ì…ë ¥ì˜¤ë¥˜");
 		}
 		/*
 		 while(true) {
-			System.out.print("Á¤¼ö ÀÔ·Â : ");
+			System.out.print("ì •ìˆ˜ ì…ë ¥ : ");
 			int var = scn.nextInt();
 			num = var;
 			if(var>1 && var<101) {
@@ -42,11 +42,11 @@ public class Exam_07 {
 					binary = remainder+binary; 
 				}
 				binary = var+binary;
-				System.out.println("10Áø¼ö("+num+") : 2Áø¼ö("+binary+")");
+				System.out.println("10ì§„ìˆ˜("+num+") : 2ì§„ìˆ˜("+binary+")");
 				scn.close();
 				break;
 			}
-			System.out.println("ÀÔ·Â¿À·ù");
+			System.out.println("ì…ë ¥ì˜¤ë¥˜");
 		}
 		 */
 		

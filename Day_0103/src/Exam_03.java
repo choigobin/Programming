@@ -1,26 +1,27 @@
 import java.util.Scanner;
 
-/*	2ÀÚ¸® ÀÌ³» Á¤¼ö¸¦ ÀÔ·Â
- * 	1 ~ ÀÔ·ÂµÈ Á¤¼ö±îÁö ÇÕ°è¸¦ °è»êÇÏ¿© Ãâ·Â
+/*	2ìë¦¬ ì´ë‚´ ì •ìˆ˜ë¥¼ ì…ë ¥
+ * 	1 ~ ì…ë ¥ëœ ì •ìˆ˜ê¹Œì§€ í•©ê³„ë¥¼ ê³„ì‚°í•˜ì—¬ ì¶œë ¥
  */
 public class Exam_03 {
 	public static void main(String[] args) {
 		Scanner scn = new Scanner(System.in);
 		int var;
 		while(true) {
-			System.out.print("Á¤¼öÀÔ·Â(1~99):");
+			System.out.print("ì •ìˆ˜ì…ë ¥(1~99):");
 			var = scn.nextInt();
 			if(var>=1 && var<=99) {
 				int sum = 0;
 				for(int x=1;x<=var;x++) {
 					sum+=x;
 				}
-				System.out.println("1 ~ "+var+" ÇÕ°è = "+sum);
+				System.out.println("1 ~ "+var+" í•©ê³„ = "+sum);
 				scn.close();
 				break;
 			}
 		}
-		// 1 ~ var ÇÕ°è°è»ê Ãâ·Â
+		// 1 ~ var í•©ê³„ê³„ì‚° ì¶œë ¥
 		
 	}
 }
+

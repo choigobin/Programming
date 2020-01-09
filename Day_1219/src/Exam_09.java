@@ -1,5 +1,5 @@
-/*	µÎ°³ÀÇ Á¤¼ö ÀÔ·Â ´ë, ¼Ò ±¸ºĞ
- * 	´Ü, µ¿ÀÏÇÑ °ªÀ½ ¾øÀ½
+/*	ë‘ê°œì˜ ì •ìˆ˜ ì…ë ¥ ëŒ€, ì†Œ êµ¬ë¶„
+ * 	ë‹¨, ë™ì¼í•œ ê°’ìŒ ì—†ìŒ
  */
 public class Exam_09 {
 	public static void main(String[] args) {
@@ -12,7 +12,7 @@ public class Exam_09 {
 			max=b;
 			min=a;
 		}
-		System.out.println("´ë : "+max+" ¼Ò : "+min);
+		System.out.println("ëŒ€ : "+max+" ì†Œ : "+min);
 	}
 
 }

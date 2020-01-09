@@ -1,15 +1,15 @@
 /*	if()
  * 	switch ~ case
- * 	90ÀÌ»ó,	80ÀÌ»ó, 	70ÀÌ»ó,	60ÀÌ»ó,	60¹Ì¸¸
+ * 	90ì´ìƒ,	80ì´ìƒ, 	70ì´ìƒ,	60ì´ìƒ,	60ë¯¸ë§Œ
  * 	100-~90 89~80	79~70	69~60	59~0
  */
 public class Exam_02 {
 	public static void main(String[] args) {
 		int var = 77;
-		String str=""; // !=String str=null => ""=°ø¹é, null=¾øÀ½ ´Ù¸§!
+		String str=""; // !=String str=null => ""=ê³µë°±, null=ì—†ìŒ ë‹¤ë¦„!
 		
-		switch(var/10) { // ()¾È¿¡´Â ¼ö½Ä ¶Ç´Â º¯¼ö(Á¤¼ö, ¹®ÀÚ, ¹®ÀÚ¿­)
-			case 10: // °ª(Á¤¼ö, ¹®ÀÚ, ¹®ÀÚ¿­)
+		switch(var/10) { // ()ì•ˆì—ëŠ” ìˆ˜ì‹ ë˜ëŠ” ë³€ìˆ˜(ì •ìˆ˜, ë¬¸ì, ë¬¸ìì—´)
+			case 10: // ê°’(ì •ìˆ˜, ë¬¸ì, ë¬¸ìì—´)
 				str="A";
 				break;
 			case 9:
@@ -27,7 +27,7 @@ public class Exam_02 {
 			default:
 				str="F";
 		}
-		System.out.println("¼ºÀû = "+str);
+		System.out.println("ì„±ì  = "+str);
 		System.out.println(var+"\t"+var/10);
 		
 		

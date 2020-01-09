@@ -1,6 +1,6 @@
 /*
-1~100 ÇÕ°è
-while(){}À» »ç¿ë
+1~100 í•©ê³„
+while(){}ì„ ì‚¬ìš©
  */
 
 public class Exam_02 {
@@ -16,7 +16,7 @@ public class Exam_02 {
 			
 			if(i==100) break;
 		}
-		System.out.println("1~100 ±îÁöÀÇ ÇÕ : "+sum);
+		System.out.println("1~100 ê¹Œì§€ì˜ í•© : "+sum);
 		
 		
 		

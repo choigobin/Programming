@@ -1,14 +1,14 @@
 
 public class Exam_02 {
 	public static void main(String[] args) {
-		int[] arr = new int[5];//arr[0],arr[1] -- arr[4] -> 0~4 5°³!
+		int[] arr = new int[5];//arr[0],arr[1] -- arr[4] -> 0~4 5ê°œ!
 		arr[0]=10;
 		arr[1]=20;
 		arr[2]=30;
 		arr[3] = arr[0]+arr[1]+arr[2];
 		arr[4] = arr[3]/3;
 		
-		System.out.println("±¹¾î\t¿µ¾î\t¼öÇĞ\tÃÑÁ¡\tÆò±Õ");
+		System.out.println("êµ­ì–´\tì˜ì–´\tìˆ˜í•™\tì´ì \tí‰ê· ");
 		System.out.print(arr[0]+"\t");
 		System.out.print(arr[1]+"\t");
 		System.out.print(arr[2]+"\t");

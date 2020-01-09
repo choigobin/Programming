@@ -1,28 +1,28 @@
-/* [ÀÚ·áÇü - DateType(±â¾ïÀå¼ÒÀÇ Å©±â¿Í ¿¬°ü)]
+/* [ìë£Œí˜• - DateType(ê¸°ì–µì¥ì†Œì˜ í¬ê¸°ì™€ ì—°ê´€)]
  * 
- * {±âº» ÀÚ·áÇü} - ¹®ÀÚ : char
- * 			  - Á¤¼ö : byte, int, long
- *			  - ½Ç¼ö : double, float
- * 			  - ³í¸® : boolean
+ * {ê¸°ë³¸ ìë£Œí˜•} - ë¬¸ì : char
+ * 			  - ì •ìˆ˜ : byte, int, long
+ *			  - ì‹¤ìˆ˜ : double, float
+ * 			  - ë…¼ë¦¬ : boolean
  * 
- * ÀÚ¹Ù¿¡´Â ¹®ÀÚ¿­ ÀÚ·áÇüÀº ¾øÀ½ ¿ø·¡
+ * ìë°”ì—ëŠ” ë¬¸ìì—´ ìë£Œí˜•ì€ ì—†ìŒ ì›ë˜
  * 
- *{ÂüÁ¶Çü(ÁÖ¼Ò/À§Ä¡)} - ¹è¿­
- *		 		  - Å¬·¡½º, ÀÎÅÍÆäÀÌ½º
+ *{ì°¸ì¡°í˜•(ì£¼ì†Œ/ìœ„ì¹˜)} - ë°°ì—´
+ *		 		  - í´ë˜ìŠ¤, ì¸í„°í˜ì´ìŠ¤
  * 
- * -> ¸éÁ¢¿¡¼­ ¹°¾îº¼ ¼ö ÀÖÀ½!
+ * -> ë©´ì ‘ì—ì„œ ë¬¼ì–´ë³¼ ìˆ˜ ìˆìŒ!
  */
 public class Exam_02 {
 	public static void main(String[] args) {
-		char ch; //2byte ÇÑ±Û 1±ÛÀÚ¿¡ 2byte(utf-16) 3byte(utf-8)
+		char ch; //2byte í•œê¸€ 1ê¸€ìì— 2byte(utf-16) 3byte(utf-8)
 		int jung; //4byte
 		double dou; //8byte
 		boolean bool; //1byte
 		
-		ch = 'S'; // = -> ´ëÀÔ¿¬»êÀÚ -1¹®ÀÚ´ëÀÔ
-		jung = 123791; //Á¤¼ö´ëÀÔ
-		dou = 3.141592; //½Ç¼ö´ëÀÔ
-		bool = true; //true(Âü)´ëÀÔ
+		ch = 'S'; // = -> ëŒ€ì…ì—°ì‚°ì -1ë¬¸ìëŒ€ì…
+		jung = 123791; //ì •ìˆ˜ëŒ€ì…
+		dou = 3.141592; //ì‹¤ìˆ˜ëŒ€ì…
+		bool = true; //true(ì°¸)ëŒ€ì…
 		
 		System.out.println("char ch = " + ch);
 		System.out.println("int jung = " + jung);

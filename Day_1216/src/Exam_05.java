@@ -5,7 +5,7 @@
  		****
  		*****
  */
-// ÀÌ½ºÄÉÀÌÇÁ¹®ÀÚ "\n" = NewLine, "\r" = Return, "\t" = tab
+// ì´ìŠ¤ì¼€ì´í”„ë¬¸ì "\n" = NewLine, "\r" = Return, "\t" = tab
 public class Exam_05 {
 
 	public static void main(String[] args) {

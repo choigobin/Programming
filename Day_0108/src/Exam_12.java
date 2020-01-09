@@ -8,7 +8,7 @@ public class Exam_12 {
 	public static void main(String[] args) {
 		int[][] a = new int[5][5];
 		int f = 5, cnt = 0, c = 1, i = 0, j = -1;
-		// ÀÔ·Â
+		// ìž…ë ¥
 		while (f > 0) {
 			for (int x = 0; x < f; x++) {
 				cnt++;
@@ -23,7 +23,7 @@ public class Exam_12 {
 			}
 			c = -c;
 		}
-		// Ãâ·Â
+		// ì¶œë ¥
 		for (int x = 0; x < a.length; x++) {
 			for (int y = 0; y < a[0].length; y++) {
 				System.out.print(a[x][y] + "\t");

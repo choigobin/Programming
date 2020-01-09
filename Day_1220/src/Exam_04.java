@@ -1,7 +1,7 @@
 /*
- 1~100 È¦¼öÇÕ
- 1) for¹®
- 2) while¹®
+ 1~100 í™€ìˆ˜í•©
+ 1) forë¬¸
+ 2) whileë¬¸
  */
 
 
@@ -9,9 +9,9 @@ public class Exam_04 {
 	
 	public static void main(String[] args) {
 		
-		//1) for¹® »ç¿ë
+		//1) forë¬¸ ì‚¬ìš©
 		
-		//³ª¸ÓÁö ¿¬»ê ÀÌ¿ë
+		//ë‚˜ë¨¸ì§€ ì—°ì‚° ì´ìš©
 		int sum = 0;
 		
 		for(int i = 0; i<=100 ; i++) {
@@ -21,9 +21,9 @@ public class Exam_04 {
 			}
 			
 		}
-		System.out.println("1~100 ±îÁö È¦¼öÀÇ ÇÕÀº "+sum);
+		System.out.println("1~100 ê¹Œì§€ í™€ìˆ˜ì˜ í•©ì€ "+sum);
 		
-		//flag »ç¿ë(½ºÀ§Ä¡)
+		//flag ì‚¬ìš©(ìŠ¤ìœ„ì¹˜)
 		int sum1 = 0;
 		boolean flag = true;
 		
@@ -37,11 +37,11 @@ public class Exam_04 {
 			}
 			
 		}
-		System.out.println("1~100 ±îÁö È¦¼öÀÇ ÇÕÀº "+sum1);
+		System.out.println("1~100 ê¹Œì§€ í™€ìˆ˜ì˜ í•©ì€ "+sum1);
 		
 		
 		
-		//flag »ç¿ë(½ºÀ§Ä¡) Â¦¼öÇÕ
+		//flag ì‚¬ìš©(ìŠ¤ìœ„ì¹˜) ì§ìˆ˜í•©
 		int sum2 = 0;
 		boolean flag2 = true;
 		
@@ -55,9 +55,9 @@ public class Exam_04 {
 			}
 			
 		}
-		System.out.println("1~100 ±îÁö Â¦¼öÀÇ ÇÕÀº "+sum2);
+		System.out.println("1~100 ê¹Œì§€ ì§ìˆ˜ì˜ í•©ì€ "+sum2);
 		
-		//³ª¸ÓÁö ¿¬»ê ÀÌ¿ë Â¦¼öÇÕ
+		//ë‚˜ë¨¸ì§€ ì—°ì‚° ì´ìš© ì§ìˆ˜í•©
 		int sum3 = 0;
 		
 		for(int i = 0; i<=100 ; i++) {
@@ -67,12 +67,12 @@ public class Exam_04 {
 			}
 			
 		}
-		System.out.println("1~100 ±îÁö Â¦¼öÀÇ ÇÕÀº "+sum3);
+		System.out.println("1~100 ê¹Œì§€ ì§ìˆ˜ì˜ í•©ì€ "+sum3);
 		
 		
 		
 		
-		//2) while¹® »ç¿ë
+		//2) whileë¬¸ ì‚¬ìš©
 		
 		
 		

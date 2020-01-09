@@ -1,4 +1,4 @@
-/*	1 ~ 10 ÇÕ°è
+/*	1 ~ 10 í•©ê³„
  * 	1+2+3+4+ ..... +10 = 55
  */
 public class Exam_05 {
@@ -9,20 +9,21 @@ public class Exam_05 {
 			i++;//i=i+1
 			s+=i;//s=s+i
 		}while(i<10);
-		System.out.println("1ºÎÅÍ 10±îÁöÀÇ ÇÕ = "+s);
+		System.out.println("1ë¶€í„° 10ê¹Œì§€ì˜ í•© = "+s);
 		i=0;s=0;
 		while(i<10) {
 			i++;
 			s+=i;
 		}
-		System.out.println("1ºÎÅÍ 10±îÁöÀÇ ÇÕ = "+s);
+		System.out.println("1ë¶€í„° 10ê¹Œì§€ì˜ í•© = "+s);
 		i=0;s=0;
 		while(true) {
 			i++;
 			s+=i;
 			if(i==10) break;
 		}
-		System.out.println("1ºÎÅÍ 10±îÁöÀÇ ÇÕ = "+s);
+		System.out.println("1ë¶€í„° 10ê¹Œì§€ì˜ í•© = "+s);
 		
 	}
 }
+

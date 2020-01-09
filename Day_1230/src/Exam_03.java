@@ -1,19 +1,19 @@
 import java.util.Scanner;
 
-/*	Å°º¸µå·Î Á¤¼ö 2°³ ÀÔ·Â Å©±â ºñ±³ÇÏ±â
+/*	í‚¤ë³´ë“œë¡œ ì •ìˆ˜ 2ê°œ ìž…ë ¥ í¬ê¸° ë¹„êµí•˜ê¸°
  * 	
  */
 public class Exam_03 {
 	public static void main(String[] args) {
 		Scanner scn = new Scanner(System.in);
-		System.out.print("Á¤¼ö1 :");
+		System.out.print("ì •ìˆ˜1 :");
 		int a = scn.nextInt();
-		System.out.print("Á¤¼ö2 :");
+		System.out.print("ì •ìˆ˜2 :");
 		int b = scn.nextInt();
 		scn.close();
-		if(a>b) System.out.println("a>b"); //¹®ÀåÀÌ 1°³ÀÏ ¶§
+		if(a>b) System.out.println("a>b"); //ë¬¸ìž¥ì´ 1ê°œì¼ ë•Œ
 		if(a<b)
-			System.out.println("a<b"); //¹®ÀåÀÌ 1°³ÀÏ ¶§
+			System.out.println("a<b"); //ë¬¸ìž¥ì´ 1ê°œì¼ ë•Œ
 		if(a==b) {
 			System.out.println("a==b");
 		}

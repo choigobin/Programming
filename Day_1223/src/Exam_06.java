@@ -1,4 +1,4 @@
-/*	¹è¿­¿¡ ÀúÀåµÈ data Áß °¡ÀåÅ« °ª, °¡Àå ÀÛÀº°ª Ã£±â
+/*	ë°°ì—´ì— ì €ì¥ëœ data ì¤‘ ê°€ì¥í° ê°’, ê°€ì¥ ì‘ì€ê°’ ì°¾ê¸°
  */
 public class Exam_06 {
 	public static void main(String[] args) {
@@ -11,8 +11,8 @@ public class Exam_06 {
 			System.out.print(array[i]+"\t");
 		}
 		System.out.println();
-		int max=array[0];//ÃÖ´ë
-		int min=array[0];//ÃÖ¼Ò
+		int max=array[0];//ìµœëŒ€
+		int min=array[0];//ìµœì†Œ
 		for(int i=1;i<array.length;i++) {
 			if(max < array[i]) {
 				max=array[i];

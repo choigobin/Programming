@@ -1,12 +1,12 @@
-/*	¹İº¹¹® // Á¶°Ç½Ä = Âü,°ÅÁş
- * 	1. while(Á¶°Ç½Ä){	}
- * 	2. do{	}while(Á¶°Ç½Ä)
- * 	3. for(º¯¼ö=ÃÊ±â°ª;Á¶°Ç½Ä;Áõ°¨½Ä){	}
+/*	ë°˜ë³µë¬¸ // ì¡°ê±´ì‹ = ì°¸,ê±°ì§“
+ * 	1. while(ì¡°ê±´ì‹){	}
+ * 	2. do{	}while(ì¡°ê±´ì‹)
+ * 	3. for(ë³€ìˆ˜=ì´ˆê¸°ê°’;ì¡°ê±´ì‹;ì¦ê°ì‹){	}
  */
 public class Exam_04 {
 	public static void main(String[] args) {
 		int x=0;
-		while(true) {//¹«ÇÑ¹İº¹
+		while(true) {//ë¬´í•œë°˜ë³µ
 			System.out.println("x = "+ x);
 			x++;
 			if(x==10) {

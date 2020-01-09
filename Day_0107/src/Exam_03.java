@@ -1,14 +1,14 @@
 import java.util.Scanner;
 
-/*	Å°º¸µå ÀÔ·Â(1~100) ÃÖ´ë 10°³ ÀÔ·Â
- * 	 Â¦¼ö¸¸ Ãâ·Â
+/*	í‚¤ë³´ë“œ ì…ë ¥(1~100) ìµœëŒ€ 10ê°œ ì…ë ¥
+ * 	 ì§ìˆ˜ë§Œ ì¶œë ¥
  */
 public class Exam_03 {
 	public static void main(String[] args) {
 		Scanner scn = new Scanner(System.in);
 		/*
 		for(int x=0; x<10; x++) {
-			System.out.print("ÀÔ·Â : ");
+			System.out.print("ì…ë ¥ : ");
 			int a=scn.nextInt();
 			if(a%2==0) {
 				System.out.println(a);
@@ -16,20 +16,20 @@ public class Exam_03 {
 		}
 		*/
 		int val[] = new int[10];
-		//ÀÔ·ÂÀÛ¾÷
+		//ì…ë ¥ì‘ì—…
 		for(int x=0; x<10; x++) {
-			System.out.print("ÀÔ·Â : ");
-			int a=scn.nextInt(); // a¸¦ °Ë»çÇØ¼­ Á¶°Ç¿¡ ¸ÂÀ» °æ¿ì¿¡ ¹è¿­¿¡ ³ÖÀ» ¶§
+			System.out.print("ì…ë ¥ : ");
+			int a=scn.nextInt(); // aë¥¼ ê²€ì‚¬í•´ì„œ ì¡°ê±´ì— ë§ì„ ê²½ìš°ì— ë°°ì—´ì— ë„£ì„ ë•Œ
 			val[x] = a; 
-			//val[x] = scn.nextInt(); //¹Ù·Î ³Ö±â
+			//val[x] = scn.nextInt(); //ë°”ë¡œ ë„£ê¸°
 		}
 		scn.close();
-		//Ãâ·Â
-		System.out.print("ÀÔ·ÂÀÚ·á : ");
+		//ì¶œë ¥
+		System.out.print("ì…ë ¥ìë£Œ : ");
 		for (int i=0; i<10; i++) {
 			System.out.print(val[i]+"\t");
 		}
-		System.out.print("\nÂ¦¼ö : ");
+		System.out.print("\nì§ìˆ˜ : ");
 		for (int i=0; i<10; i++) {
 			if(val[i]%2==0) {
 				System.out.print(val[i]+"\t");

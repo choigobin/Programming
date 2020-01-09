@@ -8,11 +8,11 @@ public class Exam_02 {
 		bun[2]=100;
 		bun[3]=1000;
 		bun[4]=10000;
-		name[0]="±èÀÚ¹Ù";
-		name[1]="È«±æµ¿";
+		name[0]="ê¹€ìë°”";
+		name[1]="í™ê¸¸ë™";
 		name[2]="C/C++";
-		name[3]="ÆÄÀÌ½ã";
-		name[4]="¼­ºí¸´";
+		name[3]="íŒŒì´ì¬";
+		name[4]="ì„œë¸”ë¦¿";
 		
 		for(int x=0; x<5; x++) {
 			System.out.println(bun[x] + ":" + name[x]);
@@ -20,3 +20,4 @@ public class Exam_02 {
 		
 	}
 }
+

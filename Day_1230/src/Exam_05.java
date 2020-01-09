@@ -1,15 +1,15 @@
 import java.util.Scanner;
 
-/*	Á¤¼ö 2°³ ÀÔ·Â
- * 	µÎ ¼öÀÇ Â÷ÀÌ°¡ 10ÀÌ»óÀÌ¸é 
- * 	Å« ¼ö¿¡ -5, ÀÛÀº ¼ö¿¡ +5
+/*	ì •ìˆ˜ 2ê°œ ìž…ë ¥
+ * 	ë‘ ìˆ˜ì˜ ì°¨ì´ê°€ 10ì´ìƒì´ë©´ 
+ * 	í° ìˆ˜ì— -5, ìž‘ì€ ìˆ˜ì— +5
  */
 public class Exam_05 {
 	public static void main(String[] args) {
 		Scanner scn = new Scanner(System.in);
-		System.out.print("Á¤¼ö1 :");
+		System.out.print("ì •ìˆ˜1 :");
 		int a = scn.nextInt();
-		System.out.print("Á¤¼ö2 :");
+		System.out.print("ì •ìˆ˜2 :");
 		int b = scn.nextInt();
 		scn.close();
 		System.out.println("a = " +a);
@@ -19,7 +19,7 @@ public class Exam_05 {
 		if(b>=a+10) a=a+5;b=b-5;
 		
 		/*
-		// µÎ ¼ö Â÷ÀÌ °è»ê
+		// ë‘ ìˆ˜ ì°¨ì´ ê³„ì‚°
 		int c;
 		if(a>=b) {
 			c=a-b;
@@ -41,3 +41,4 @@ public class Exam_05 {
 		
 	}
 }
+

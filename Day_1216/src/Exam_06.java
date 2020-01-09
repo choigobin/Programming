@@ -1,18 +1,18 @@
-/*		¹øÈ£		ÀÌ¸§		Á¡¼ö
- *  	01		È«±æµ¿	90
+/*		ë²ˆí˜¸		ì´ë¦„		ì ìˆ˜
+ *  	01		í™ê¸¸ë™	90
  */
 public class Exam_06 {
 
 	public static void main(String[] args) {
-		System.out.print("¹øÈ£\tÀÌ¸§\tÁ¡¼ö\n");
+		System.out.print("ë²ˆí˜¸\tì´ë¦„\tì ìˆ˜\n");
 		System.out.print("01\t");
-		System.out.print("È«±æµ¿\t");
+		System.out.print("í™ê¸¸ë™\t");
 		System.out.print(90);
 		System.out.println();
-		System.out.printf("%10s\n",123); // Çü½ÄÁöÁ¤ Ãâ·Â (%s ¹®ÀÚ·Î º¯È¯ÇØ¶ó),(%10s 10ÀÚ¸®¸¦ Àâ¾Æ¼­ Ãâ·ÂÇÏ¶ó)
-		System.out.printf("10Áø¼ö = %d\n",10); // %d 10Áø¼ö·Î ¹Ù²ã¼­ Ãâ·ÂÇÏ¶ó
-		System.out.printf("8Áø¼ö = %o\n",10); // %o 8Áø¼ö·Î ¹Ù²ã¼­ Ãâ·ÂÇÏ¶ó
-		System.out.printf("16Áø¼ö = %x\n",10); // %x 16Áø¼ö·Î ¹Ù²ã¼­ Ãâ·ÂÇÏ¶ó
+		System.out.printf("%10s\n",123); // í˜•ì‹ì§€ì • ì¶œë ¥ (%s ë¬¸ìë¡œ ë³€í™˜í•´ë¼),(%10s 10ìë¦¬ë¥¼ ì¡ì•„ì„œ ì¶œë ¥í•˜ë¼)
+		System.out.printf("10ì§„ìˆ˜ = %d\n",10); // %d 10ì§„ìˆ˜ë¡œ ë°”ê¿”ì„œ ì¶œë ¥í•˜ë¼
+		System.out.printf("8ì§„ìˆ˜ = %o\n",10); // %o 8ì§„ìˆ˜ë¡œ ë°”ê¿”ì„œ ì¶œë ¥í•˜ë¼
+		System.out.printf("16ì§„ìˆ˜ = %x\n",10); // %x 16ì§„ìˆ˜ë¡œ ë°”ê¿”ì„œ ì¶œë ¥í•˜ë¼
 
 	}
 

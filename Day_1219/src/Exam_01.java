@@ -1,13 +1,13 @@
-/*	Áõ°¨¿¬»êÀÚ
- * 	++ : 1¾¿ Áõ°¡
- * 	-- : 1¾¿ °¨¼Ò
+/*	ì¦ê°ì—°ì‚°ìž
+ * 	++ : 1ì”© ì¦ê°€
+ * 	-- : 1ì”© ê°ì†Œ
  */
 public class Exam_01 {
 	public static void main(String[] args) {
 		int a=5, b;
 		int aa=5, bb;
 		
-		b=a++;// ÈÄÀ§Çü a=a+1 => b=a, a=a+1 => b=5,a=6
+		b=a++;// í›„ìœ„í˜• a=a+1 => b=a, a=a+1 => b=5,a=6
 		System.out.println("a="+a);
 		System.out.println("b="+b);
 		bb=++aa;

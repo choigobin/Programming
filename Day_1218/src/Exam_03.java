@@ -1,28 +1,28 @@
 import java.util.Scanner;
 
-/*	¹øÈ£, ÀÌ¸§, ±¹¾î, ¿µ¾î, ¼öÇĞ Á¡¼ö¸¦ Å°º¸µå·Î ÀÔ·Â
- * 	ÃÑÁ¡, Æò±Õ(¼Ò¼öÁ¡ µÎ¹øÂ° ÀÚ¸®¿¡¼­ ¹İ¿Ã¸²)
+/*	ë²ˆí˜¸, ì´ë¦„, êµ­ì–´, ì˜ì–´, ìˆ˜í•™ ì ìˆ˜ë¥¼ í‚¤ë³´ë“œë¡œ ì…ë ¥
+ * 	ì´ì , í‰ê· (ì†Œìˆ˜ì  ë‘ë²ˆì§¸ ìë¦¬ì—ì„œ ë°˜ì˜¬ë¦¼)
  */
 public class Exam_03 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		System.out.print("¹øÈ£ : ");
+		System.out.print("ë²ˆí˜¸ : ");
 		int num = sc.nextInt();
-		System.out.print("ÀÌ¸§ : ");//¿µ¾î·Î ÀÔ·ÂÇÏ¸é ¹®Á¦¾øÀ½
+		System.out.print("ì´ë¦„ : ");//ì˜ì–´ë¡œ ì…ë ¥í•˜ë©´ ë¬¸ì œì—†ìŒ
 		String name = sc.next();
-		System.out.print("±¹¾î : ");
+		System.out.print("êµ­ì–´ : ");
 		int kor = sc.nextInt();
-		System.out.print("¿µ¾î : ");
+		System.out.print("ì˜ì–´ : ");
 		int eng = sc.nextInt();
-		System.out.print("¼öÇĞ : ");
+		System.out.print("ìˆ˜í•™ : ");
 		int mat = sc.nextInt();
 		sc.close();
 		int tot = kor+eng+mat;
 		double avg = tot/3.;// ex)87.256-> 87.3
 		avg = (int)(avg*10+0.5)/10.;
 		
-		System.out.println("¹øÈ£\tÀÌ¸§\tÃÑÁ¡\tÆò±Õ\t");
+		System.out.println("ë²ˆí˜¸\tì´ë¦„\tì´ì \tí‰ê· \t");
 		System.out.println(num+"\t"+name+"\t"+tot+"\t"+avg);
 	}
 

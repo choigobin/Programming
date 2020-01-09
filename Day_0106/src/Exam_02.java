@@ -1,21 +1,21 @@
 import java.util.Scanner;
 
-/*	Å°º¸µå·Î Á¤¼ö(2~1000) ÀÔ·Â
- * 	1) 2 ~ ÀÔ·Â°ª ±îÁöÀÇ ¼Ò¼ö¸¦ Ãâ·Â
- * 	2) ÇÑ ÁÙ¿¡ 5°³¾¿ Ãâ·Â
- * 	3) ¸¶Áö¸·¿¡ ¼Ò¼öÀÇ °¹¼ö Ãâ·Â
- * 	4) ¿¹½Ã
- * 	ÀÔ·Â : 50
+/*	í‚¤ë³´ë“œë¡œ ì •ìˆ˜(2~1000) ìž…ë ¥
+ * 	1) 2 ~ ìž…ë ¥ê°’ ê¹Œì§€ì˜ ì†Œìˆ˜ë¥¼ ì¶œë ¥
+ * 	2) í•œ ì¤„ì— 5ê°œì”© ì¶œë ¥
+ * 	3) ë§ˆì§€ë§‰ì— ì†Œìˆ˜ì˜ ê°¯ìˆ˜ ì¶œë ¥
+ * 	4) ì˜ˆì‹œ
+ * 	ìž…ë ¥ : 50
  * 	2 3 5 7 11
  * 	13 ...
- * 	¼Ò¼ö °¹¼ö : xx
+ * 	ì†Œìˆ˜ ê°¯ìˆ˜ : xx
  */
 public class Exam_02 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int x,cnt=0;
 		while(true) {
-			System.out.print("ÀÔ·Â : ");
+			System.out.print("ìž…ë ¥ : ");
 			x = sc.nextInt();
 			if(x>=2 && x<=1000) {
 				for(int i=2;i<=x;i++) {
@@ -34,10 +34,10 @@ public class Exam_02 {
 					}
 				}
 				if(cnt%5!=0) System.out.println();
-				System.out.println("¼Ò¼ö °¹¼ö : "+cnt);
+				System.out.println("ì†Œìˆ˜ ê°¯ìˆ˜ : "+cnt);
 				break;
 			}else {
-				System.out.println("ÀÔ·Â ¿À·ù");
+				System.out.println("ìž…ë ¥ ì˜¤ë¥˜");
 			}
 			
 		}

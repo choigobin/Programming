@@ -1,17 +1,17 @@
 import java.util.Scanner;
 
-/*	¼¼ °³ÀÇ Á¤¼ö Áß ´ë,Áß,¼Ò Ã£±â
- * 	1. °¡Àå Å« ¼ö Ã£±â
- * 	2. °¡Àå ÀÛÀº ¼ö Ã£±â
+/*	ì„¸ ê°œì˜ ì •ìˆ˜ ì¤‘ ëŒ€,ì¤‘,ì†Œ ì°¾ê¸°
+ * 	1. ê°€ì¥ í° ìˆ˜ ì°¾ê¸°
+ * 	2. ê°€ì¥ ì‘ì€ ìˆ˜ ì°¾ê¸°
  */
 public class Exam_08 {
 	public static void main(String[] args) {
 		Scanner scn = new Scanner(System.in);
-		System.out.print("Á¤¼ö1 :");
+		System.out.print("ì •ìˆ˜1 :");
 		int a = scn.nextInt();
-		System.out.print("Á¤¼ö2 :");
+		System.out.print("ì •ìˆ˜2 :");
 		int b = scn.nextInt();
-		System.out.print("Á¤¼ö3 :");
+		System.out.print("ì •ìˆ˜3 :");
 		int c = scn.nextInt();
 		scn.close();
 		int max = 0;
@@ -33,3 +33,4 @@ public class Exam_08 {
 		
 	}
 }
+

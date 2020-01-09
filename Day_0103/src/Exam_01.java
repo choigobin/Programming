@@ -1,13 +1,13 @@
-/*	for(ÃÊ±â°ª; Á¶°Ç½Ä; Áõ°¨½Ä){
- * 		¹®Àå;
- * 		¹Ýº¹È½¼ö°¡ Á¤ÇØÁ® ÀÖÀ» ¶§ for ¹®ÀÌ È¿°úÀû!
+/*	for(ì´ˆê¸°ê°’; ì¡°ê±´ì‹; ì¦ê°ì‹){
+ * 		ë¬¸ìž¥;
+ * 		ë°˜ë³µíšŸìˆ˜ê°€ ì •í•´ì ¸ ìžˆì„ ë•Œ for ë¬¸ì´ íš¨ê³¼ì !
  * 	}
  * 
  */
 public class Exam_01 {
 	public static void main(String[] args) {
 		
-		// 1 ~ 10 Ãâ·Â
+		// 1 ~ 10 ì¶œë ¥
 		int i = 0;	
 		while(true) {
 			i++;

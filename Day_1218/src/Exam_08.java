@@ -1,18 +1,19 @@
-/*	³í¸®¿¬»êÀÚ(&&,||)
- * 	ºñÆ®³í¸®¿¬»êÀÚ(&,|)
+/*	ë…¼ë¦¬ì—°ì‚°ìž(&&,||)
+ * 	ë¹„íŠ¸ë…¼ë¦¬ì—°ì‚°ìž(&,|)
  */
 public class Exam_08 {
 
 	public static void main(String[] args) {
-		System.out.println("7>8 && 7<9 = " + (7>8 && 7<9));//7>8ÀÌ F±â ¶§¹®¿¡ 7<9´Â ÇÊ¿ä¾ø´Ù°í ³ë¶õÁÙ
-		System.out.println("7>8 & 7<9 = " + (7>8 & 7<9));//ºñÆ®¿¬»êÀÚµµ ³í¸®¿¬»êÀÚÃ³·³ »ç¿ë°¡´É
-		/*	ÇÏÁö¸¸ À§(&&)ÀÇ °æ¿ì 7>8, 7<9Áß¿¡¼­ 7>8ÀÌ falseÀÌ¸é µÚ´Â °è»êÇÏÁö ¾ÊÀ½
-		 * 	¾Æ·¡(&)ÀÇ °æ¿ì 7>8, 7<9 µÑ´Ù ÆÇ´ÜÇÑµÚ false°¡ ³ª¿À¹Ç·Î Èå¸§(¼Óµµ)¿¡ Â÷ÀÌ°¡ ÀÖÀ½
+		System.out.println("7>8 && 7<9 = " + (7>8 && 7<9));//7>8ì´ Fê¸° ë•Œë¬¸ì— 7<9ëŠ” í•„ìš”ì—†ë‹¤ê³  ë…¸ëž€ì¤„
+		System.out.println("7>8 & 7<9 = " + (7>8 & 7<9));//ë¹„íŠ¸ì—°ì‚°ìžë„ ë…¼ë¦¬ì—°ì‚°ìžì²˜ëŸ¼ ì‚¬ìš©ê°€ëŠ¥
+		/*	í•˜ì§€ë§Œ ìœ„(&&)ì˜ ê²½ìš° 7>8, 7<9ì¤‘ì—ì„œ 7>8ì´ falseì´ë©´ ë’¤ëŠ” ê³„ì‚°í•˜ì§€ ì•ŠìŒ
+		 * 	ì•„ëž˜(&)ì˜ ê²½ìš° 7>8, 7<9 ë‘˜ë‹¤ íŒë‹¨í•œë’¤ falseê°€ ë‚˜ì˜¤ë¯€ë¡œ íë¦„(ì†ë„)ì— ì°¨ì´ê°€ ìžˆìŒ
 		 */
 		
-		//System.out.println("7&&8 = " + (7&&8)); //7ÀÌ true ÀÎÁö falseÀÎÁö ¸ô¶ó¼­ ¿¡·¯
-		System.out.println("7&8 = " + (7&8)); // 2Áø¼ö·Î ¹Ù²ã¼­ ¿¬»êµÊ
+		//System.out.println("7&&8 = " + (7&&8)); //7ì´ true ì¸ì§€ falseì¸ì§€ ëª°ë¼ì„œ ì—ëŸ¬
+		System.out.println("7&8 = " + (7&8)); // 2ì§„ìˆ˜ë¡œ ë°”ê¿”ì„œ ì—°ì‚°ë¨
 
 	}
 
 }
+

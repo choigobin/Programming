@@ -7,9 +7,9 @@ public class Exam_05 {
 			System.out.print(score[x]+" ");
 		}
 		System.out.println();
-		for(int x=0; x<score.length-1;x++) {//±âÁØ
+		for(int x=0; x<score.length-1;x++) {//ê¸°ì¤€
 			for(int y=x+1;y<score.length;y++) {
-				if(score[x]>score[y]) {//¿À¸§Â÷¼ø
+				if(score[x]>score[y]) {//ì˜¤ë¦„ì°¨ìˆœ
 					int temp=score[x];
 					score[x]=score[y];
 					score[y]=temp;

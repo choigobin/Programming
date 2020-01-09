@@ -1,11 +1,11 @@
 /*
- 1~100 Â¦¼öÇÕ
+ 1~100 ì§ìˆ˜í•©
  */
 public class Exam_05 {
 	
 	public static void main(String[] args) {
 		
-		//2¾¿ Áõ°¡ ½ÃÄÑÁÖ±â
+		//2ì”© ì¦ê°€ ì‹œì¼œì£¼ê¸°
 		int i = 0, eventot = 0;
 		while(true) {
 			i = i + 2;
@@ -14,9 +14,9 @@ public class Exam_05 {
 				break;
 			}
 		}
-		System.out.println("1~100 ±îÁö Â¦¼ö ÇÕÀº "+eventot);
+		System.out.println("1~100 ê¹Œì§€ ì§ìˆ˜ í•©ì€ "+eventot);
 		
-		//Á¶°Ç¹®Ãß°¡
+		//ì¡°ê±´ë¬¸ì¶”ê°€
 		i = 0;
 		int eventot1 = 0;
 		while(i<100) {
@@ -24,9 +24,9 @@ public class Exam_05 {
 			eventot1 = eventot1 + i ;
 			
 		}
-		System.out.println("1~100 ±îÁö Â¦¼ö ÇÕÀº "+eventot1);
+		System.out.println("1~100 ê¹Œì§€ ì§ìˆ˜ í•©ì€ "+eventot1);
 		
-		//³ª¸ÓÁö ¿¬»ê ÀÌ¿ë
+		//ë‚˜ë¨¸ì§€ ì—°ì‚° ì´ìš©
 		i = 0;
 		int eventot2 = 0;
 		while(i<100) {
@@ -37,9 +37,9 @@ public class Exam_05 {
 			}
 			
 		}
-		System.out.println("1~100 ±îÁö Â¦¼ö ÇÕÀº "+eventot2);
+		System.out.println("1~100 ê¹Œì§€ ì§ìˆ˜ í•©ì€ "+eventot2);
 		
-		//flagÀÌ¿ë
+		//flagì´ìš©
 		i = 0;
 		int eventot3 = 0;
 		boolean flag = true;
@@ -52,7 +52,7 @@ public class Exam_05 {
 				flag = true;
 			}
 		}
-		System.out.println("1~100 ±îÁö Â¦¼ö ÇÕÀº "+eventot3);
+		System.out.println("1~100 ê¹Œì§€ ì§ìˆ˜ í•©ì€ "+eventot3);
 		
 		
 		

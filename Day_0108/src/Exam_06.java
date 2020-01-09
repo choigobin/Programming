@@ -7,8 +7,8 @@ public class Exam_06 {
 			System.out.print(score[x]+" ");
 		}
 		System.out.println();
-		for(int x=1; x<score.length;x++) {//±âÁØ
-			for(int y=0;y<score.length-x;y++) {//bubble±â¹ý
+		for(int x=1; x<score.length;x++) {//ê¸°ì¤€
+			for(int y=0;y<score.length-x;y++) {//bubbleê¸°ë²•
 				if(score[y]>score[y+1]) {
 					int temp=score[y];
 					score[y]=score[y+1];
@@ -23,3 +23,4 @@ public class Exam_06 {
 		
 	}
 }
+

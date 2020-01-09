@@ -1,16 +1,16 @@
-/*	Á¦¾î¹®
- * 	1) if(Á¶°Ç½Ä)
- * 			¹®Àå1; // if ´ÙÀ½¿¡ Ã¹¹ø Â° ;(¼¼¹ÌÅ¬·Ğ)¿¡¼­ if¹®Àº Á¾·á // {} ¾²¸é ¿©·¯¹®Àå »ç¿ë°¡´É
- *	       ¹®Àå2;
+/*	ì œì–´ë¬¸
+ * 	1) if(ì¡°ê±´ì‹)
+ * 			ë¬¸ì¥1; // if ë‹¤ìŒì— ì²«ë²ˆ ì§¸ ;(ì„¸ë¯¸í´ë¡ )ì—ì„œ ifë¬¸ì€ ì¢…ë£Œ // {} ì“°ë©´ ì—¬ëŸ¬ë¬¸ì¥ ì‚¬ìš©ê°€ëŠ¥
+ *	       ë¬¸ì¥2;
  */
 public class Exam_03 {
 	public static void main(String[] args) {
 		int jumsu = 80;
 		if(jumsu>=80) {
-			System.out.println("ÇÕ°İ");
-			System.out.println("Á¡¼ö = " +jumsu);
+			System.out.println("í•©ê²©");
+			System.out.println("ì ìˆ˜ = " +jumsu);
 		}
-		System.out.println("ÇÁ·Î±×·¥ Á¾·á");
+		System.out.println("í”„ë¡œê·¸ë¨ ì¢…ë£Œ");
 	}
 
 }

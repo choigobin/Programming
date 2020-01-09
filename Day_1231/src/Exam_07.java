@@ -1,22 +1,22 @@
 import java.util.Scanner;
 
-/*	Å°º¸µå·Î 10°³ÀÇ Á¤¼ö data ÀÔ·Â
- * 	ÇÕ°è¸¦ Ãâ·Â
+/*	í‚¤ë³´ë“œë¡œ 10ê°œì˜ ì •ìˆ˜ data ì…ë ¥
+ * 	í•©ê³„ë¥¼ ì¶œë ¥
  */
 public class Exam_07 {
 	public static void main(String[] args) {
 		Scanner scn = new Scanner(System.in);
-		int sum = 0; //´©ÀûÇü ÃÊ±âÈ­ ÇÊ¿ä
-		int x; // ´ëÀÔÇü ÃÊ±âÈ­ ¹«°ü
+		int sum = 0; //ëˆ„ì í˜• ì´ˆê¸°í™” í•„ìš”
+		int x; // ëŒ€ì…í˜• ì´ˆê¸°í™” ë¬´ê´€
 		for(int i=0;i<10;i++) {
-			System.out.print("Á¤¼ö ÀÔ·Â = ");
-			//int x = scn.nextInt();// °è¼Ó »õ·Î ¸¸µé¾îÁü => ¸Ş¸ğ¸® °è¼Ó Àâ¾Æ¸ÔÀ½ => 
-			//ÇÏÁö¸¸ ÀÚ¹Ù´Â gc(Garbage Collection)À¸·Î ¾²Áö¾Ê´Â ¸Ş¸ğ¸® ÀÚµ¿ »èÁ¦ 
-			x = scn.nextInt(); //¸Ş¸ğ¸® 1¹ø¸¸ ¾¸
+			System.out.print("ì •ìˆ˜ ì…ë ¥ = ");
+			//int x = scn.nextInt();// ê³„ì† ìƒˆë¡œ ë§Œë“¤ì–´ì§ => ë©”ëª¨ë¦¬ ê³„ì† ì¡ì•„ë¨¹ìŒ => 
+			//í•˜ì§€ë§Œ ìë°”ëŠ” gc(Garbage Collection)ìœ¼ë¡œ ì“°ì§€ì•ŠëŠ” ë©”ëª¨ë¦¬ ìë™ ì‚­ì œ 
+			x = scn.nextInt(); //ë©”ëª¨ë¦¬ 1ë²ˆë§Œ ì”€
 			sum+=x;
 		}
 		scn.close();
-		System.out.println("ÇÕ°è = "+sum);
+		System.out.println("í•©ê³„ = "+sum);
 		
 		
 	}

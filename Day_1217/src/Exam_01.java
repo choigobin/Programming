@@ -1,13 +1,13 @@
 import java.io.IOException;
 
-/* Ç¥ÁØÀÔÃâ·Â(System.out/System.in)
+/* í‘œì¤€ì…ì¶œë ¥(System.out/System.in)
  * print(), println()
- * System.in.read() --> 1¹®ÀÚ(Å°º¸µå 1Å¸ÀÚ) ÀÔ·Â
- * ÀÚµ¿ import --> ctl+shift+o
+ * System.in.read() --> 1ë¬¸ì(í‚¤ë³´ë“œ 1íƒ€ì) ì…ë ¥
+ * ìë™ import --> ctl+shift+o
  */
-public class Exam_01 { //½ÇÇàÅ¬·¡½º
+public class Exam_01 { //ì‹¤í–‰í´ë˜ìŠ¤
 	public static void main(String[] args) throws IOException{
-		System.out.print("ÀÔ·ÂÇÏ¼¼¿ä : ");
+		System.out.print("ì…ë ¥í•˜ì„¸ìš” : ");
 		System.in.read();
 	}
 

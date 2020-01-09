@@ -1,19 +1,19 @@
 import java.util.Scanner;
 
-/*	Å°º¸µå ÀÔ·Â
- * 	1. Á¤¼ö 10°³¸¦ ÀÔ·Â ÇÕÀ» Ãâ·ÂÇÏ½Ã¿À
+/*	í‚¤ë³´ë“œ ì…ë ¥
+ * 	1. ì •ìˆ˜ 10ê°œë¥¼ ì…ë ¥ í•©ì„ ì¶œë ¥í•˜ì‹œì˜¤
  * 	
- * 	2. Á¤¼ö 10°³¸¦ ÀÔ·Â ÇÕÀ» Ãâ·Â(´Ü, ÀÔ·Â °ªÀÌ À½¼ö´Â ¹èÁ¦ÇÑ´Ù)
+ * 	2. ì •ìˆ˜ 10ê°œë¥¼ ì…ë ¥ í•©ì„ ì¶œë ¥(ë‹¨, ì…ë ¥ ê°’ì´ ìŒìˆ˜ëŠ” ë°°ì œí•œë‹¤)
  */
 public class Exam_06 {
 	public static void main(String[] args) {
 		Scanner scn = new Scanner(System.in);
 		//while()
 		/*
-		int cnt=0; // °¹¼ö
-		int total=0; // ÇÕ°è
+		int cnt=0; // ê°¯ìˆ˜
+		int total=0; // í•©ê³„
 		while(cnt<10) {
-			System.out.print("Á¤¼ö : ");
+			System.out.print("ì •ìˆ˜ : ");
 			int var = scn.nextInt();
 			if(var>=0) {
 				cnt++;
@@ -21,13 +21,13 @@ public class Exam_06 {
 			}
 		}
 		scn.close();
-		System.out.println("ÇÕ°è = "+total);
+		System.out.println("í•©ê³„ = "+total);
 		*/
 		//for()
 		/*
 		int sum=0;
 		for(int x=1;x<=10;) {
-			System.out.print("Á¤¼ö : ");
+			System.out.print("ì •ìˆ˜ : ");
 			int var = scn.nextInt();
 			if(var>=0) {
 				sum+=var;
@@ -35,11 +35,11 @@ public class Exam_06 {
 			}
 		}
 		scn.close();
-		System.out.println("ÇÕ°è = "+sum);
+		System.out.println("í•©ê³„ = "+sum);
 		*/
 		int sum=0;
 		for(int x=1;x<=10;x++) {
-			System.out.print("Á¤¼ö : ");
+			System.out.print("ì •ìˆ˜ : ");
 			int var = scn.nextInt();
 			if(var>=0) {
 				sum+=var;
@@ -48,8 +48,9 @@ public class Exam_06 {
 				}
 		}
 		scn.close();
-		System.out.println("ÇÕ°è = "+sum);
+		System.out.println("í•©ê³„ = "+sum);
 		
 		
 	}
 }
+

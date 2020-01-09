@@ -9,8 +9,8 @@ public class Exam_07 {
 		int i,j;
 		
 		 System.out.println("1)");
-		 for(i=1; i<=5;i++) { //ÁÙ¼ö
-			for(j=1;j<6;j++) { //ÁÙ´ç Ä­¼ö
+		 for(i=1; i<=5;i++) { //ì¤„ìˆ˜
+			for(j=1;j<6;j++) { //ì¤„ë‹¹ ì¹¸ìˆ˜
 				System.out.print("*");
 			}
 			System.out.print("\n");

@@ -1,17 +1,17 @@
 import java.util.Scanner;
 
-/*	Å°º¸µå·Î ÀÓÀÇÀÇ Á¤¼ö data 10°³ ÀÔ·Â
- * 	´Ü, data´Â 50ÀÌ»ó 100ÀÌÇÏ¸¸ ÀÔ·Â
+/*	í‚¤ë³´ë“œë¡œ ìž„ì˜ì˜ ì •ìˆ˜ data 10ê°œ ìž…ë ¥
+ * 	ë‹¨, dataëŠ” 50ì´ìƒ 100ì´í•˜ë§Œ ìž…ë ¥
  * 	1,60,50,70,-99,69,60
  */
 public class Exam_05 {
 	public static void main(String[] args) {
-		//ÀÔ·Â
+		//ìž…ë ¥
 		Scanner scn = new Scanner(System.in);
 		int[] score = new int[10];
-		int cnt=0; // data °¹¼ö Ä«¿îÆ®
-		while(true) {// ¹«ÇÑ ·çÇÁ
-			System.out.print("Á¤¼ö ÀÔ·Â : ");
+		int cnt=0; // data ê°¯ìˆ˜ ì¹´ìš´íŠ¸
+		while(true) {// ë¬´í•œ ë£¨í”„
+			System.out.print("ì •ìˆ˜ ìž…ë ¥ : ");
 			int jungsu = scn.nextInt();
 			if(jungsu>=50 && jungsu<=100) {
 				score[cnt] = jungsu;
@@ -21,9 +21,9 @@ public class Exam_05 {
 				}
 			}
 		}
-		//Ãâ·Â
+		//ì¶œë ¥
 		for(int i=0;i<score.length;i++) {
-			System.out.println((i+1)+"¹øÂ° = "+score[i]);
+			System.out.println((i+1)+"ë²ˆì§¸ = "+score[i]);
 		}
 		
 	}

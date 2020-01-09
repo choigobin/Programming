@@ -2,11 +2,11 @@
 public class Exam_04 {
 	public static void main(String[] args) {
 		
-		// »ïÇ× ¿¬»êÀÚ (Á¶°Ç ¿¬»êÀÚ)
-		// (Á¶°Ç½Ä) ? Âü : °ÅÁş;
+		// ì‚¼í•­ ì—°ì‚°ì (ì¡°ê±´ ì—°ì‚°ì)
+		// (ì¡°ê±´ì‹) ? ì°¸ : ê±°ì§“;
 		
 		int a = (10>5) ? 10:5;
-		// Âü:°ÅÁş Á¶°Ç¿¡ ¸Â´Â °ªÀ» º¯¼ö¿¡ ´ëÀÔÇÑ´Ù.
+		// ì°¸:ê±°ì§“ ì¡°ê±´ì— ë§ëŠ” ê°’ì„ ë³€ìˆ˜ì— ëŒ€ì…í•œë‹¤.
 		
 		System.out.println("10>5 = "+a);
 		
@@ -15,8 +15,8 @@ public class Exam_04 {
 		int max = (aa>bb) ? aa:bb;
 		int min = (aa>bb) ? bb:aa;
 		
-		System.out.println("Å« °ª : "+ max);
-		System.out.println("ÀÛÀº °ª : "+ min);
+		System.out.println("í° ê°’ : "+ max);
+		System.out.println("ì‘ì€ ê°’ : "+ min);
 		
 
 	}

@@ -1,19 +1,19 @@
 import java.util.Scanner;
 
-/*	Á¤¼ö 2°³ ÀÔ·Â Å©±â ºñ±³ÇÏ±â
- *	ex) 79, 88 ÀÔ·Â½Ã
+/*	ì •ìˆ˜ 2ê°œ ìž…ë ¥ í¬ê¸° ë¹„êµí•˜ê¸°
+ *	ex) 79, 88 ìž…ë ¥ì‹œ
  *	 => 79<88
  *		
- *		70, 60 ÀÔ·Â½Ã
+ *		70, 60 ìž…ë ¥ì‹œ
  *	 => 70>60
  */
 
 public class Exam_05 {
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);
-		System.out.print("Á¤¼öa¸¦ ÀÔ·ÂÇÏ½Ã¿À : ");
+		System.out.print("ì •ìˆ˜aë¥¼ ìž…ë ¥í•˜ì‹œì˜¤ : ");
 		int a = s.nextInt();
-		System.out.print("Á¤¼öb¸¦ ÀÔ·ÂÇÏ½Ã¿À : ");
+		System.out.print("ì •ìˆ˜bë¥¼ ìž…ë ¥í•˜ì‹œì˜¤ : ");
 		int b = s.nextInt();
 		s.close();
 		if(a>b) {

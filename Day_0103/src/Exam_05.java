@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
-/*	е╟╨╦╣Е ют╥б
- * 	1. а╓╪Ж 10╟Ё╦╕ ют╥б гую╩ цБ╥бго╫ц©ю
+/*	М┌╓КЁ╢К⌠° Л·┘К═╔
+ * 	1. Л═∙Л┬≤ 10Й╟°К╔╪ Л·┘К═╔ М∙╘Л²└ Л╤°К═╔М∙≤Л▀°Л≤╓
  * 	
- * 	2. а╓╪Ж 10╟Ё╦╕ ют╥б гую╩ цБ╥б(╢э, ют╥б ╟╙юл ю╫╪Ж╢б ╧Ха╕гя╢ы)
+ * 	2. Л═∙Л┬≤ 10Й╟°К╔╪ Л·┘К═╔ М∙╘Л²└ Л╤°К═╔(К▀╗, Л·┘К═╔ Й╟▓Л²╢ Л²▄Л┬≤К┼■ К╟╟Л═°М∙°К▀╓)
  */
 public class Exam_05 {
 	public static void main(String[] args) {
@@ -11,18 +11,18 @@ public class Exam_05 {
 		/*
 		int sum=0;
 		for(int x=1;x<=10;x++) {
-			System.out.print("а╓╪Ж : ");
+			System.out.print("Л═∙Л┬≤ : ");
 			int var = scn.nextInt();
 			sum+=var;
 		}
 		scn.close();
-		System.out.println("гу╟Х = "+sum);
+		System.out.println("М∙╘ЙЁ└ = "+sum);
 		*/
 		//while()
-		int cnt=0; // ╟╧╪Ж
-		int total=0; // гу╟Х
+		int cnt=0; // Й╟╞Л┬≤
+		int total=0; // М∙╘ЙЁ└
 		while(cnt<10) {
-			System.out.print("а╓╪Ж : ");
+			System.out.print("Л═∙Л┬≤ : ");
 			int var = scn.nextInt();
 			if(var>=0) {
 				cnt++;
@@ -30,6 +30,6 @@ public class Exam_05 {
 			}
 		}
 		scn.close();
-		System.out.println("гу╟Х = "+total);
+		System.out.println("М∙╘ЙЁ└ = "+total);
 	}
 }

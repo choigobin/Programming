@@ -1,12 +1,12 @@
 import java.util.Scanner;
 
-/*	Å°º¸µåÀÔ·Â(2~100)
- * 	ÀÔ·Â°ªÀÌ -99 ÀÌ¸é Á¾·á
- * 	ÀÔ·ÂÀÚ·á Áß ¼Ò¼ö¸¦ ±¸ÇÏ¿© Ãâ·Â(ÃÖ´ë 5°³) -> ¼Ò¼ö°¡ 5°³ µÇ¸é ÇÁ·Î±×·¥ Á¾·á
- * 	ÀÔ·Â : 5
+/*	í‚¤ë³´ë“œì…ë ¥(2~100)
+ * 	ì…ë ¥ê°’ì´ -99 ì´ë©´ ì¢…ë£Œ
+ * 	ì…ë ¥ìë£Œ ì¤‘ ì†Œìˆ˜ë¥¼ êµ¬í•˜ì—¬ ì¶œë ¥(ìµœëŒ€ 5ê°œ) -> ì†Œìˆ˜ê°€ 5ê°œ ë˜ë©´ í”„ë¡œê·¸ë¨ ì¢…ë£Œ
+ * 	ì…ë ¥ : 5
  * 	...
- * 	ÀÔ·Â : -99
- * 	¼Ò¼ö : x x x x x
+ * 	ì…ë ¥ : -99
+ * 	ì†Œìˆ˜ : x x x x x
  */
 public class Exam_04 {
 	public static void main(String[] args) {
@@ -14,7 +14,7 @@ public class Exam_04 {
 		int num=0;
 		Scanner sc = new Scanner(System.in);
 		do {
-			System.out.print("ÀÔ·Â : ");
+			System.out.print("ì…ë ¥ : ");
 			int x = sc.nextInt();
 			if(x==-99) {
 				break;
@@ -29,13 +29,13 @@ public class Exam_04 {
 						}
 					}
 				}else {
-					System.out.println("ÀÔ·Â ¿À·ù");
+					System.out.println("ì…ë ¥ ì˜¤ë¥˜");
 				}
 			
 			
 		}while(num<5);
 		sc.close();
-		System.out.print("¼Ò¼ö : ");
+		System.out.print("ì†Œìˆ˜ : ");
 		for(int i=0;i<num;i++) {
 				System.out.print(prime[i]+" ");
 		}

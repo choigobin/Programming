@@ -5,17 +5,17 @@ public class Exam_03 {
 		char irum ='k';
 		int kor = 95;
 		int eng=88,mat=77;
-		//ÃÑÁ¡ °è»ê
+		//ì´ì  ê³„ì‚°
 		int tot = kor+eng+mat;
-		//Æò±Õ
-		double ave=tot/3.;//tot/3 -> Á¤¼ö ³ª¸ÓÁö ¹ö¸² //tot/3. -> ½Ç¼ö ³ª¸ÓÁö »ì¸²
+		//í‰ê· 
+		double ave=tot/3.;//tot/3 -> ì •ìˆ˜ ë‚˜ë¨¸ì§€ ë²„ë¦¼ //tot/3. -> ì‹¤ìˆ˜ ë‚˜ë¨¸ì§€ ì‚´ë¦¼
 		
-		System.out.println("¹øÈ£ = " + bun);
-		System.out.println("ÀÌ¸§ = " + irum);
-		System.out.println("ÃÑÁ¡ = " + tot);
-		System.out.println("Æò±Õ = " + ave);
+		System.out.println("ë²ˆí˜¸ = " + bun);
+		System.out.println("ì´ë¦„ = " + irum);
+		System.out.println("ì´ì  = " + tot);
+		System.out.println("í‰ê·  = " + ave);
 		System.out.println();
-		System.out.print("¹øÈ£\tÀÌ¸§\t±¹¾î\t¿µ¾î\t¼öÇĞ\tÃÑÁ¡\tÆò±Õ\n");
+		System.out.print("ë²ˆí˜¸\tì´ë¦„\têµ­ì–´\tì˜ì–´\tìˆ˜í•™\tì´ì \tí‰ê· \n");
 		System.out.print(bun+"\t"+irum+"\t"+kor+"\t"+eng+"\t"+mat+"\t"+tot+"\t"+ave);
 	}
 }

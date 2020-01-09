@@ -1,32 +1,32 @@
 import java.util.Scanner;
 
-/*	Å°º¸µå ÀÔ·Â
- * 	¹øÈ£ : 
- * 	±¹¾î : 
- * 	¿µ¾î : 
- * 	¼öÇÐ : 
+/*	í‚¤ë³´ë“œ ìž…ë ¥
+ * 	ë²ˆí˜¸ : 
+ * 	êµ­ì–´ : 
+ * 	ì˜ì–´ : 
+ * 	ìˆ˜í•™ : 
  * 
- * 	Ãâ·Â
- * 	¹øÈ£	±¹¾î	¿µ¾î	¼öÇÐ	ÃÑÁ¡	Æò±Õ	ÆÇÁ¤
+ * 	ì¶œë ¥
+ * 	ë²ˆí˜¸	êµ­ì–´	ì˜ì–´	ìˆ˜í•™	ì´ì 	í‰ê· 	íŒì •
  * 	
- * 	Ã³¸®Á¶°Ç :
- * 	ÃÑÁ¡ = ±¹¾î+¿µ¾î+¼öÇÐ
- * 	Æò±Õ = ÃÑÁ¡/3.
- * 	ÆÇÁ¤ : Æò±ÕÀÌ 60ÀÌ»óÀÌ°í 3°ú¸ñ ¸ðµÎ 40ÀÌ»ó ÀÏ ¶§ "ÇÕ°Ý"
- * 	1°ú¸ñ ÀÌ¶óµµ 40¹Ì¾ÈÀÌ¸é "°ú¶ô"
- * 	3°ú¸ñ ¸ðµÎ 40ÀÌ»óÀÌ³ª Æò±ÕÀÌ 60¹Ì¸¸ÀÌ¸é "ºÒÇÕ°Ý"
+ * 	ì²˜ë¦¬ì¡°ê±´ :
+ * 	ì´ì  = êµ­ì–´+ì˜ì–´+ìˆ˜í•™
+ * 	í‰ê·  = ì´ì /3.
+ * 	íŒì • : í‰ê· ì´ 60ì´ìƒì´ê³  3ê³¼ëª© ëª¨ë‘ 40ì´ìƒ ì¼ ë•Œ "í•©ê²©"
+ * 	1ê³¼ëª© ì´ë¼ë„ 40ë¯¸ì•ˆì´ë©´ "ê³¼ë½"
+ * 	3ê³¼ëª© ëª¨ë‘ 40ì´ìƒì´ë‚˜ í‰ê· ì´ 60ë¯¸ë§Œì´ë©´ "ë¶ˆí•©ê²©"
  */
 public class Exam_07 {
 
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);
-		System.out.print("¹øÈ£ : ");
+		System.out.print("ë²ˆí˜¸ : ");
 		int num = s.nextInt();
-		System.out.print("±¹¾î : ");
+		System.out.print("êµ­ì–´ : ");
 		int kor = s.nextInt();
-		System.out.print("¿µ¾î : ");
+		System.out.print("ì˜ì–´ : ");
 		int eng = s.nextInt();
-		System.out.print("¼öÇÐ : ");
+		System.out.print("ìˆ˜í•™ : ");
 		int mat = s.nextInt();
 		s.close();
 		int tot = kor+eng+mat;
@@ -36,26 +36,26 @@ public class Exam_07 {
 		/*
 		if(kor>=40 && eng>=40 && mat>=40) {
 			if(avg>=60) {
-				pass = "ÇÕ°Ý";
+				pass = "í•©ê²©";
 			}else {
-				pass = "ºÒÇÕ°Ý";
+				pass = "ë¶ˆí•©ê²©";
 			}
 		}else {
-			pass = "°ú¶ô";
+			pass = "ê³¼ë½";
 		}
 		*/
 		
 		if(kor>=40&&eng>=40&&mat>=40&&avg>=60) {
-			pass = "ÇÕ°Ý";
+			pass = "í•©ê²©";
 		}else {
 			if(avg<60) {
-				pass="ºÒÇÕ°Ý";
+				pass="ë¶ˆí•©ê²©";
 			}else {
-				pass="°ú¶ô";
+				pass="ê³¼ë½";
 			}
 		}
 		
-		System.out.println("\t¹øÈ£\t±¹¾î\t¿µ¾î\t¼öÇÐ\tÃÑÁ¡\tÆò±Õ\tÆÇÁ¤");
+		System.out.println("\të²ˆí˜¸\têµ­ì–´\tì˜ì–´\tìˆ˜í•™\tì´ì \tí‰ê· \tíŒì •");
 		System.out.println("\t"+num+"\t"+kor+"\t"+eng+"\t"+mat+"\t"+tot+"\t"+avg+"\t"+pass);
 	}
 

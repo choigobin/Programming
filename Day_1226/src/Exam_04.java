@@ -2,25 +2,25 @@ import java.util.Scanner;
 
 public class Exam_04 {
 	public static void main(String[] args) {
-		Scanner scn = new Scanner(System.in);//System.in => Å°º¸µåÀÔ·Â;
+		Scanner scn = new Scanner(System.in);//System.in => í‚¤ë³´ë“œì…ë ¥;
 		
-		System.out.print("¹øÈ£ÀÔ·Â :");
+		System.out.print("ë²ˆí˜¸ì…ë ¥ :");
 		int bun = scn.nextInt();
-		System.out.print("ÀÌ¸§ÀÔ·Â :");
+		System.out.print("ì´ë¦„ì…ë ¥ :");
 		String name = scn.next();
-		System.out.print("±¹¾îÁ¡¼ö :");
+		System.out.print("êµ­ì–´ì ìˆ˜ :");
 		double kor=scn.nextDouble();
-		System.out.print("¿µ¾îÁ¡¼ö :");
+		System.out.print("ì˜ì–´ì ìˆ˜ :");
 		double eng=scn.nextDouble();
-		System.out.print("¼öÇĞÁ¡¼ö :");
+		System.out.print("ìˆ˜í•™ì ìˆ˜ :");
 		double mat=scn.nextDouble();
 		
 		//int tot = (int)(kor+eng+mat);
 		double tot = kor+eng+mat;
 		double ave = tot/3;
 		
-		System.out.println("¼ºÀûÇ¥");
-		System.out.println("¹øÈ£\tÀÌ¸§\tÃÑÁ¡\tÆò±Õ");
+		System.out.println("ì„±ì í‘œ");
+		System.out.println("ë²ˆí˜¸\tì´ë¦„\tì´ì \tí‰ê· ");
 		System.out.println(bun+"\t"+name+"\t"+tot+"\t"+ave);
 		
 		

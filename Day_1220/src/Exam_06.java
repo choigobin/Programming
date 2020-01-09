@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 /*
-[´ÙÁß ¹Ýº¹¹®]
+[ë‹¤ì¤‘ ë°˜ë³µë¬¸]
 for(){
 	for(){
 	
@@ -15,14 +15,14 @@ public class Exam_06 {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("ÁÙ ¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À : ");
+		System.out.print("ì¤„ ìˆ˜ë¥¼ ìž…ë ¥í•˜ì‹œì˜¤ : ");
 		int jul_num = sc.nextInt();
-		System.out.print("Ä­ ¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À : ");
+		System.out.print("ì¹¸ ìˆ˜ë¥¼ ìž…ë ¥í•˜ì‹œì˜¤ : ");
 		int kan_num = sc.nextInt();
 		sc.close();
-		for(int i = 1; i <= jul_num; i++) {// ÁÙ¼ö
+		for(int i = 1; i <= jul_num; i++) {// ì¤„ìˆ˜
 			System.out.print(i + " : ");
-			for(int j = 1; j <= kan_num ; j++) { // ÁÙ´ç Ä­¼ö
+			for(int j = 1; j <= kan_num ; j++) { // ì¤„ë‹¹ ì¹¸ìˆ˜
 			System.out.print("*");	
 			}
 			System.out.println();
@@ -33,3 +33,4 @@ public class Exam_06 {
 	}
 
 }
+

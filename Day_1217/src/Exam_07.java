@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
-/*	¹®ÀÚ¿­ Ã³¸®("") ¹× ÀÚ·áÇü ÀÔ·Â
- * 	¹®ÀÚ¿­ Ã³¸® : String Å¬·¡½º(´ë¹®ÀÚ·Î ½ÃÀÛ =>Å¬·¡½º //±âº»ÀÚ·áÇü ¾Æ´Ô!)
- * 	ÀÚ·áÇü ÀÔ·Â : Scanner Å¬·¡½º(jdk 1.7 ÀÌ»ó)
+/*	ë¬¸ìì—´ ì²˜ë¦¬("") ë° ìë£Œí˜• ì…ë ¥
+ * 	ë¬¸ìì—´ ì²˜ë¦¬ : String í´ë˜ìŠ¤(ëŒ€ë¬¸ìë¡œ ì‹œì‘ =>í´ë˜ìŠ¤ //ê¸°ë³¸ìë£Œí˜• ì•„ë‹˜!)
+ * 	ìë£Œí˜• ì…ë ¥ : Scanner í´ë˜ìŠ¤(jdk 1.7 ì´ìƒ)
  */
 public class Exam_07 {
 	public static void main(String[] args) {
@@ -10,8 +10,9 @@ public class Exam_07 {
 		//String str = "AAAAA";
 		Scanner scn = new Scanner(System.in);
 		String name = scn.next();
-		System.out.println("ÀÌ¸§ : " + name);
+		System.out.println("ì´ë¦„ : " + name);
 		scn.close();
 	}
 
 }
+

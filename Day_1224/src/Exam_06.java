@@ -3,7 +3,7 @@ public class Exam_06 {
 	public static void main(String[] args) {
 		char x = '*';
 		char s = ' ';
-		//1¹ø
+		//1ë²ˆ
 		System.out.print(x);
 		System.out.print(x);
 		System.out.print(x);
@@ -30,14 +30,14 @@ public class Exam_06 {
 		System.out.print(s);
 		System.out.print(x+"\n");
 		System.out.println();
-		//2¹ø
+		//2ë²ˆ
 		System.out.println("    "+x);
 		System.out.println("   "+x+x);
 		System.out.println("  "+x+x+x);
 		System.out.println(" "+x+x+x+x);
 		System.out.println(""+x+x+x+x+x);
 		System.out.println();
-		//3¹ø
+		//3ë²ˆ
 		System.out.print(s);
 		System.out.print(s);
 		System.out.print(s);
@@ -61,7 +61,7 @@ public class Exam_06 {
 		System.out.print(x);
 		System.out.print(x+"\n");
 		System.out.println();
-		//4¹ø
+		//4ë²ˆ
 		char a = 'A';
 		System.out.print(a);
 		System.out.print(a);
@@ -83,3 +83,4 @@ public class Exam_06 {
 		
 	}
 }
+

@@ -1,7 +1,7 @@
-/*	ÀÔ·ÂµÈ Á¤¼öÀÇ °ªÀÌ 70 ~ 90 ÇÕ°Ý
- * 	if(Á¶°Ç½Ä){
- * 		if(Á¶°Ç½Ä){
- * 			¹®Àå1;
+/*	ìž…ë ¥ëœ ì •ìˆ˜ì˜ ê°’ì´ 70 ~ 90 í•©ê²©
+ * 	if(ì¡°ê±´ì‹){
+ * 		if(ì¡°ê±´ì‹){
+ * 			ë¬¸ìž¥1;
  * 		}
  * 	}
  */
@@ -11,7 +11,7 @@ public class Exam_06 {
 		/*
 		if(a>=70) {
 			if(a<=90) {
-				System.out.println("ÇÕ°Ý");
+				System.out.println("í•©ê²©");
 			}
 		}
 		*/
@@ -19,19 +19,19 @@ public class Exam_06 {
 		/*
 		if(a>=70) {
 			if(a<=90) {
-				System.out.println("ÇÕ°Ý");
+				System.out.println("í•©ê²©");
 			}else {
-				System.out.println("ºÒÇÕ°Ý");
+				System.out.println("ë¶ˆí•©ê²©");
 			}
 		}else {
-			System.out.println("ºÒÇÕ°Ý");
+			System.out.println("ë¶ˆí•©ê²©");
 		}
 		*/
 		
 		if(70<=a && a<=90) {
-			System.out.println("ÇÕ°Ý");
+			System.out.println("í•©ê²©");
 		}else {
-			System.out.println("ºÒÇÕ°Ý");
+			System.out.println("ë¶ˆí•©ê²©");
 		}
 		
 	}

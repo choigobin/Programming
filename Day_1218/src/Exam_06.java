@@ -1,6 +1,6 @@
-/*	³í¸®¿¬»êÀÚ
+/*	ë…¼ë¦¬ì—°ì‚°ì
  * 	!(not) -> &&(and) -> ||(or)
- * 	//!(not) => (´ÜÇ×¿¬»êÀÚ) ¿¬»ê¼øÀ§°¡ ¾öÃ» ºü¸§ +- º¸´Ù ºü¸§
+ * 	//!(not) => (ë‹¨í•­ì—°ì‚°ì) ì—°ì‚°ìˆœìœ„ê°€ ì—„ì²­ ë¹ ë¦„ +- ë³´ë‹¤ ë¹ ë¦„
  */
 public class Exam_06 {
 
@@ -11,7 +11,7 @@ public class Exam_06 {
 		System.out.println("flag = " + !flag);
 		int a = 100;
 		System.out.println("a = " + a);
-		//System.out.println("a = " + !a); -> Âü°ÅÁş¿¡¸¸ !(not)À» °É ¼ö ÀÖ´Ù.
+		//System.out.println("a = " + !a); -> ì°¸ê±°ì§“ì—ë§Œ !(not)ì„ ê±¸ ìˆ˜ ìˆë‹¤.
 		int sw = 0;
 		System.out.println("sw = " + (sw==0));
 		System.out.println("sw = " + !(sw==0));

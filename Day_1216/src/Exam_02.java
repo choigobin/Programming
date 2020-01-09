@@ -4,7 +4,7 @@ public class Exam_02 {
 	public static void main(String[] args) {
 		System.out.print("1234");
 		System.out.print(100);
-		System.out.println();//ÁÙ¹Ù²Ş
+		System.out.println();//ì¤„ë°”ê¿ˆ
 		System.out.print("10+20=");
 		System.out.print(10+20);
 		System.out.println();
@@ -12,7 +12,7 @@ public class Exam_02 {
 		System.out.println();
 		System.out.print("10+20=" + ("10"+"20"));
 		System.out.println();
-		System.out.println("10+20=" + 10+20);//¹®ÀÚ¿­ + ¼ıÀÚ => ¹®ÀÚ¿­ (¼ø¼­°¡ ¿ŞÂÊºÎÅÍ) =>"10+20"+10 =>¹®ÀÚ + 20 =>¹®ÀÚ 
+		System.out.println("10+20=" + 10+20);//ë¬¸ìì—´ + ìˆ«ì => ë¬¸ìì—´ (ìˆœì„œê°€ ì™¼ìª½ë¶€í„°) =>"10+20"+10 =>ë¬¸ì + 20 =>ë¬¸ì 
 		System.out.println(10+20);//30
 		System.out.println(""+10+20);//1020
 	}

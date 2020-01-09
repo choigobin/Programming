@@ -2,17 +2,17 @@ import java.util.Scanner;
 
 public class Exam_03 {
 	public static void main(String[] args) {
-		Scanner scn = new Scanner(System.in); //new ¿¬»êÀÚ => °´Ã¼ »ı¼º
-		//Scanner => ÂüÁ¶Çü, À§Ä¡ÀúÀå
+		Scanner scn = new Scanner(System.in); //new ì—°ì‚°ì => ê°ì²´ ìƒì„±
+		//Scanner => ì°¸ì¡°í˜•, ìœ„ì¹˜ì €ì¥
 		int a = 10;
-		System.out.print("Á¤¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À : ");
-		a=scn.nextInt();//°ø¹é=>´ÙÀ½ ÀÔ·ÂÀ¸·Î ³Ñ¾î°¨
-		System.out.print("½Ç¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À : ");
+		System.out.print("ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì‹œì˜¤ : ");
+		a=scn.nextInt();//ê³µë°±=>ë‹¤ìŒ ì…ë ¥ìœ¼ë¡œ ë„˜ì–´ê°
+		System.out.print("ì‹¤ìˆ˜ë¥¼ ì…ë ¥í•˜ì‹œì˜¤ : ");
 		double b = scn.nextDouble();
-		System.out.print("¹®ÀÚ¿­À» ÀÔ·ÂÇÏ½Ã¿À : ");
-		String c = scn.next();//°ø¹é ÀÎ½Ä¾ÈµÊ
-		System.out.print("¹®ÀÚ¿­À» ÀÔ·ÂÇÏ½Ã¿À : ");
-		String d = scn.nextLine();// ÇÑ ÁÙ ÅëÂ°·Î °ø¹éµµ ÀÎ½Ä
+		System.out.print("ë¬¸ìì—´ì„ ì…ë ¥í•˜ì‹œì˜¤ : ");
+		String c = scn.next();//ê³µë°± ì¸ì‹ì•ˆë¨
+		System.out.print("ë¬¸ìì—´ì„ ì…ë ¥í•˜ì‹œì˜¤ : ");
+		String d = scn.nextLine();// í•œ ì¤„ í†µì§¸ë¡œ ê³µë°±ë„ ì¸ì‹
 		
 		System.out.println("a = "+a);
 		System.out.println("b = "+b);

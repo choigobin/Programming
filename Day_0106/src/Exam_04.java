@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
-/*	Å°º¸µå·Î ±Ş¿©¸¦ ÀÔ·Â(1 ~ 500,000)
- * 	ÀÔ·Â ÀÚ·á°¡ -999 ÀÌ¸é Á¾·á ¶Ç´Â ÀÎ¿ø¼ö´Â ÃÖ´ë 10¸í
+/*	í‚¤ë³´ë“œë¡œ ê¸‰ì—¬ë¥¼ ì…ë ¥(1 ~ 500,000)
+ * 	ì…ë ¥ ìë£Œê°€ -999 ì´ë©´ ì¢…ë£Œ ë˜ëŠ” ì¸ì›ìˆ˜ëŠ” ìµœëŒ€ 10ëª…
  * 	
  * 	50,000 : xx
  * 	10,000 : xx
@@ -15,7 +15,7 @@ public class Exam_04 {
 		Scanner sc = new Scanner(System.in);
 		/*int oman=0,man=0,ochun=0,chun=0,obak=0,bak=0,osib=0,sib=0,o=0,il=0,cnt=0,x;
 		while(cnt<10) {
-			System.out.print("ÀÔ·Â : ");
+			System.out.print("ì…ë ¥ : ");
 			x = sc.nextInt();
 			if(x==-999) break;
 			else if(x>=1 && x<=500000) {
@@ -40,7 +40,7 @@ public class Exam_04 {
 				x=x%5;
 				il+=x;
 				
-			}else System.out.println("ÀÔ·Â ¿À·ù");
+			}else System.out.println("ì…ë ¥ ì˜¤ë¥˜");
 		}
 		sc.close();
 		System.out.println("50,000 : "+oman);
@@ -58,7 +58,7 @@ public class Exam_04 {
 		int sum[] = new int[10];
 		int cnt=0,x;
 		while(cnt<10) {
-			System.out.print("ÀÔ·Â : ");
+			System.out.print("ì…ë ¥ : ");
 			x = sc.nextInt();
 			if(x==-999) break;
 			else if(x>=1 && x<=500000) {
@@ -79,7 +79,7 @@ public class Exam_04 {
 				for(int i=0;i<10;i++) {
 					total[i]+=sum[i];
 				}
-			}else System.out.println("ÀÔ·Â ¿À·ù");
+			}else System.out.println("ì…ë ¥ ì˜¤ë¥˜");
 		}
 		sc.close();
 		System.out.println("50,000 : "+total[0]);

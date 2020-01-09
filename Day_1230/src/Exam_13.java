@@ -1,16 +1,16 @@
 import java.util.Scanner;
 
-/*	¼¼ °³ÀÇ Á¤¼ö Áß Áß°£ °ª¸¸ Ã£±â
- * 	ÃÖ´ë,ÃÖ¼Ò ±¸ÇÏ¸é ¾ÈµÊ
+/*	ì„¸ ê°œì˜ ì •ìˆ˜ ì¤‘ ì¤‘ê°„ ê°’ë§Œ ì°¾ê¸°
+ * 	ìµœëŒ€,ìµœì†Œ êµ¬í•˜ë©´ ì•ˆë¨
  */
 public class Exam_13 {
 	public static void main(String[] args) {
 		Scanner scn = new Scanner(System.in);
-		System.out.print("Á¤¼ö1 :");
+		System.out.print("ì •ìˆ˜1 :");
 		int a = scn.nextInt();
-		System.out.print("Á¤¼ö2 :");
+		System.out.print("ì •ìˆ˜2 :");
 		int b = scn.nextInt();
-		System.out.print("Á¤¼ö3 :");
+		System.out.print("ì •ìˆ˜3 :");
 		int c = scn.nextInt();
 		scn.close();
 		
@@ -37,10 +37,10 @@ public class Exam_13 {
 			}
 		}
 		
-		//Ãâ·Â
-		System.out.print("Á¤¼ö 1 : " + a + "\t");
-		System.out.print("Á¤¼ö 2 : " + b + "\t");
-		System.out.print("Á¤¼ö 3 : " + c + "\t");
+		//ì¶œë ¥
+		System.out.print("ì •ìˆ˜ 1 : " + a + "\t");
+		System.out.print("ì •ìˆ˜ 2 : " + b + "\t");
+		System.out.print("ì •ìˆ˜ 3 : " + c + "\t");
 		System.out.println("med = " + med);
 		
 		

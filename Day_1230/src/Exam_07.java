@@ -1,5 +1,5 @@
-/*	Á¤¼ö 1°³ ÀÔ·Â
- * 	'A' ~ 'F' ÆÇ´ÜÇÏ±â
+/*	ì •ìˆ˜ 1ê°œ ì…ë ¥
+ * 	'A' ~ 'F' íŒë‹¨í•˜ê¸°
  */
 public class Exam_07 {
 	public static void main(String[] args) {

@@ -1,4 +1,4 @@
-/*	10°³ÀÇ ¹è¿­¿¡ ÀúÀåµÈ µ¥ÀÌÅÍ Áß ÃÖ´ë, ÃÖ¼Ò °ª Ã£±â
+/*	10ê°œì˜ ë°°ì—´ì— ì €ì¥ëœ ë°ì´í„° ì¤‘ ìµœëŒ€, ìµœì†Œ ê°’ ì°¾ê¸°
  */
 public class Exam_07 {
 	public static void main(String[] args) {
@@ -13,8 +13,8 @@ public class Exam_07 {
 				min=score[x];
 			}
 		}
-		//Ãâ·Â
-		System.out.print("ÀÔ·ÂÀÚ·á : ");
+		//ì¶œë ¥
+		System.out.print("ì…ë ¥ìë£Œ : ");
 		for(int i=0;i<score.length;i++) {
 			System.out.print(score[i]+" ");
 		}

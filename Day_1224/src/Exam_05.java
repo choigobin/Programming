@@ -18,3 +18,4 @@ public class Exam_05 {
 		System.out.print(a);
 	}
 }
+

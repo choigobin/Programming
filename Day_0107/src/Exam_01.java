@@ -1,11 +1,11 @@
 
 public class Exam_01 {
 	public static void main(String[] args) {
-		int[] score; //¹è¿­ ¼±¾ð -> ÀÚµ¿À¸·Î ÃÊ±âÈ­
-		score = new int[10]; //ÇÒ´ç(¸Þ¸ð¸®°ø°£ È®º¸)
+		int[] score; //ë°°ì—´ ì„ ì–¸ -> ìžë™ìœ¼ë¡œ ì´ˆê¸°í™”
+		score = new int[10]; //í• ë‹¹(ë©”ëª¨ë¦¬ê³µê°„ í™•ë³´)
 		score[0]=10;
 		score[1]=20;
-		//score[10]=100; //-> ÄÄÆÄÀÏ¿¡·¯ ¾È³²! ·±Å¸ÀÓ ¿À·ù -> Ã£±â¾î·Á¿ò 
+		//score[10]=100; //-> ì»´íŒŒì¼ì—ëŸ¬ ì•ˆë‚¨! ëŸ°íƒ€ìž„ ì˜¤ë¥˜ -> ì°¾ê¸°ì–´ë ¤ì›€ 
 		System.out.println(score);
 		System.out.println(score[0]);
 		System.out.println(score.length);

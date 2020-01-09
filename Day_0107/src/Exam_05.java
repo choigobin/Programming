@@ -1,12 +1,12 @@
 import java.util.Scanner;
 
-/*	Å°º¸µå ÀÔ·Â(100,000 ~ 1,000,000)
- * 	ÀÔ·ÂÀÚ·á°¡ -99 Á¾·á
- * 	ÀÔ·Â : 234567
- * 	ÀÔ·Â : 345434
+/*	í‚¤ë³´ë“œ ì…ë ¥(100,000 ~ 1,000,000)
+ * 	ì…ë ¥ìë£Œê°€ -99 ì¢…ë£Œ
+ * 	ì…ë ¥ : 234567
+ * 	ì…ë ¥ : 345434
  * 		. . .
- * 	ÀÔ·Â : -99
- * 	ÃÑ±Ş¿© : xxxxxxx
+ * 	ì…ë ¥ : -99
+ * 	ì´ê¸‰ì—¬ : xxxxxxx
  * 	50,000	10,000	5,000	1,000	500	100	50	10	5	1
  * 	xx		xx		xx		xxx		xx	xx	xx	xx	xx	xx
  */
@@ -17,7 +17,7 @@ public class Exam_05 {
 		int total=0;
 		
 		while(true) {
-			System.out.print("ÀÔ·Â : ");
+			System.out.print("ì…ë ¥ : ");
 			int m = sc.nextInt();
 			if(m==-99) {
 				break;
@@ -37,11 +37,11 @@ public class Exam_05 {
 					}
 				}
 			}else {
-				System.out.println("ÀÔ·Â ¿À·ù");
+				System.out.println("ì…ë ¥ ì˜¤ë¥˜");
 			}
 		}
 		sc.close();
-		System.out.println("ÃÑ ±Ş¿© : "+total);
+		System.out.println("ì´ ê¸‰ì—¬ : "+total);
 		System.out.println("50,000\t10,000\t5,000\t1,000\t500\t100\t50\t10\t5\t1");
 		for(int i=0;i<10;i++) {
 			System.out.print(money[i]+"\t");

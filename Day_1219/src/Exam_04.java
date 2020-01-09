@@ -1,29 +1,29 @@
 import java.util.Scanner;
 
-/*	if(Á¶°Ç½Ä){ //Âü
- * 		¹®Àå1;
- * 	}else{ //°ÅÁþ
- * 		¹®Àå2;
+/*	if(ì¡°ê±´ì‹){ //ì°¸
+ * 		ë¬¸ìž¥1;
+ * 	}else{ //ê±°ì§“
+ * 		ë¬¸ìž¥2;
  * 	}
- * 	¹®Àå3;
+ * 	ë¬¸ìž¥3;
  * 
- * 	¹®Á¦ : Å°º¸µå·Î Á¡¼ö¸¦ ÀÔ·Â ¹Þ¾Æ¼­ 85 ÀÌ»óÀÌ¸é "ÇÕ°Ý" ¾Æ´Ï¸é "ºÒÇÕ°Ý" Ãâ·Â
+ * 	ë¬¸ì œ : í‚¤ë³´ë“œë¡œ ì ìˆ˜ë¥¼ ìž…ë ¥ ë°›ì•„ì„œ 85 ì´ìƒì´ë©´ "í•©ê²©" ì•„ë‹ˆë©´ "ë¶ˆí•©ê²©" ì¶œë ¥
  */
 public class Exam_04 {
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);
-		System.out.print("Á¡¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+		System.out.print("ì ìˆ˜ë¥¼ ìž…ë ¥í•˜ì„¸ìš” : ");
 		int score = s.nextInt();
 		s.close();
 		String pass="";
 		if(score>=85) {
-			//System.out.println("ÇÕ°Ý");
-			pass = "ÇÕ°Ý";
+			//System.out.println("í•©ê²©");
+			pass = "í•©ê²©";
 		}else {
-			//System.out.println("ºÒÇÕ°Ý");
-			pass = "ºÒÇÕ°Ý";
+			//System.out.println("ë¶ˆí•©ê²©");
+			pass = "ë¶ˆí•©ê²©";
 		}
-		System.out.println("°á°ú : "+pass);
+		System.out.println("ê²°ê³¼ : "+pass);
 	}
 
 }

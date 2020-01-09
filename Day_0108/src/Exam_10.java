@@ -8,21 +8,21 @@ public class Exam_10 {
 	public static void main(String[] args) {
 		int[][] a= new int[5][5];
 		int cnt=1;
-		//ÀÔ·Â
+		//ìž…ë ¥
 		for(int x=0; x<a.length; x++) {
 			for(int y=0; y<a[0].length; y++) {
 				a[y][x] = cnt;
 				cnt++;
 			}
 		}
-		//Ãâ·Â
+		//ì¶œë ¥
 		for(int x=0; x<a.length; x++) {
 			for(int y=0; y<a[0].length; y++) {
 				System.out.print(a[x][y]+"\t");
 			}
 			System.out.println();
 		}
-		//ÃÊ±âÈ­
+		//ì´ˆê¸°í™”
 		System.out.println("-----------------------------------");//2
 		cnt =1;
 		for(int x=0; x<a.length; x++) {
@@ -30,14 +30,14 @@ public class Exam_10 {
 				a[y][x] = 0;
 			}
 		}
-		//ÀÔ·Â
+		//ìž…ë ¥
 		for(int x=0; x<a.length; x++) {
 			for(int y=0; y<x+1; y++) {
 				a[x][y] = cnt;
 				cnt++;
 			}
 		}
-		//Ãâ·Â
+		//ì¶œë ¥
 		for(int x=0; x<a.length; x++) {
 			for(int y=0; y<a[0].length; y++) {
 				if(a[x][y]==0) {
@@ -48,7 +48,7 @@ public class Exam_10 {
 			}
 			System.out.println();
 		}
-		//ÃÊ±âÈ­
+		//ì´ˆê¸°í™”
 		System.out.println("-----------------------------------");//3
 		cnt = 1;
 		for (int x = 0; x < a.length; x++) {
@@ -56,7 +56,7 @@ public class Exam_10 {
 				a[y][x] = 0;
 			}
 		}
-		// ÀÔ·Â
+		// ìž…ë ¥
 		int z=4;
 		for (int x = 0; x < a.length; x++) {
 			z--;
@@ -67,7 +67,7 @@ public class Exam_10 {
 				}
 			}
 		}
-		// Ãâ·Â
+		// ì¶œë ¥
 		for (int x = 0; x < a.length; x++) {
 			for (int y = 0; y < a[0].length; y++) {
 				if (a[x][y] == 0) {
@@ -78,7 +78,7 @@ public class Exam_10 {
 			}
 			System.out.println();
 		}
-		//ÃÊ±âÈ­
+		//ì´ˆê¸°í™”
 		System.out.println("-----------------------------------");//4
 		cnt = 1;
 		for (int x = 0; x < a.length; x++) {
@@ -86,14 +86,14 @@ public class Exam_10 {
 				a[y][x] = 0;
 			}
 		}
-		// ÀÔ·Â
+		// ìž…ë ¥
 		for (int x = 0; x < a.length; x++) {
 			for (int y = x; y >=0; y--) {
 				a[x][y] = cnt;
 				cnt++;
 			}
 		}
-		// Ãâ·Â
+		// ì¶œë ¥
 		for (int x = 0; x < a.length; x++) {
 			for (int y = 0; y < a[0].length; y++) {
 				if (a[x][y] == 0) {

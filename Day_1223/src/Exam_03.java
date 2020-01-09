@@ -1,25 +1,25 @@
 import java.util.Scanner;
 
-/*	Å°º¸µå·Î 10°³ÀÇ Á¡¼ö¸¦ ÀÔ·Â¹Ş¾Æ¼­
- * 	¹è¿­¿¡ ÀúÀåÈÄ ÃÑÁ¡, Æò±ÕÀ» ±¸ÇÏ¿© Ãâ·Â
+/*	í‚¤ë³´ë“œë¡œ 10ê°œì˜ ì ìˆ˜ë¥¼ ì…ë ¥ë°›ì•„ì„œ
+ * 	ë°°ì—´ì— ì €ì¥í›„ ì´ì , í‰ê· ì„ êµ¬í•˜ì—¬ ì¶œë ¥
  */
 public class Exam_03 {
 	public static void main(String[] args) {
-		// ÀÔ·Â ÀÛ¾÷
+		// ì…ë ¥ ì‘ì—…
 		Scanner scn = new Scanner(System.in);
 		int var[] = new int[10];
 		
 		for(int i=0; i<10;i++) {
-			System.out.print("Á¡¼ö("+(i+1)+") :");
+			System.out.print("ì ìˆ˜("+(i+1)+") :");
 			var[i] = scn.nextInt();
 		}
-		// Ãâ·Â ÀÛ¾÷
+		// ì¶œë ¥ ì‘ì—…
 		int tot = 0;
 		for(int i=0; i<10;i++) {
-			System.out.print("Á¡¼ö("+(i+1)+")\t");
+			System.out.print("ì ìˆ˜("+(i+1)+")\t");
 			tot= tot+var[i];
 		}
-		System.out.print("ÃÑÁ¡\tÆò±Õ\n");
+		System.out.print("ì´ì \tí‰ê· \n");
 		for(int i=0; i<10;i++) {
 			System.out.print(var[i]+"\t");
 		}

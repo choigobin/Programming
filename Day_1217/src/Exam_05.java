@@ -2,10 +2,11 @@
 public class Exam_05 {
 
 	public static void main(String[] args) throws Exception{
-		System.out.print("1¹®ÀÚÀÔ·Â : ");
+		System.out.print("1ë¬¸ìì…ë ¥ : ");
 		int var = System.in.read();
 		
-		System.out.println("Ãâ·Â : "+ (char)var); // (char) = Çüº¯È¯
+		System.out.println("ì¶œë ¥ : "+ (char)var); // (char) = í˜•ë³€í™˜
 	}
 
 }
+
