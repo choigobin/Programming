@@ -68,7 +68,7 @@ public class Exam_12 {
 		double avg = (int)((score[10][5]/(double)cnt)*10+0.5)/10.;
 		System.out.println("번호\t이름\t평균");
 		for(int x=0; x<cnt; x++) {
-			if(score[x][5] > avg) {
+			if(score[x][5] >= avg) {
 				System.out.print(score[x][0]+"\t");
 				System.out.print(name[x]+"\t");
 				System.out.print(score[x][6]+"\n");
