@@ -13,5 +13,6 @@ public class Exam_01 {
 		System.out.println("var+0 = "+var+0);//첫번째 요소의 주소
 		System.out.println("var+1 = "+var+1);//두번째 요소의 주소 -> 배열의 시작주소에서 4byte건너 뛴 주소
 		System.out.println("var[0] = "+var[0]);//[0]번 요소의 값
+		System.out.println("a = "+a);
 	}
 }

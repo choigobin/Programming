@@ -31,7 +31,7 @@ public class Exam_01 {
 		
 		System.out.println("abc\n456");
 		System.out.print("abc\r456");
-		
+		System.out.println(a+ch+fi+di);
 		
 		
 		

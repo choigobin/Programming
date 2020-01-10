@@ -14,7 +14,7 @@ public class Exam_04 {
 		double eng=scn.nextDouble();
 		System.out.print("수학점수 :");
 		double mat=scn.nextDouble();
-		
+		scn.close();
 		//int tot = (int)(kor+eng+mat);
 		double tot = kor+eng+mat;
 		double ave = tot/3;

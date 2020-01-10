@@ -21,6 +21,7 @@ public class Exam_05 {
 				}
 			}
 		}
+		scn.close();
 		//출력
 		for(int i=0;i<score.length;i++) {
 			System.out.println((i+1)+"번째 = "+score[i]);

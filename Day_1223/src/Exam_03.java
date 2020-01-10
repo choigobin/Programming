@@ -13,6 +13,7 @@ public class Exam_03 {
 			System.out.print("점수("+(i+1)+") :");
 			var[i] = scn.nextInt();
 		}
+		scn.close();
 		// 출력 작업
 		int tot = 0;
 		for(int i=0; i<10;i++) {

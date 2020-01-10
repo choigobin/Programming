@@ -22,17 +22,17 @@ public class Exam_10 {
 		int data[][] = {{4,50,40,50,60,50,0},{8,80,56,10,35,47,0},{7,98,65,45,65,12,0},
 				{18,65,78,56,78,23,0},{9,56,12,78,98,56,0}};
 		//dataPrint() 호출
-		dataPrint(data,1);
+		dataPrint(data);
 		//dataTot() 호출
 		dataTot(data);
 		//totSort() 호출
 		totSort(data);
 		//dataPrint2() 호출
-		dataPrint(data,2);
+		dataPrint(data);
 	}
 	
-	static void dataPrint(int[][] data,int v) {
-		if(v==1) {
+	static void dataPrint(int[][] data) {
+		if(data[0][6]==0) {
 			System.out.print("번호\t점수1\t점수2\t점수3\t점수4\t점수5\n");
 			for(int x=0; x<data.length;x++) {
 				for(int y=0;y<data[x].length-1;y++) {

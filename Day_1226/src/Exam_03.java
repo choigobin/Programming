@@ -13,7 +13,7 @@ public class Exam_03 {
 		String c = scn.next();//공백 인식안됨
 		System.out.print("문자열을 입력하시오 : ");
 		String d = scn.nextLine();// 한 줄 통째로 공백도 인식
-		
+		scn.close();
 		System.out.println("a = "+a);
 		System.out.println("b = "+b);
 		System.out.println("c = "+c);
