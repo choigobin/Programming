@@ -1,7 +1,7 @@
 public class sam_25 {
 	
 	public static void main(String[] args) {
-		int a[] = {1,5,8,6,36,3,12,7,6,89};
+		int a[] = {17,5,8,6,36,3,12,7,6,89};
 		
 		for(int i=1; i<a.length-1; i++) {
 			int sw = 0;
