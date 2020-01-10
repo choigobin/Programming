@@ -11,7 +11,6 @@ public class sam_26 {
 					a[j+1] =a[j];
 					a[j]=key;
 				}else {
-					a[j+1] = key;
 					break;
 				}
 			}
