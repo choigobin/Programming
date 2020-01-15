@@ -3,6 +3,13 @@
 	<section name="NewWizardAction">
 		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.jdt.ui.wizards.JavaProjectWizard"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.emf.codegen.ecore.ui.wizardCategory"/>
+			<item value="org.eclipse.jdt.ui.java"/>
+			<item value="org.eclipse.jst.j2ee.internal"/>
+			<item value="org.eclipse.wst.jsdt.ui.java"/>
+			<item value="org.eclipse.jpt.jaxb"/>
+			<item value="org.eclipse.jpt.jpa"/>
+			<item value="org.eclipse.pde.PDE"/>
 		</list>
 	</section>
 	<section name="ExternalProjectImportWizard">
@@ -10,9 +17,9 @@
 		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\JSL40\JSL40"/>
 			<item value="C:\Users\ckmmy\Documents\GitHub\JSL40"/>
 			<item value="D:\eclipse\JSL40"/>
-			<item value="C:\Users\JSL40\JSL40"/>
 			<item value="C:\Users\JSLHRD\eclipse-workspace\JSL40\Day_1220"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
