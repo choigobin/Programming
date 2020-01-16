@@ -22,7 +22,7 @@ public class SawonData {
 		}
 		for(int i=0; i<cnt; i++) {
 			for(int j=1; j<12; j++) {
-				sa[10].data[j]+=sa[i].data[j];
+				sa[10].data[j]+=sa[i].data[j];  //합계
 			}
 		}
 	}
@@ -43,7 +43,7 @@ public class SawonData {
 			System.out.print(sa[i].data[0]+"\t");
 			System.out.print(sa[i].name+"\t");
 			for(int j=1; j<12; j++) {
-				System.out.print(sa[i].data[j]+"\t");
+				System.out.print(sa[i].data[j]+"\t"); //50,000
 			}
 			System.out.println();
 		}
