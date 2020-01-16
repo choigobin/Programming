@@ -9,12 +9,14 @@ class DataA{
 public class Exam_08 {
 	public static void main(String[] args) {
 		DataA a1 = new DataA();
-		a1.id = 333;
+		//a1.id = 333;
+		DataA.id = 555;
 		DataA a2 = new DataA();
 		
 		System.out.println("a1==a2 : "+ (a1==a2));
-		System.out.println(a1.id);
-		System.out.println(a2.id);
+		//System.out.println("a1.id==a2.id : "+ (a1.id==a2.id));
+		//System.out.println(a1.id);
+		//System.out.println(a2.id);
 		System.out.println(DataA.id);
 		
 	}
