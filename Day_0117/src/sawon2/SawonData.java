@@ -18,12 +18,6 @@ public class SawonData {
 				System.out.print("\t");
 				partPay += sa[i].getPay();
 				totPay += sa[i].getPay();
-			}else if(i==cnt-1){
-				System.out.println("합계\t\t\t"+partPay);
-				partPay=0;
-				partPay+=sa[i].getPay();
-				totPay += sa[i].getPay();
-				System.out.print(part+"\t");
 			}else {
 				System.out.println("합계\t\t\t"+partPay);
 				partPay=0;
