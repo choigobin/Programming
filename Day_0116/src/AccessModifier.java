@@ -4,6 +4,9 @@
  * 	default // 기본값, 같은 패키지에서만 접근 가능
  * 	protected // 같은패키지 또는 상속 받은 클래스가 접근 가능
  * 	public // 패키지에 관계없이 접근 가능
+ *	
+ *	클래스 파일에 하나의 public class만 존재할 수 있는 이유 => 가독성 때문에
+ *	파일의 대표 클래스가 무엇인지 알아볼 수 있도록 하기위함
  */
 public class AccessModifier {
 	private int a = 10;
