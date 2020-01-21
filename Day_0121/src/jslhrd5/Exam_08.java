@@ -40,8 +40,10 @@ public class Exam_08 {
 			System.out.println("s1!=s2 : " + false );
 		}
 		String s3 = "홍길동";
-		String s4 = "홍길동";
+		String s4 = new String("홍길동");
 		System.out.println(s1.name==s2.name);
+		System.out.println(s1);
+		System.out.println(s2);
 		System.out.println(s3==s4);
 	}
 
