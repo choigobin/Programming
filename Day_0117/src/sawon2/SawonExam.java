@@ -23,6 +23,7 @@ public class SawonExam {
 		}
 		sc.close();
 		SawonData.print(sa, cnt);
+		
 	}
 
 }
