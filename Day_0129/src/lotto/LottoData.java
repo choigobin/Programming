@@ -17,6 +17,7 @@ public class LottoData {
 		}
 		int check = 0;
 		while (check < 6) {
+			check = 0;
 			answer[6] = (int) (Math.random() * 45 + 1);
 			for (int i = 0; i < 6; i++) {
 				if (answer[6] == answer[i]) {
