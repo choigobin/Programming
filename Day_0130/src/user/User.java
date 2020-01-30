@@ -8,11 +8,7 @@ public class User {
 	@Override
 	public boolean equals(Object obj) {
 		User x = (User)obj;
-		if(userid.equals(x.userid)) {
-			return true;
-		}else {
-			return false;
-		}
+		return userid.equals(x.userid);
 	}
 	
 	@Override
