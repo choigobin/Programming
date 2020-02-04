@@ -7,10 +7,8 @@ INDEX VERSION 1.131+C:\Users\JSL40\JSL40\.metadata\.plugins\org.eclipse.jdt.core
 3811929080.index
 1401678300.index
 1860485910.index
-2492909726.index
 2050767426.index
 1972315422.index
-3852737441.index
 3655193151.index
 2933580457.index
 3234259838.index
@@ -21,10 +19,9 @@ INDEX VERSION 1.131+C:\Users\JSL40\JSL40\.metadata\.plugins\org.eclipse.jdt.core
 2453080089.index
 1360095617.index
 337656725.index
-531533494.index
 65045222.index
 3506637178.index
-2418709952.index
+1294017152.index
 2486328174.index
 3227056335.index
 1048350443.index
@@ -42,12 +39,8 @@ INDEX VERSION 1.131+C:\Users\JSL40\JSL40\.metadata\.plugins\org.eclipse.jdt.core
 1943575548.index
 1241298325.index
 144380394.index
-1233919542.index
 2708078069.index
 1663503107.index
 1188155634.index
-202638269.index
-897659091.index
 3357030459.index
-1845031563.index
 561749262.index
