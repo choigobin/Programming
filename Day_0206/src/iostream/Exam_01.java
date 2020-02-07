@@ -6,7 +6,7 @@ package iostream;
 import java.io.*;
 public class Exam_01 {
 	public static void main(String[] args) {
-		File f = new File("data\\work");
+		File f = new File("..\\data\\work");
 		if(f.exists()) {
 			f.delete();
 			System.out.println("삭제");

@@ -2,7 +2,7 @@ package iostream;
 import java.io.*;
 public class Exam_03 {
 	public static void main(String[] args) {
-		File f = new File("data\\work\\test.txt");
+		File f = new File("..\\data\\work\\test.txt");
 		if(f.exists()) {
 			f.deleteOnExit();//종료시 삭제
 			System.out.println("파일명 : "+f.getName());

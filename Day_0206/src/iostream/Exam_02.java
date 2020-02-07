@@ -2,7 +2,7 @@ package iostream;
 import java.io.*;
 public class Exam_02 {
 	public static void main(String[] args) {
-		File f = new File("data\\work");
+		File f = new File("..\\data\\work");
 		if(!f.exists()) {
 			f.mkdir();
 			System.out.println("생성");
