@@ -11,7 +11,7 @@ public class Exam_04 {
 		double d = dos.readDouble();
 		byte[] b = new byte[10];
 		dos.read(b);
-		
+		dos.close();
 		System.out.println("a = "+a);
 		System.out.println("d = "+d);
 		System.out.println("b = "+new String(b));

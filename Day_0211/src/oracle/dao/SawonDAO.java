@@ -5,6 +5,7 @@ import java.util.*;
 
 import oracle.db.DBManager;
 import oracle.dto.DeptVO;
+import oracle.dto.EmpVO;
 
 public class SawonDAO {
 	DBManager manager = DBManager.getInstance();
@@ -41,4 +42,73 @@ public class SawonDAO {
 		}
 		return list;
 	}
+	// 부서,직급으로 검색 AND
+	public EmpVO searchEmp(String dno, String job) {
+		EmpVO vo = null;
+		String sql = "select * from emp where dno = "+dno+" and job = '"+job+"'";
+		try {
+			Connection conn = manager.getConnection();
+			PreparedStatement pstmt = conn.prepareStatement(sql);
+			ResultSet rs = pstmt.executeQuery();
+			if(rs.next()) {
+				vo = new EmpVO();
+				vo.setEno(rs.getInt("ENO"));
+				vo.setEname(rs.getString("ENAME"));
+				vo.setJob(rs.getString("JOB"));
+				vo.setManager(rs.getInt("MANAGER"));
+				vo.setHiredate(rs.getString("HIREDATE"));
+				vo.setSalary(rs.getInt("SALARY"));
+				vo.setCommission(rs.getInt("COMMISSION"));
+				vo.setDno(rs.getInt("DNO"));
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+				try {
+					if(rs!=null) rs.close();
+					if(pstmt!=null) pstmt.close();
+					if(conn!=null) conn.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+		}
+		return vo;
+	}
+	// 부서 또는 직급으로 검색 OR
+	public List<EmpVO> searchEmpO(String dno, String job){
+		List<EmpVO> list = new ArrayList<EmpVO>();
+		String sql = "select * from emp where dno = "+dno+" or job = '"+job+"'";
+		try {
+			Connection conn = manager.getConnection();
+			PreparedStatement pstmt = conn.prepareStatement(sql);
+			ResultSet rs = pstmt.executeQuery();
+			while(rs.next()) {
+				EmpVO vo = new EmpVO();
+				vo = new EmpVO();
+				vo.setEno(rs.getInt("ENO"));
+				vo.setEname(rs.getString("ENAME"));
+				vo.setJob(rs.getString("JOB"));
+				vo.setManager(rs.getInt("MANAGER"));
+				vo.setHiredate(rs.getString("HIREDATE"));
+				vo.setSalary(rs.getInt("SALARY"));
+				vo.setCommission(rs.getInt("COMMISSION"));
+				vo.setDno(rs.getInt("DNO"));
+				list.add(vo);
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+				try {
+					if(rs!=null) rs.close();
+					if(pstmt!=null) pstmt.close();
+					if(conn!=null) conn.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+		}
+		return list;
+	}
+	
 }
