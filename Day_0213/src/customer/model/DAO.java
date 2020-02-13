@@ -22,14 +22,14 @@ public class DAO {
 	}
 	// select count(*) from custom
 	public int count() {
-		int answer = 0;
+		int answer = 1;
 		String sql = "select count(*) from custom";
 		try {
 			conn = db.getConnection();
 			pstmt = conn.prepareStatement(sql);
 			rs = pstmt.executeQuery();
 			if(rs.next()) {
-				answer = rs.getInt(1);
+				answer += rs.getInt(1);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

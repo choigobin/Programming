@@ -2,7 +2,6 @@ package customer;
 
 import java.io.IOException;
 import java.util.Scanner;
-
 import customer.view.UI;
 
 public class Main {
