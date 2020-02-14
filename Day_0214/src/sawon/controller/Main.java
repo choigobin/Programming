@@ -23,6 +23,7 @@ public class Main {
 			System.out.println("  해당항목을 선택하세요 ?");
 			System.out.println("==================================");
 			int menu = scn.nextInt();
+			scn.nextLine();
 			switch(menu) {
 			case 1:
 				if(ui.select()!='\r') menu=-1;

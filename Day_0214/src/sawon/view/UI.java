@@ -61,22 +61,25 @@ public class UI {
 		DTO dto = new DTO();
 		System.out.print("사원이름 : ");
 		dto.setEname(scn.next());
-		System.out.print("업 무 명  : ");
-		dto.setJob(scn.next());
-		System.out.print("상사번호 : ");
-		dto.setManager(scn.nextInt());
 		scn.nextLine();
-		System.out.print("입사일자(" + date + ") : ");
+		System.out.print("업 무 명  : ");
+		dto.setJob(scn.nextLine());
+		System.out.print("상사번호 : ");
 		String str = scn.nextLine();
-		if (str.equals("")) {
+		if(str.length()!=0) dto.setManager(Integer.parseInt(str));
+		System.out.print("입사일자(" + date + ") : ");
+		str = scn.nextLine();
+		if (str.length() == 0) {
 			dto.setHiredate(date);
 		} else {
 			dto.setHiredate(str);
 		}
 		System.out.print("급      여 : ");
-		dto.setSalary(scn.nextInt());
+		str = scn.nextLine();
+		if(str.length()!=0) dto.setSalary(Integer.parseInt(str));
 		System.out.print("커 미 션  : ");
-		dto.setCommission(scn.nextInt());
+		str = scn.nextLine();
+		if(str.length()!=0) dto.setCommission(Integer.parseInt(str));
 		System.out.print("부서정보(");
 		List<Integer> check = new ArrayList<Integer>();
 		for (int x = 0; x < list.size(); x++) {
@@ -90,8 +93,11 @@ public class UI {
 		}
 		System.out.println(")");
 		System.out.print("부서번호 : ");
-		int dno = scn.nextInt();
-		scn.nextLine();
+		str = scn.nextLine();
+		int dno = -100;
+		if(str.length()!=0) {
+			dno = Integer.parseInt(str);
+		}
 		if (check.contains(dno)) {
 			dto.setDno(dno);
 		} else {
