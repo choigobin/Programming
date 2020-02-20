@@ -1,0 +1,38 @@
+package net.webmvc.controller;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import net.webmvc.action.Action;
+
+@WebServlet("/JoinServlet")
+public class JoinServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    public JoinServlet() {
+        super();
+    }
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String cmd = request.getParameter("cmd");
+		System.out.println("JoinServlet  : " + cmd);
+		
+		JoinFactory jf=JoinFactory.getInstance();
+		Action action=jf.getAction(cmd);
+		
+		if(action != null){
+			action.execute(request, response);
+		}
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setCharacterEncoding("utf-8");
+		doGet(request, response);
+	}
+
+}
