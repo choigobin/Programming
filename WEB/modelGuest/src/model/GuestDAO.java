@@ -35,15 +35,14 @@ public class GuestDAO {
 		List<GuestVO> list = new ArrayList<GuestVO>();
 		
 		try {
-			String sql = "select * from guest order by idx desc";
+			String sql = "select x.* from (select ROW_NUMBER() OVER (ORDER BY idx desc) as r, g.* from guest g) x "
+					+ "where r BETWEEN ? and ?";
 			conn = getConnection();
 			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, pg*10-9);
+			pstmt.setInt(2, pg*10);
 			rs=pstmt.executeQuery();
-			for(int x=10; x<pg*10; x++) {
-				rs.next();
-			}
-			for(int x=0; x<10; x++) {
-				rs.next();
+			while(rs.next()) {
 				GuestVO vo = new GuestVO();
 				vo.setIdx(rs.getInt("idx"));
 				vo.setName(rs.getString("name"));
