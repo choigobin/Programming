@@ -56,9 +56,8 @@ td   { font-family: 돋움, Verdana; font-size: 9pt; text-decoration: none; colo
     <td></td>
    </tr>
   <tr>
-    <td>로그인 페이지 이동
-    </td>
-    <td>회원가입페이지 이동</td>
+    <td><a href="/ServletMember/MemberLoginServlet">로그인 페이지 이동</a></td>
+   <td><a href="/ServletMember/MemberInsertServlet">회원가입페이지 이동</a></td>
    </tr>
 </table>    
 </body>

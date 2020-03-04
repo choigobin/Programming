@@ -1,15 +1,7 @@
 package model;
 
 public class ZipcodeVO {
-	private String no,zipcode,sido,gugun,dong,bunji;
-
-	public String getNo() {
-		return no;
-	}
-
-	public void setNo(String no) {
-		this.no = no;
-	}
+	private String zipcode,sido,gugun,dong,bunji;
 
 	public String getZipcode() {
 		return zipcode;

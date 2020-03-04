@@ -12,6 +12,11 @@ td   { font-family: 돋움, Verdana; font-size: 9pt; text-decoration: none; colo
 } 
 --->
 </STYLE>
+<script type="text/javascript">
+	function post_check() {
+		window.open("post_check.jsp","우편번호 검색","width=350 height=250 scrollbars=yes");
+	}
+</script>
 </head>
 
 <body bgcolor="#FFFFFF" LEFTMARGIN=0  TOPMARGIN=0 >
@@ -27,7 +32,7 @@ td   { font-family: 돋움, Verdana; font-size: 9pt; text-decoration: none; colo
 
   </td>
   <td width="80%" valign="top">&nbsp;<img src="./img/title1.gif" ><br>    
-	<form name=form_name method=post>
+	<form name=member method=post>
 	<table border=0 cellpadding=0 cellspacing=0 border=0 width=730 valign=top>
 		<tr><td align=center><br>                            
 			<table cellpadding=0 cellspacing=0 border=0 width=650 align=center>       
@@ -88,10 +93,10 @@ td   { font-family: 돋움, Verdana; font-size: 9pt; text-decoration: none; colo
 									<table cellspacing=0 cellpadding=0>
 										<tr>
 											<td>
-                  				<input type=text name=zip size=6 maxlength=6 >
+                  				<input type=text name=zip size=6 maxlength=6 readonly>
                   		</td>
                   		<td>
-      									<img src="./img/u_bt07.gif" hspace=2 border=0 name=img2 align=absmiddle>
+      									<a href="#" onclick="post_check()"><img src="./img/u_bt07.gif" hspace=2 border=0 name=img2 align=absmiddle></a>
  											</td>
 										</tr>
 									</table>
@@ -100,7 +105,7 @@ td   { font-family: 돋움, Verdana; font-size: 9pt; text-decoration: none; colo
 							<tr>
 								<TD BGCOLOR="#EFF4F8">&nbsp;주소<font color=red>&nbsp;</font></td>
 								<TD BGCOLOR=WHITE>
-									<input type=text name=addr1 size=50 maxlength=100 value="">
+									<input type=text name=addr1 size=50 maxlength=100 value="" readonly>
 								</td>
 							</tr>
 							<tr>

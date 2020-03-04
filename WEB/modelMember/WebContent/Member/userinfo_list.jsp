@@ -59,11 +59,26 @@ td   { font-family: 돋움, Verdana; font-size: 9pt; text-decoration: none; colo
     </td>
     <td></td>
    </tr>
+<%
+	String user = (String)session.getAttribute("user");
+%>
   <tr>
-    <td>
+  <%
+  	if(user == null){
+  		%>
+  		<td>
     	<a href="userlogin_form.jsp">로그인 페이지 이동</a>
     </td>
     <td>회원가입페이지 이동</td>
+  		<%
+  	}else{
+  		%>
+  		<td>
+    		<a href="logout.jsp">로그아웃</a>
+    	</td>
+  		<%
+  	}
+  %>
    </tr>
 </table>    
 </body>

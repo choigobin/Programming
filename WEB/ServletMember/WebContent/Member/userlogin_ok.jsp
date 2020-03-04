@@ -23,7 +23,7 @@ td   { font-family: 돋움, Verdana; font-size: 9pt; text-decoration: none; colo
     <TABLE CELLPADDING=4 CELLSPACING=1 BORDER=0 WIDTH=330>
   	  <TR BGCOLOR="#FFFFFF">
         <TD ALIGN="center">
-          xxxx님 환영합니다.<br><br>
+          	${ userid } 님 환영합니다.<br><br>
         </TD>
       </TR>
     </TABLE>
@@ -43,8 +43,8 @@ td   { font-family: 돋움, Verdana; font-size: 9pt; text-decoration: none; colo
   <tr>
     <td align="center">
       <a href="#">[자기정보수정]</a>
-      <a href="#">[로그아웃]
-
+      <a href="Member/logout.jsp">[로그아웃]</a>
+      <a href="/ServletMember/ListServlet">[메인페이지 이동]</a>
 	</td>
   </tr>
 </table>

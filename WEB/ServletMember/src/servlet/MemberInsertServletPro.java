@@ -44,10 +44,8 @@ public class MemberInsertServletPro extends HttpServlet {
 		if(flag) {
 			out.println("<script>");
 			out.println("alert('등록 성공');");
+			out.println("location.href='/ServletMember/ListServlet';");
 			out.println("</script>");
-			RequestDispatcher dispatcher =
-					request.getRequestDispatcher("/ListServlet");
-			dispatcher.forward(request, response);
 		}else {
 			out.println("<script>");
 			out.println("alert('등록 실패');");

@@ -19,8 +19,10 @@
 		history.go(-1);
 		</script>
 		<%
+	}else{//세션 형성
+		session.setAttribute("user", userid);
+		session.setMaxInactiveInterval(1800);
 	}
-	//세션 형성
 %>
 <HTML>
 
@@ -65,8 +67,8 @@ td   { font-family: 돋움, Verdana; font-size: 9pt; text-decoration: none; colo
   <tr>
     <td align="center">
       <a href="#">[자기정보수정]</a>
-      <a href="#">[로그아웃]
-
+      <a href="#">[로그아웃]</a>
+      <a href="userinfo_list.jsp">[메인페이지 이동]</a>
 	</td>
   </tr>
 </table>

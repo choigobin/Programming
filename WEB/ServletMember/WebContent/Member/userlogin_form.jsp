@@ -11,6 +11,8 @@ td   { font-family: 돋움, Verdana; font-size: 9pt; text-decoration: none; colo
       BACKGROUND-POSITION: left top; BACKGROUND-REPEAT: no-repeat;}
 //-->
 </STYLE>
+<script type="text/javascript">
+</script>
 </HEAD>
 <body bgcolor="#FFFFFF" text="#000000" leftmargin=0 
   topmargin=0 onLoad='document.fname.user_id.focus();'>
@@ -20,16 +22,16 @@ td   { font-family: 돋움, Verdana; font-size: 9pt; text-decoration: none; colo
   <TD width=100>&nbsp;</td>
   <TD>
     <table width="583" border="0" cellspacing="0" cellpadding="0" height="265">
-	  <form name=fname method=post action=""  onSubmit="return check_submit()">
+	  <form name=fname method=post action="/ServletMember/MemberLoginServlet" >
 	    <tr>
 		  <td height="298"> 
 		    <table width="100%" border="0" cellspacing="0" cellpadding="0">
 			  <tr> 
-			    <td width="9"><img src="./img/h_b02.gif" width="9" height="21"></td>
+			    <td width="9"><img src="/ServletMember/Member/img/h_b02.gif" width="9" height="21"></td>
 				<td bgcolor="7aaad5"> 
 				 <div align="center"><font color="#FFFFFF"><b>Member Login</b></font></div>
 				 </td>
-				 <td width="9"><img src="./img/f_b03.gif" width="9" height="21"></td>
+				 <td width="9"><img src="/ServletMember/Member/img/f_b03.gif" width="9" height="21"></td>
 			  </tr>
 			 </table>
 			 <table border="0" cellpadding="0" cellspacing="0" width="550">
@@ -40,7 +42,7 @@ td   { font-family: 돋움, Verdana; font-size: 9pt; text-decoration: none; colo
 					   <td align=CENTER bgcolor="#eff4f8" height="92"> 
 					     <table width="330" border="0" cellspacing="0" cellpadding="1">
 							<tr valign=bottom> 
-							  <td width="21"><img src="./img/h_bl02.gif" width="18" height="16"></td>
+							  <td width="21"><img src="/ServletMember/Member/img/h_bl02.gif" width="18" height="16"></td>
 							  <td width="55" nowrap>아 이 디</td>
 							  <td width="175">: 
 								<input type=text name="userid" size=16 maxlength=16 STYLE="WIDTH:155">
@@ -48,12 +50,14 @@ td   { font-family: 돋움, Verdana; font-size: 9pt; text-decoration: none; colo
 							  <td width="79"></td>
 							</tr>
 							<tr valign=bottom> 
-							  <td><img src="./img/h_bl02.gif" width="18" height="16"></td>
+							  <td><img src="/ServletMember/Member/img/h_bl02.gif" width="18" height="16"></td>
 							  <td nowrap>비밀번호</td>
 							  <td>: 
 								<input type=password name="passwd" size=14 maxlength=12 STYLE="WIDTH:155">
 							  </td>
-							  <td><input type=image src="./img/login.gif" border=0 align=absmiddle></td>
+							  <td>
+							  <input type=image src="/ServletMember/Member/img/login.gif" border=0 align=absmiddle name=submit>
+							  </td>
 							</tr>
 						  </table>
 						</td>
@@ -90,11 +94,11 @@ td   { font-family: 돋움, Verdana; font-size: 9pt; text-decoration: none; colo
 			         </table>
 			  <table width="100%" border="0" cellspacing="0" cellpadding="0">
 				<tr> 
-				  <td width="9"><img src="./img/h_b04.gif" width="12" height="11"></td>
+				  <td width="9"><img src="/ServletMember/Member/img/h_b04.gif" width="12" height="11"></td>
 				  <td bgcolor="7aaad5" width="612"> 
 					<div align="center"></div>
 				  </td>
-				  <td width="10"><img src="./img/h_b05.gif" width="12" height="11"></td>
+				  <td width="10"><img src="/ServletMember/Member/img/h_b05.gif" width="12" height="11"></td>
 				</tr>
 			  </table>
 			</td>

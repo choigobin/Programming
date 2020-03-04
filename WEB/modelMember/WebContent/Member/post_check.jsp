@@ -1,5 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
-
+<%@ page import="model.*,java.util.*" %>
 <HTML>
 <HEAD>
 <TITLE>우편번호 찾기</TITLE>
@@ -14,8 +14,23 @@ a    { font-family: 돋움, Verdana; color: #000000; text-decoration: none}
      a:hover { font-family:돋움; text-decoration:underline }
 -->
 </STYLE>
-</HEAD>
+<script type="text/javascript">
+function sendAddr(zipcode,sido,gugun,dong,bunji){
+	addr = sido+" "+gugun+" "+dong+" "+bunji;
+	opener.member.addr1.value=addr;
+	opener.member.zip.value=zipcode;
+	self.close();
+}
 
+</script>
+</HEAD>
+<%
+	request.setCharacterEncoding("utf-8");
+	String addr="";
+	if(request.getParameter("addr")!=null){
+		addr = request.getParameter("addr");
+	}
+%>
 <BODY BGCOLOR="#FFFFFF" onLoad="document.inquiry.addr.focus();">
 <TABLE CELLPADDING=0 CELLSPACING=0 BORDER=0 WIDTH=330>
   <TR BGCOLOR=#7AAAD5>
@@ -32,7 +47,7 @@ a    { font-family: 돋움, Verdana; color: #000000; text-decoration: none}
       <TR>
         <TD ALIGN=CENTER><br>
           동이름 입력 : <INPUT NAME="addr" TYPE="text" style="width:120">
-          <INPUT TYPE="image" src="./img/u_bt08.gif" hspace=10>
+          <a href="#" onclick="submit()"><INPUT TYPE="image" src="./img/u_bt08.gif" hspace=10></a>
         </TD>
       </TR>
       <TR>
@@ -40,19 +55,23 @@ a    { font-family: 돋움, Verdana; color: #000000; text-decoration: none}
         ※검색 후, 아래 우편번호를 클릭하면 자동으로 입력됩니다.
         </TD>
       </TR>
-      <TR>
-        <TD>123-123 대전광역시 중구 도마동 123
+<%
+	if(addr!=""){
+		MemberDAO dao = MemberDAO.getInstance();
+		List<ZipcodeVO> list = dao.zipcodeSelect(addr);
+		for(ZipcodeVO vo : list){
+			%>
+		 <TR>
+        <TD>
+   			<a href="javascript:sendAddr('<%=vo.getZipcode()%>','<%=vo.getSido()%>','<%=vo.getGugun()%>','<%=vo.getDong()%>','<%=vo.getBunji()%>')">
+   			<%=vo.getZipcode()%>,<%=vo.getSido()%>,<%=vo.getGugun()%>,<%=vo.getDong()%>,<%=vo.getBunji()%>
+   			</a>	
         </TD>
-      </TR>
-      <TR>
-        <TD>123-123 대전광역시 중구 도마동 123
-        </TD>
-      </TR>
-      <TR>
-        <TD>123-123 대전광역시 중구 도마동 123
-        </TD>
-      </TR>
-
+        </TR>
+			<%		
+		}
+	}
+%>
     </FORM>
     </TABLE>
   </TD></TR></TABLE>

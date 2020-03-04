@@ -44,6 +44,9 @@ td   { font-family: 돋움, Verdana; font-size: 9pt; text-decoration: none; colo
 		}
 		member.submit();
 	}
+	function post_check() {
+		window.open("Member/post_check.jsp","우편번호 검색","width=350 height=250 scrollbars=yes");
+	}
 </script>
 </head>
 
@@ -124,7 +127,7 @@ td   { font-family: 돋움, Verdana; font-size: 9pt; text-decoration: none; colo
                   				<input type=text name=zip size=6 maxlength=6 >
                   		</td>
                   		<td>
-      									<img src="/ServletMember/Member/img/u_bt07.gif" hspace=2 border=0 name=img2 align=absmiddle>
+      									<a href="#" onclick="post_check()"><img src="/ServletMember/Member/img/u_bt07.gif" hspace=2 border=0 name=img2 align=absmiddle></a>
  											</td>
 										</tr>
 									</table>

@@ -22,6 +22,24 @@
  <%
  	int idx = Integer.parseInt(request.getParameter("idx"));
  	GuestDAO dao = GuestDAO.getInstance();
+ 	// 쿠키검사
+ 	boolean bool = true;
+ 	Cookie info = null;
+ 	Cookie[] cookies = request.getCookies();
+ 	for(int x=0; x<cookies.length; x++){
+ 		info = cookies[x];
+ 		if(info.getName().equals("guest"+idx)){
+ 			bool = false;
+ 			break;
+ 		}
+ 	}
+ 	String newValue = ""+System.currentTimeMillis();
+ 	if(bool){ // 쿠키가 존재하지 않으면
+ 		dao.guestReadCnt(idx);
+ 		info = new Cookie("guest"+idx,newValue);
+ 		info.setMaxAge(3600); //쿠기 최대유지 시간 (초 단위)
+ 		response.addCookie(info);
+ 	}
  	GuestVO vo = dao.select(idx);
  %>
  <%!

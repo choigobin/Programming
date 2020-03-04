@@ -133,7 +133,30 @@ public class MemberDAO {
 		return row;
 	}
 	// 우편번호 검색 메소드
-	
+	public List<ZipcodeVO> zipcodeSelect(String addr){
+		List<ZipcodeVO>  list = new ArrayList<ZipcodeVO>();
+		String sql="select * from zipcode where dong like '%"+addr+"%'";
+		try {
+			conn = getConnection();
+			pstmt = conn.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+			while(rs.next()) {
+				ZipcodeVO vo = new ZipcodeVO();
+				vo.setZipcode(rs.getString("zipcode"));
+				vo.setSido(rs.getString("sido"));
+				vo.setGugun(rs.getString("gugun"));
+				vo.setDong(rs.getString("dong"));
+				vo.setBunji(rs.getString("bunji"));
+				list.add(vo);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			cleanUp();
+		}
+		
+		return list;
+	}
 	// id 또는 기본키에 해당하는 회원 정보 검색 메소드
 	
 	// 회원정보 수정 메소드

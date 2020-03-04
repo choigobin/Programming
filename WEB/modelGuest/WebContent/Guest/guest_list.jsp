@@ -35,7 +35,7 @@
         <img src="./img/bullet-01.gif"> <b>방 명 록</b></font></td></tr>
       <tr>
         <td colspan="5" align="right" valign="middle" height="20">
-		<font size="2" face="고딕">전체 : <%=cnt %></b>건 - <%=(int)((cnt+9)/10) %> Pages</font></td></tr>
+		<font size="2" face="고딕">전체 : <%=cnt %></b>건 - <%=pg %> Pages</font></td></tr>
  	   <tr bgcolor="e3e9ff">
  	      <td width="10%"align="center" height="20"><font face="돋움" size="2">번호</font></td>
  	      <td width="50%" align="center" height="20"><font face="돋움" size="2">제목</font></td>

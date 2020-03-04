@@ -123,4 +123,18 @@ public class GuestDAO {
 		}
 	}
 	
+	public void guestReadCnt(int idx) {
+		try {
+			String sql = "update guest set readcnt=readcnt+1 where idx = ? ";
+			conn = getConnection();
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, idx);
+			pstmt.execute();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			clean();
+		}
+	}
+	
 }

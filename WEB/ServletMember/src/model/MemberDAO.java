@@ -41,7 +41,8 @@ public class MemberDAO {
 			pstmt.setString(2, vo.getUserid());
 			pstmt.setString(3, vo.getPasswd());
 			pstmt.setString(4, vo.getTel());
-			flag = pstmt.execute();
+			pstmt.execute();
+			flag = true;
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -102,9 +103,62 @@ public class MemberDAO {
 		return list;
 	}
 	// 우편번호 검색 메소드
+		public List<ZipcodeVO> zipcodeSelect(String addr){
+			List<ZipcodeVO>  list = new ArrayList<ZipcodeVO>();
+			String sql="select * from zipcode where dong like '%"+addr+"%'";
+			try {
+				conn = getConnection();
+				pstmt = conn.prepareStatement(sql);
+				rs = pstmt.executeQuery();
+				while(rs.next()) {
+					ZipcodeVO vo = new ZipcodeVO();
+					vo.setZipcode(rs.getString("zipcode"));
+					vo.setSido(rs.getString("sido"));
+					vo.setGugun(rs.getString("gugun"));
+					vo.setDong(rs.getString("dong"));
+					vo.setBunji(rs.getString("bunji"));
+					list.add(vo);
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+				cleanUp();
+			}
+			
+			return list;
+		}
 	
 	// 로그인 검사(id, passs 체크) 메소드
-	
+		public int memberLogin(String userid,String passwd) {
+			int row=-1;
+			String pwCheck="";
+			String sql = "select passwd from tbl_member where userid = ?";
+			try {
+				conn = getConnection();
+				pstmt = conn.prepareStatement(sql);
+				pstmt.setString(1, userid);
+				rs = pstmt.executeQuery();
+				if(rs.next()) {
+					pwCheck=rs.getString("passwd");
+					if(pwCheck.equals(passwd)) {
+						// 로그인 성공
+						sql="update tbl_member set last_time = sysdate where userid = ?";
+						pstmt = conn.prepareStatement(sql);
+						pstmt.setString(1, userid);
+						pstmt.execute();
+						row=1;
+					}else {
+						// 비번오류
+						row=0;
+					}
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+				cleanUp();
+			}
+			return row;
+		}
 	// id 또는 기본키에 해당하는 회원 정보 검색 메소드
 	
 	// 회원정보 수정 메소드
