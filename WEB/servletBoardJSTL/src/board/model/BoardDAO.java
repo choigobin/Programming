@@ -225,4 +225,27 @@ public class BoardDAO {
 		}
 		return list;
 	}
+	
+	public int boardCount(String type,String key) {
+		
+		String query="select count(*) as counter from tbl_board where "+type+" like '%"+key+"%'";
+		int cnt=0;
+		try {
+			conn = manager.getConnection();
+			pstmt = conn.prepareStatement(query);
+			rs = pstmt.executeQuery();
+			if(rs.next()) {
+				cnt = rs.getInt(1);//cnt = rs.getInt("counter");
+			}
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				if(rs != null) rs.close();
+				if(pstmt != null) pstmt.close();
+				if(conn != null) conn.close();				
+			}catch(Exception e) {}
+		}
+		return cnt;
+	}
 }

@@ -51,19 +51,18 @@ public class BoardListServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
 		BoardDAO dao = new BoardDAO();
-		int cnt = dao.boardCount();
 		String type = request.getParameter("type");
 		String key = "";
 		if(request.getParameter("key")!=null) {
 			key = request.getParameter("key");
 		}
 		List<BoardVO> list = dao.searchList(type, key);
-		
+		int cnt = dao.boardCount(type, key);
 		request.setAttribute("total", cnt);
 		request.setAttribute("list", list);
 		request.setAttribute("tpye", type);
 		request.setAttribute("key", key);
-
+		
 		
 		RequestDispatcher dispater = 
 				request.getRequestDispatcher("Board/board_list.jsp");
