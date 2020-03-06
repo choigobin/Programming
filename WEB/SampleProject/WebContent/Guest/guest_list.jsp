@@ -50,9 +50,11 @@
           <tr>&nbsp;</tr><tr>
              <td colspan="5">        
                 <div align="center">
-                <c:forEach  var="pg" begin="1" end="${(total+9)/10 }" >
+                <a href="GusetList?page=${page-1}"><img src="./img/i_prev.gif" border="0"></a>
+                <c:forEach  var="pg" begin="${page-2<1 ? 1:page-2 }" end="${page<3 ? 5:page+2>tpage ? tpage:page+2}" >
                 	<a href="GusetList?page=${pg }">[${pg }]</a>
                 </c:forEach>
+                <a href="GusetList?page=${page+1}"><img src="./img/i_next.gif" border="0"></a>
                 </div>
 			  </td>
 			 </tr>

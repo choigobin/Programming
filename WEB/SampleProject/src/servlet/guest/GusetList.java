@@ -36,9 +36,17 @@ public class GusetList extends HttpServlet {
 		}
 		GuestDAO dao = GuestDAO.getInstance();
 		int total = dao.countGuest();
+		int tpage = (int)(total+9)/10;
+		if(page>tpage) {
+			page=tpage;
+		}
+		if(page<1) {
+			page=1;
+		}
 		List<GuestVO> list = dao.selectGuest(page);
 		request.setAttribute("page", page);
 		request.setAttribute("total", total);
+		request.setAttribute("tpage", tpage);
 		request.setAttribute("list", list);
 		RequestDispatcher dispatch = request.getRequestDispatcher("Guest/guest_list.jsp");
 		dispatch.forward(request, response);
