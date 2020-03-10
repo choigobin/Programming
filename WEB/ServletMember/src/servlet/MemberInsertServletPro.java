@@ -3,14 +3,15 @@ package servlet;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import KISA.SHA256;
 import model.*;
+import sun.misc.BASE64Encoder;
 
 /**
  * Servlet implementation class MemberInsertServlet
@@ -34,9 +35,14 @@ public class MemberInsertServletPro extends HttpServlet {
 		request.setCharacterEncoding("utf-8");
 		MemberVO vo = new MemberVO();
 		MemberDAO dao = MemberDAO.getInstance();
+		
+		
 		vo.setName(request.getParameter("name"));
 		vo.setUserid(request.getParameter("userid"));
-		vo.setPasswd(request.getParameter("passwd"));
+		String passwd = request.getParameter("passwd");
+		SHA256 s = new SHA256(passwd.getBytes());
+		BASE64Encoder Base64Encoder = new BASE64Encoder();
+		vo.setPasswd(Base64Encoder.encode(s.GetHashCode()));
 		vo.setTel(request.getParameter("tel"));
 		response.setContentType("text/html; charset=utf-8");
 		PrintWriter out = response.getWriter();
