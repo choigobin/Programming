@@ -108,7 +108,7 @@
 				
 				
 				
-			<Context docBase="exUser" path="/exUser" reloadable="true" source="org.eclipse.jst.jee.server:exUser"/></Host>
+			<Context docBase="exPdsPoolDBCP" path="/exPdsPoolDBCP" reloadable="true" source="org.eclipse.jst.jee.server:exPdsPoolDBCP"/></Host>
 		</Engine>
 	</Service>
 </Server>
