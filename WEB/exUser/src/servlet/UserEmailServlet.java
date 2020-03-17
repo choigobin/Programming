@@ -65,7 +65,8 @@ public class UserEmailServlet extends HttpServlet {
 		props.put("mail.smtp.port", port); 
 		props.put("mail.smtp.auth", "true"); 
 		props.put("mail.smtp.ssl.enable", "true"); 
-		props.put("mail.smtp.ssl.trust", host); //Session 생성 
+		props.put("mail.smtp.ssl.trust", host); 
+		//Session 생성 
 		Session session = Session.getInstance(props, new javax.mail.Authenticator() { 
 			String un=username; 
 			String pw=password; 
