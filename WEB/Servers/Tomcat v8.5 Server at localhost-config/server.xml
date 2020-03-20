@@ -108,7 +108,7 @@
 				
 				
 				
-			<Context docBase="exPdsPoolDBCP" path="/exPdsPoolDBCP" reloadable="true" source="org.eclipse.jst.jee.server:exPdsPoolDBCP"/><Context docBase="EmailProject" path="/EmailProject" reloadable="true" source="org.eclipse.jst.jee.server:EmailProject"/><Context docBase="Day0313" path="/Day0313" reloadable="true" source="org.eclipse.jst.jee.server:Day0313"/></Host>
+			<Context docBase="exPdsPoolDBCP" path="/exPdsPoolDBCP" reloadable="true" source="org.eclipse.jst.jee.server:exPdsPoolDBCP"/><Context docBase="EmailProject" path="/EmailProject" reloadable="true" source="org.eclipse.jst.jee.server:EmailProject"/><Context docBase="Day0313" path="/Day0313" reloadable="true" source="org.eclipse.jst.jee.server:Day0313"/><Context docBase="exProduct" path="/exProduct" reloadable="true" source="org.eclipse.jst.jee.server:exProduct"/></Host>
 		</Engine>
 	</Service>
 </Server>
