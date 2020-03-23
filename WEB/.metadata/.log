@@ -6677,24 +6677,40 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.jst.server.tomcat.core 4 0 2020-03-20 14:09:00.803
 !MESSAGE Several ports (8005, 8089) required by Tomcat v8.5 Server at localhost are already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
+<<<<<<< HEAD
 !SESSION 2020-03-23 09:24:14.439 -----------------------------------------------
 eclipse.buildId=4.12.0.I20190605-1800
 java.version=1.8.0_241
+=======
+!SESSION 2020-03-21 16:17:27.092 -----------------------------------------------
+eclipse.buildId=4.12.0.I20190605-1800
+java.version=1.8.0_231
+>>>>>>> 5e751ee419a11b20d24e3dacf167075d4c73a1d4
 java.vendor=Oracle Corporation
 BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
 Framework arguments:  -product org.eclipse.epp.package.jee.product
 Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.egit.core 1 0 2020-03-23 09:24:22.362
 !MESSAGE Using Apache MINA sshd as ssh client.
 
 !ENTRY org.eclipse.egit.ui 2 0 2020-03-23 09:24:31.413
 !MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
 user global configuration and to define the default location to store repositories: 'C:\Users\JSLHRD'. If this is
+=======
+!ENTRY org.eclipse.egit.core 1 0 2020-03-21 16:17:42.494
+!MESSAGE Using Apache MINA sshd as ssh client.
+
+!ENTRY org.eclipse.egit.ui 2 0 2020-03-21 16:17:54.901
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\ckmmy'. If this is
+>>>>>>> 5e751ee419a11b20d24e3dacf167075d4c73a1d4
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.jst.server.tomcat.core 4 0 2020-03-23 09:27:20.277
 !MESSAGE Several ports (8005, 8089, 8009) required by Tomcat v8.5 Server at localhost are already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
 
@@ -6702,6 +6718,9 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 !MESSAGE The server is invalid or missing
 
 !ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2020-03-23 09:27:56.555
+=======
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2020-03-21 16:19:52.367
+>>>>>>> 5e751ee419a11b20d24e3dacf167075d4c73a1d4
 !MESSAGE Connection to http://jope.ow2.org/update/jope/site.xml failed on jope.ow2.org. Retry attempt 0 started
 !STACK 0
 java.net.UnknownHostException: jope.ow2.org
@@ -6727,7 +6746,11 @@ java.net.UnknownHostException: jope.ow2.org
 	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2020-03-23 09:27:56.806
+=======
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2020-03-21 16:19:52.637
+>>>>>>> 5e751ee419a11b20d24e3dacf167075d4c73a1d4
 !MESSAGE Connection to http://jope.ow2.org/update/jope/p2.index failed on jope.ow2.org. Retry attempt 0 started
 !STACK 0
 java.net.UnknownHostException: jope.ow2.org
@@ -6749,6 +6772,7 @@ java.net.UnknownHostException: jope.ow2.org
 	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:988)
 	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+<<<<<<< HEAD
 
 !ENTRY org.eclipse.jdt.debug 2 0 2020-03-23 16:58:55.253
 !MESSAGE Unable to find location of java.lang.Thread.setName() in debuggee JVM, for type java.lang.Thread
@@ -6781,3 +6805,5 @@ org.xml.sax.SAXParseException; lineNumber: 12; columnNumber: 19; 요소 유형 "
 	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3184)
 	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:357)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+=======
+>>>>>>> 5e751ee419a11b20d24e3dacf167075d4c73a1d4
