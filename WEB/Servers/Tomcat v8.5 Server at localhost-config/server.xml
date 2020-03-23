@@ -60,11 +60,7 @@
          APR (HTTP/AJP) Connector: /docs/apr.html
          Define a non-SSL/TLS HTTP/1.1 Connector on port 8080
     -->
-<<<<<<< HEAD
     <Connector URIEncoding="UTF-8" connectionTimeout="20000" port="8089" protocol="HTTP/1.1" redirectPort="8443"/>
-=======
-    <Connector connectionTimeout="20000" port="8080" protocol="HTTP/1.1" redirectPort="8443"/>
->>>>>>> 5e751ee419a11b20d24e3dacf167075d4c73a1d4
     <!-- A "Connector" using the shared thread pool-->
     <!--
     <Connector executor="tomcatThreadPool"
@@ -72,11 +68,7 @@
                connectionTimeout="20000"
                redirectPort="8443" />
     -->
-<<<<<<< HEAD
     <!-- Define a SSL/TLS HTTP/1.1 Connector on port 8443
-=======
-    <!-- Define an SSL/TLS HTTP/1.1 Connector on port 8443
->>>>>>> 5e751ee419a11b20d24e3dacf167075d4c73a1d4
          This connector uses the NIO implementation. The default
          SSLImplementation will depend on the presence of the APR/native
          library and the useOpenSSL attribute of the
@@ -93,11 +85,7 @@
         </SSLHostConfig>
     </Connector>
     -->
-<<<<<<< HEAD
     <!-- Define a SSL/TLS HTTP/1.1 Connector on port 8443 with HTTP/2
-=======
-    <!-- Define an SSL/TLS HTTP/1.1 Connector on port 8443 with HTTP/2
->>>>>>> 5e751ee419a11b20d24e3dacf167075d4c73a1d4
          This connector uses the APR/native implementation which always uses
          OpenSSL for TLS.
          Either JSSE or OpenSSL style configuration may be used. OpenSSL style
@@ -117,17 +105,8 @@
     -->
 
     <!-- Define an AJP 1.3 Connector on port 8009 -->
-<<<<<<< HEAD
     <Connector port="8009" protocol="AJP/1.3" redirectPort="8443"/>
 
-=======
-    <!--
-    <Connector protocol="AJP/1.3"
-               address="::1"
-               port="8009"
-               redirectPort="8443" />
-    -->
->>>>>>> 5e751ee419a11b20d24e3dacf167075d4c73a1d4
 
     <!-- An Engine represents the entry point (within Catalina) that processes
          every request.  The Engine implementation for Tomcat stand alone
@@ -170,13 +149,9 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-<<<<<<< HEAD
 		<Resource auth="Container" driverClassName="oracle.jdbc.driver.OracleDriver" maxIdle="10" maxTotal="20" maxWaitMillis="-1" name="jdbc/myoracle" password="1234" type="javax.sql.DataSource" url="jdbc:oracle:thin:@localhost:1521:orcl" username="jsldb"/>
 
       <Context docBase="exProject" path="/" reloadable="true" source="org.eclipse.jst.jee.server:exProject"/></Host>
-=======
-      <Context docBase="exProduct" path="/exProduct" reloadable="true" source="org.eclipse.jst.jee.server:exProduct"/></Host>
->>>>>>> 5e751ee419a11b20d24e3dacf167075d4c73a1d4
     </Engine>
   </Service>
 </Server>
