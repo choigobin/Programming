@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="model.MemberVO"/>
 <fullyQualifiedTypeName name="model.MemberDAO"/>
 <fullyQualifiedTypeName name="util.DBmangaer"/>
 <fullyQualifiedTypeName name="model.guest.GuestDAO"/>
 <fullyQualifiedTypeName name="org.apache.catalina.Context"/>
 <fullyQualifiedTypeName name="org.apache.tomcat.jdbc.pool.DataSource"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="com.oreilly.servlet.MultipartRequest"/>
 <fullyQualifiedTypeName name="javax.servlet.ServletContext"/>
 <fullyQualifiedTypeName name="com.oreilly.servlet.multipart.DefaultFileRenamePolicy"/>
 <fullyQualifiedTypeName name="model.PdsVO"/>
 <fullyQualifiedTypeName name="model.PdsDAO"/>
 <fullyQualifiedTypeName name="javax.websocket.Session"/>
-<fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="javax.servlet.http.Cookie"/>
-<fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="KISA.SHA256"/>
 <fullyQualifiedTypeName name="sun.misc.BASE64Encoder"/>
 <fullyQualifiedTypeName name="java.util.Properties"/>
@@ -24,7 +20,6 @@
 <fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="javax.mail.internet.InternetAddress"/>
 <fullyQualifiedTypeName name="javax.mail.internet.AddressException"/>
-<fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
 <fullyQualifiedTypeName name="sun.rmi.server.Dispatcher"/>
 <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
 <fullyQualifiedTypeName name="java.lang.ProcessBuilder.Redirect"/>
@@ -32,8 +27,6 @@
 <fullyQualifiedTypeName name="oracle.net.aso.r"/>
 <fullyQualifiedTypeName name="java.sql.SQLException"/>
 <fullyQualifiedTypeName name="java.sql.DriverManager"/>
-<fullyQualifiedTypeName name="java.sql.ResultSet"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="model.DAOBase"/>
 <fullyQualifiedTypeName name="model.SampleDAO"/>
 <fullyQualifiedTypeName name="util.DB"/>
@@ -41,10 +34,7 @@
 <fullyQualifiedTypeName name="javax.naming.Context"/>
 <fullyQualifiedTypeName name="javax.naming.InitialContext"/>
 <fullyQualifiedTypeName name="javax.sql.DataSource"/>
-<fullyQualifiedTypeName name="java.sql.Connection"/>
 <fullyQualifiedTypeName name="org.apache.tomcat.dbcp.dbcp2.BasicDataSource"/>
-<fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
-<fullyQualifiedTypeName name="java.io.PrintWriter"/>
 <fullyQualifiedTypeName name="jdbc.DBConn"/>
 <fullyQualifiedTypeName name="org.apache.tomcat.dbcp.dbcp2.PoolingDriver"/>
 <fullyQualifiedTypeName name="org.apache.tomcat.dbcp.pool2.impl.GenericObjectPool"/>
@@ -53,4 +43,19 @@
 <fullyQualifiedTypeName name="org.apache.tomcat.dbcp.dbcp2.PoolableConnectionFactory"/>
 <fullyQualifiedTypeName name="org.apache.tomcat.dbcp.dbcp2.ConnectionFactory"/>
 <fullyQualifiedTypeName name="org.apache.tomcat.dbcp.dbcp2.DriverManagerConnectionFactory"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+<fullyQualifiedTypeName name="java.sql.ResultSet"/>
+<fullyQualifiedTypeName name="model.MemberDao"/>
+<fullyQualifiedTypeName name="java.io.PrintWriter"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="model.MemberVO"/>
+<fullyQualifiedTypeName name="model.ModelDao"/>
+<fullyQualifiedTypeName name="model.NoticeVO"/>
+<fullyQualifiedTypeName name="model.NoticeDao"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
 </qualifiedTypeNameHistroy>

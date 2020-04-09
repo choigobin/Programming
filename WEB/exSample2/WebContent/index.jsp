@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
-<%@ include file="header.jsp" %>
+<%@ include file="/header.jsp" %>
 	
 	<div class="slider">
 	    <div><img src="images/a1.jpg" alt="" title="배움의 즐거움이 있는곳"></div>
@@ -12,8 +12,8 @@
 	
 	<div class="indexgallery">
 			<div class="indextitle">
-				<h2>장수하늘소<br>갤러리</h2>
-				<span><a href="gallery.do">MORE</a></span>
+				<h2>포트폴리오</h2>
+				<span><a href="/portfolio/portfolio.jsp">MORE</a></span>
 			</div>
 			<ul>
 				<li><a href=""><img src="images/shop1.jpg"></a></li>
@@ -27,13 +27,20 @@
 		<div class="bbs_left">
 			<h2 class="title">공지시항</h2>
 			<ul>
-				<li><a href="#">화면구현은 어떻게 하는가</a></li>
-				<li><a href="#">홈페이지 혼자 만들어보기</a></li>
-				<li><a href="#">지구여행 얼마 남았는가</a> </li>
-				<li><a href="#">일본취업 나도 해보자</a></li>
-				<li><a href="#">하다보면 할수 있다</a></li>
+			<%
+			NoticeDao dao = new NoticeDao();
+			List<NoticeVO> list = dao.selectNotice(1);
+			int noticeEnd = 1;
+			for(NoticeVO vo : list){
+				noticeEnd ++;
+				%>
+				<li><a href="/notice/noticeview.jsp?no=<%=vo.getNo() %>"><%=vo.getTitle() %></a></li>
+				<%
+				if(noticeEnd >5) break;
+			}
+			%>
 			</ul>
-			<a href="notice.do"><span class="fa fa-plus plus"></span></a>
+			<a href="/notice/notice.jsp"><span class="fa fa-plus plus"></span></a>
 		</div>
 		<div class="bbs_right">
 			<h2 class="title">질문답변</h2>
@@ -44,11 +51,11 @@
 				<li><a href="#">동영상 강좌 자료실</a></li>
 				<li><a href="#">스프링 강좌 자료 다운</a></li>
 			</ul>
-			<a href="qa.do"><span class="fa fa-plus plus"></span></a>
+			<a href="/qa/qa.jsp"><span class="fa fa-plus plus"></span></a>
 		</div>
 	</div>
 	
-<%@ include file="footer.jsp" %>
+<%@ include file="/footer.jsp" %>
 
 
 

@@ -1,11 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
-<%@ include file="../header.jsp"%>
+<%@ include file="/header.jsp"%>
 
 <div class="contain">
 	<div class="sub-topcontent">
-		<h2 class="sub-title">장수하늘소 회원가입</h2>
+		<h2 class="sub-title">회원가입</h2>
 	</div>
 	
 	<div class="write-form">
@@ -16,7 +16,7 @@
 				<col width="80%">
 			</colgroup>
 			<tbody>
-			<form name="my" method="post" action="memberinsert.do" enctype="multipart/form-data" onsubmit="return formcheck();">
+			<form name="my" method="post" action="/MemberInsert.do"  onsubmit="return formcheck();">
 				<fieldset>
 					<legend class="readonly">입력폼</legend>
 					<tr>
@@ -30,15 +30,19 @@
 					</tr>
 					<tr>
 						<th scope="row"><lavel for="pass1">패스워드</lavel></th>
-						<td><input type="passwrod" name="pass1" id="pass1"  class="minput"></td>
+						<td><input type="password" name="pass1" id="pass1"  class="minput"></td>
 					</tr>
 					<tr>
 						<th scope="row">패스워드 확인</th>
-						<td><input type="passwrod" name="pass2"  class="minput"></td>
+						<td><input type="password" name="pass2"  class="minput"></td>
 					</tr>
 					<tr>
 						<th scope="row">이름</th>
 						<td><input type="text" name="name"  class="minput"></td>
+					</tr>
+					<tr>
+						<th scope="row">전화번호</th>
+						<td><input type="text" name="phone"  class="minput"></td>
 					</tr>
 					<tr>
 						<th scope="row">이메일</th>
@@ -49,8 +53,8 @@
 					</tr>
 					<tr>
 						<td colspan="2">
-							<input type="submit" value="전송" class="btn-write">
-							<input type="button" value="목록"  class="btn-reset" onclick="javascript:location.href='portfolio.do'">
+							<input type="button" value="취소"  class="btn-reset" onclick="javascript:if(confirm('작성 내용을 지우시겠습니까?')){my.reset();}">
+							<input type="submit" value="가입" class="btn-write">
 						</td>
 					</tr>
 					</fieldset>
@@ -75,14 +79,34 @@
 		}
 		if(my.pass1.value != my.pass2.value) {
 			alert("패스워드를 확인하세요");
-			my.pass1.focus();
+			my.pass2.focus();
+			return false;
+		}
+		if(my.name.value=="") {
+			alert("이름을 입력하세요");
+			my.name.focus();
+			return false;
+		}
+		if(my.phone.value=="") {
+			alert("전화번호를 입력하세요");
+			my.phone.focus();
+			return false;
+		}
+		if(my.email1.value=="") {
+			alert("이메일을 입력하세요");
+			my.email1.focus();
+			return false;
+		}
+		if(my.email2.value=="") {
+			alert("이메일주소를 입력하세요");
+			my.email2.focus();
 			return false;
 		}
 		return true;
 	}
 </script>
 
-<%@ include file="../footer.jsp"%>
+<%@ include file="/footer.jsp"%>
 
 
 

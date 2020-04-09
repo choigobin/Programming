@@ -1,15 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
-<%@ include file="../header.jsp"%>
+<%@ include file="/header.jsp"%>
 
 <div class="contain">
 	<div class="sub-topcontent">
-		<h2 class="sub-title">장수하늘소 로그인</h2>
+		<h2 class="sub-title">회원 로그인</h2>
 	</div>
 	
 	<div class="write-form" style="width:50%; margin:0 auto; border:1px solid #ccc; padding:20px;">
-		<form>
+		<form name="my" method="post" action="/Login.do" onsubmit="return formcheck();">
 			<fieldset>
 				<legend class="readonly">로그인그룹</legend>
 				<div style="width:70%; float:left;">
@@ -33,21 +33,21 @@
 
 <script>
 	function formcheck() {
-		if(my.title.value=="") {
-			alert("제목입력하세요");
-			my.title.focus();
+		if(my.id.value=="") {
+			alert("아이디를 입력하세요");
+			my.id.focus();
 			return false;
 		}
-		if(my.content.value=="") {
-			alert("내용입력하세요");
-			my.contnet.focus();
+		if(my.pw.value=="") {
+			alert("비밀번호를 입력하세요");
+			my.pw.focus();
 			return false;
 		}
 		return true;
 	}
 </script>
 
-<%@ include file="../footer.jsp"%>
+<%@ include file="/footer.jsp"%>
 
 
 
