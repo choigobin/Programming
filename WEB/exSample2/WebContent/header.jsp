@@ -20,7 +20,10 @@
     	
       $('.slider').bxSlider({
     	  mode: 'fade',
-    	  captions: true
+    	  captions: true,
+    	  auto: true,
+    	  autoHover: true,
+    	  speed: 1000
       });
       
       $(".sitemap").click(function() {
