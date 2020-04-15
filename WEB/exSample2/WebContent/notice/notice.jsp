@@ -33,7 +33,7 @@ if(now<1) now = 1;
 int max = (dao.countNotice()+9)/10;
 List<NoticeVO> list = dao.selectNotice(now);
 for(NoticeVO vo : list){
-	%>
+%>
 	<tr>
 		<td><%=vo.getNo() %></td>
 		<td class="tleft"><a href="/notice/noticeview.jsp?no=<%=vo.getNo() %>"><%=vo.getTitle() %></a></td>
@@ -67,20 +67,4 @@ for(NoticeVO vo : list){
 		</div>
 
 </div>
-
 <%@ include file="/footer.jsp"%>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

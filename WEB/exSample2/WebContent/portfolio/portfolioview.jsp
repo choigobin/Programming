@@ -1,52 +1,38 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
-<%@ include file="../header.jsp"%>
-
+<%@ include file="/header.jsp"%>
+<%
+int no = Integer.parseInt(request.getParameter("no"));
+PortfolioVO vo = new PortfolioVO();
+PortfolioDao dao = new PortfolioDao();
+vo = dao.viewPortfolio(no);
+dao.readPortfolio(no);
+%>
 <div class="contain">
 	<div class="sub-topcontent">
-		<h2 class="sub-view-title">포트폴리오 제목 출력</h2>
-		<p class="sub-view-wd">글쓴이 | 2019-06-11</p>
+		<h2 class="sub-view-title"><%=vo.getTitle() %></h2>
+		<p class="sub-view-wd">관리자 | <%=vo.getInsertdate() %></p>
 	</div>
 	<div class="sub-view-contnet">
-		<p>글쓴내용이 출력되는 부분입니다</p>
-		<p>웹문서를 만드는 언어는 html5언어입니다<br>
-		멍텅구리 언어라 오류가 나와도 오류무시하고 출력을 시켜요</p>
-		<p></p>
-		<img src="../images/jsl.jpg" alt="">
+		<%=vo.getContents() %>
 	</div>
 	
 	<div class="sub-view-bottom">
-		<a href="portfoliowrite.do" class="btn-modify">수정</a>&nbsp;&nbsp;
+	<c:if test="${user.getGrade() eq 'A'}">
+		<a href="/portfolio/portfolioupdate.jsp?no=<%=no %>" class="btn-modify">수정</a>&nbsp;&nbsp;
 		<a href="javascript:void(0)" class="btn-delete" onclick="avent();">삭제</a>&nbsp;&nbsp;
-		<a href="portfolio.do" class="btn-list">목록</a>&nbsp;&nbsp;
+	</c:if>
+		<a href="/portfolio/portfolio.jsp" class="btn-list">목록</a>&nbsp;&nbsp;
 	</div>
 		
 </div>
 <script>
 function avent(){
-	if(confirm("후회안해? 삭제?") == true) {
-		location.href="portfoliodelete.do";
+	if(confirm("<%=no+"번 포트폴리오를 삭제하겠습니까?"%>") == true) {
+		location.href="/Portfoliodelete.do?no=<%=no%>";
 	}else {
 		return;
 	}
 }
 </script>
-
-
-<%@ include file="../footer.jsp"%>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<%@ include file="/footer.jsp"%>

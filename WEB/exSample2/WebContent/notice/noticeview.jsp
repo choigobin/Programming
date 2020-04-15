@@ -34,21 +34,4 @@ function avent(){
 	}
 }
 </script>
-
-
 <%@ include file="/footer.jsp"%>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

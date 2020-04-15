@@ -3,7 +3,7 @@
 <%@ page import="java.util.*,model.*" %>
 <%request.setCharacterEncoding("utf-8"); %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
 	<meta charset="UTF-8">
@@ -14,7 +14,6 @@
 	<link href="/css/mystyle.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-
   <script>
     $(function(){
     	
