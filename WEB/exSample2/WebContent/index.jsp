@@ -1,12 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
+<%@page import="java.util.regex.Matcher"%>
+<%@page import="java.util.regex.Pattern"%>    
 <%@ include file="/header.jsp" %>
 	
 	<div class="slider">
-	    <div><img src="images/a1.jpg" alt="" title="배움의 즐거움이 있는곳"></div>
-	    <div><img src="images/a2.jpg" alt="" title="나에게 주는 만큼"></div>
-	    <div><img src="images/a3.jpg" alt="" title="나에게도 많은 축복이 있습니다"></div>
+	    <div><img src="/images/a1.jpg" alt="" title="광안리"></div>
+	    <div><img src="/images/a2.jpg" alt="" title="요코하마"></div>
+	    <div><img src="/images/a3.jpg" alt="" title="지리산 천왕봉"></div>
   	</div>
 
 	
@@ -16,22 +17,39 @@
 				<span><a href="/portfolio/portfolio.jsp">MORE</a></span>
 			</div>
 			<ul>
-				<li><a href=""><img src="images/shop1.jpg"></a></li>
-				<li><a href=""><img src="images/shop2.jpg"></a></li>
-				<li><a href=""><img src="images/shop3.jpg"></a></li>
+			<%
+			PortfolioDao daoPortfolio = new PortfolioDao();
+			List<PortfolioVO> listPortfolio = daoPortfolio.selectPortfolio(1);
+			int PortfolioEnd = 1;
+			for(PortfolioVO vo : listPortfolio){
+				PortfolioEnd ++;
+				%>
+				<li>
+				<%
+				String text = vo.getContents();
+				Pattern ptn = Pattern.compile("<img[^>]*src=[\"']?([^>\"']+)[\"']?[^>]*>");
+				Matcher m = ptn.matcher(text);
+				if(m.find()){%>
+					<a href="/portfolio/portfolioview.jsp?no=<%=vo.getNo() %>">
+					<%=m.group()%>
+					</a>
+				<%}%>
+				</li>
+				<%
+				if(PortfolioEnd >3) break;
+			}
+			%>	
 			</ul>
-	</div>
-	
-	
+	</div>	
 	<div class="bbs_wrap">
 		<div class="bbs_left">
 			<h2 class="title">공지시항</h2>
 			<ul>
 			<%
-			NoticeDao dao = new NoticeDao();
-			List<NoticeVO> list = dao.selectNotice(1);
+			NoticeDao daoNotice = new NoticeDao();
+			List<NoticeVO> listNotice = daoNotice.selectNotice(1);
 			int noticeEnd = 1;
-			for(NoticeVO vo : list){
+			for(NoticeVO vo : listNotice){
 				noticeEnd ++;
 				%>
 				<li><a href="/notice/noticeview.jsp?no=<%=vo.getNo() %>"><%=vo.getTitle() %></a></li>
@@ -45,27 +63,21 @@
 		<div class="bbs_right">
 			<h2 class="title">질문답변</h2>
 			<ul>
-				<li><a href="#">이클립스 다운로드</a></li>
-				<li><a href="#">JSP강좌 PDF</a></li>
-				<li><a href="#">JAVA 환경설정 파일 설명서</a> </li>
-				<li><a href="#">동영상 강좌 자료실</a></li>
-				<li><a href="#">스프링 강좌 자료 다운</a></li>
+			<%
+			QaDao daoQa = new QaDao();
+			List<QaVO> listQa = daoQa.selectQa(1);
+			int qaEnd = 1;
+			for(QaVO vo : listQa){
+				qaEnd ++;
+				%>
+				<li><a href="/qa/qaview.jsp?no=<%=vo.getNo() %>"><%=vo.getTitle() %></a></li>
+				<%
+				if(qaEnd >5) break;
+			}
+			%>
 			</ul>
 			<a href="/qa/qa.jsp"><span class="fa fa-plus plus"></span></a>
 		</div>
 	</div>
 	
 <%@ include file="/footer.jsp" %>
-
-
-
-
-
-
-
-
-
-
-
-
-

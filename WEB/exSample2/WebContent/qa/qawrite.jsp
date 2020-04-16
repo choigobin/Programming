@@ -16,14 +16,14 @@
 				<col width="80%">
 			</colgroup>
 			<tbody>
-			<form name="my" method="post" action="QaInsert.do" onsubmit="return formcheck();">
+			<form name="my" method="post" action="/QaInsert.do" onsubmit="return formcheck();">
 					<tr>
 						<th>제목</th>
 						<td><input type="text" name="title" placeholder="제목입력하세요"></td>
 					</tr>
 					<tr>
 						<th>내용</th>
-						<td><textarea name="content"></textarea></td>
+						<td><textarea name="contents"></textarea></td>
 					</tr>
 					<tr>
 						<td colspan="2">
@@ -55,18 +55,3 @@
 </script>
 
 <%@ include file="/footer.jsp"%>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

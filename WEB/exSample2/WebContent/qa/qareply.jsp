@@ -1,47 +1,47 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
 <%@ include file="/header.jsp"%>
-
+<%
+int no = Integer.parseInt(request.getParameter("no"));
+QaVO vo = new QaVO();
+QaDao dao = new QaDao();
+vo = dao.viewQa(no);
+%>
+<form name="my" method="post" action="/QaReply.do" onsubmit="return formcheck();">
+<input type="hidden" name="no" value=<%=vo.getNo() %>>
 <div class="contain">
 	<div class="sub-topcontent">
-		<h2 class="sub-view-title">질문 제목 출력</h2>
-		<p class="sub-view-wd">글쓴이 | 2019-06-11</p>
+		<h2 class="sub-view-title"><%=vo.getTitle() %></h2>
+		<p class="sub-view-wd"><%=vo.getUserid() %> | <%=vo.getInsertdate() %></p>
 	</div>
 	<div class="sub-view-contnet">
-		<p>질문 내용이 출력되는 부분입니다</p>
-		<p>자바 프로그램을 하고 싶습니다<br>
-		개발환경과 책 추천을 받고 싶습니다.<br>
-		그래서 일본 취업하는 방법즘 알려 주세요</p>
-		<p></p>
+		<%=vo.getContents().replace("\n", "<br>") %>
 	</div>
 	
 	<div class="qareply" style="padding-bottom:30px;">
 		<h2 style="padding-bottom:16px;">답변</h2>
-		<textarea name="reply" style="width:100%; height:300px;"></textarea>
+		<textarea name="reply" style="width:100%; height:300px;"><%
+			if(vo.getReply() != "" && vo.getReply() != null){
+				%><%=vo.getReply().replace("\n", "<br>")%><%
+			}
+		%></textarea>
 	</div>	
 	<div class="sub-view-bottom">
 		<input type="submit" value="답변 저장" class="btn-write">
 		<input type="button" value="목록"  class="btn-reset" onclick="javascript:location.href='/qa/qa.jsp'">
 	</div>
-		
 </div>
+</form>
 
-
+<script>
+	function formcheck() {
+		if(my.reply.value=="") {
+			alert("답변을 입력하세요");
+			my.reply.focus();
+			return false;
+		}
+		return true;
+	}
+</script>
 
 <%@ include file="/footer.jsp"%>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

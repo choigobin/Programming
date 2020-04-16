@@ -25,9 +25,8 @@ for(PortfolioVO vo : list){
 		<div class="text-wrap">
 			<div class="img-wrap">
 				<%
-				String text = vo.getContents();
-				Pattern ptn = Pattern.compile("<img(?:(?!<).)+>");
-				Matcher m = ptn.matcher(text);
+				Pattern ptn = Pattern.compile("<img[^>]*src=[\"']?([^>\"']+)[\"']?[^>]*>");
+				Matcher m = ptn.matcher(vo.getContents());
 				if(m.find()){%>
 					<a href="/portfolio/portfolioview.jsp?no=<%=vo.getNo() %>">
 					<%=m.group()%>

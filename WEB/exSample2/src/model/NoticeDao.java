@@ -20,15 +20,33 @@ public class NoticeDao {
 				e.printStackTrace();
 			}
 	 }
-	
+	private int selectMaxNo() {
+		 int max = 0;
+		 String sql = "select no from PP_Notice order by no desc";
+		 try {
+				conn = getConnection();
+				pstmt=conn.prepareStatement(sql);
+				rs = pstmt.executeQuery();
+				if(rs.next()) {
+					max=rs.getInt(1);
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}finally {
+				cleanUp();
+			}
+		 return max;
+	}
 	public int insertNotice(NoticeVO vo) {
 		int result = 0;
-		String sql = "insert into PP_Notice(no,title,contents) values(notice_no.nextval,?,?)";
+		int no = selectMaxNo()+1;
+		String sql = "insert into PP_Notice(no,title,contents) values(?,?,?)";
 		try {
 			conn = getConnection();
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, vo.getTitle());
-			pstmt.setString(2, vo.getContents());
+			pstmt.setInt(1, no);
+			pstmt.setString(2, vo.getTitle());
+			pstmt.setString(3, vo.getContents());
 			result = pstmt.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();

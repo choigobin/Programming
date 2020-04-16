@@ -38,130 +38,51 @@
 					<th>날자</th>
 					<th>조회수</th>
 				</tr>
-				<tr>
-					<td>10</td>
-					<td class="tleft"><a href="qaview.do">JVM이란 무엇인가요?</a></td>
-					<td>이순신</td>
-					<td><span  class="red">답변대기</td>
-					<td>2019-06-13</td>
-					<td>18</td>
-				</tr>
-				<tr>
-					<td>9</td>
-					<td class="tleft">서블릿이란 무엇인가요?</td>
-					<td>서블릿</td>
-					<td><span  class="gray">답변완료</span></td>
-					<td>2019-06-13</td>
-					<td>250</td>
-				</tr>
-				<tr>
-					<td>8</td>
-					<td class="tleft">JVM이란 무엇인가요?</td>
-					<td>이순신</td>
-					<td><span  class="red">답변대기</td>
-					<td>2019-06-13</td>
-					<td>18</td>
-				</tr>
-				<tr>
-					<td>7</td>
-					<td class="tleft">서블릿이란 무엇인가요?</td>
-					<td>서블릿</td>
-					<td><span  class="gray">답변완료</span></td>
-					<td>2019-06-13</td>
-					<td>250</td>
-				</tr>
-				<tr>
-					<td>6</td>
-					<td class="tleft">JVM이란 무엇인가요?</td>
-					<td>이순신</td>
-					<td><span  class="red">답변대기</td>
-					<td>2019-06-13</td>
-					<td>18</td>
-				</tr>
-				<tr>
-					<td>5</td>
-					<td class="tleft">서블릿이란 무엇인가요?</td>
-					<td>서블릿</td>
-					<td><span  class="gray">답변완료</span></td>
-					<td>2019-06-13</td>
-					<td>250</td>
-				</tr>
-				<tr>
-					<td>4</td>
-					<td class="tleft">JVM이란 무엇인가요?</td>
-					<td>이순신</td>
-					<td><span  class="red">답변대기</td>
-					<td>2019-06-13</td>
-					<td>18</td>
-				</tr>
-				<tr>
-					<td>3</td>
-					<td class="tleft">서블릿이란 무엇인가요?</td>
-					<td>서블릿</td>
-					<td><span  class="gray">답변완료</span></td>
-					<td>2019-06-13</td>
-					<td>250</td>
-				</tr>
-				<tr>
-					<td>2</td>
-					<td class="tleft">JVM이란 무엇인가요?</td>
-					<td>이순신</td>
-					<td><span  class="red">답변대기</td>
-					<td>2019-06-13</td>
-					<td>18</td>
-				</tr>
-				<tr>
-					<td>1</td>
-					<td class="tleft">서블릿이란 무엇인가요?</td>
-					<td>서블릿</td>
-					<td><span  class="gray">답변완료</span></td>
-					<td>2019-06-13</td>
-					<td>250</td>
-				</tr>
+<%
+QaDao dao = new QaDao();
+String pg = request.getParameter("pg")==null ? "1" : request.getParameter("pg");
+int now = Integer.parseInt(pg);
+if(now<1) now = 1;
+int max = (dao.countQa()+9)/10;
+List<QaVO> list = dao.selectQa(now);
+for(QaVO vo : list){
+	%>
+	<tr>
+		<td><%=vo.getNo() %></td>
+		<td class="tleft"><a href="/qa/qaview.jsp?no=<%=vo.getNo()%>"><%=vo.getTitle() %></a></td>
+		<td><%=vo.getUserid() %></td>
+		<td>
+			<%
+			if(vo.getReply() != "" && vo.getReply() != null ){
+				%><span  class="gray">답변완료</span><%
+			}else{
+				%><span  class="red">답변대기</span><%
+			}
+			%>
+		</td>
+		<td><%=vo.getInsertdate() %></td>
+		<td><%=vo.getReadcnt()%></td>
+	</tr>
+	<%
+}
+%>
 			</tbody>
 		</table>
 	</div>
-		
-		
 		<div class="paging">
 			<ul>
-				<li><a href="#">이전</a></li>
-				<li><a href="#">1</a></li>
-				<li><a href="#">2</a></li>
-				<li><a href="#">3</a></li>
-				<li><a href="#">4</a></li>
-				<li><a href="#">5</a></li>
-				<li><a href="#">다음</a></li>
+				<li><a href="/qa/qa.jsp?pg=<%=now-1%>">이전</a></li>
+				<%
+				for(int x=now-2 < 1 ? 1:now-2; x<=(now+2 < max ? now+2:max); x++){
+					%><li><a href="/qa/qa.jsp?pg=<%=x%>"><%=x%></a></li><%
+				}
+				%>
+				<li><a href="/qa/qa.jsp?pg=<%=now+1 < max ? now+1:max%>">다음</a></li>
 			</ul>
-			<a href="qawrite.do" class="btn-write">글쓰기</a>
+			<c:if test="${not empty user}">
+				<a href="/qa/qawrite.jsp" class="btn-write">글쓰기</a>
+			</c:if>
 		</div>
 
 </div>
-
-<script>
-	function check() {
-		if(my.cont.value=="") {
-			alert("검색단어입력하세요");
-			my.cont.focus;
-			return false;
-		}
-		return true;
-	}
-</script>
-
 <%@ include file="/footer.jsp"%>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
