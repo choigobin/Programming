@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
-<%@ include file="../header.jsp"%>
+<%@ include file="/header.jsp"%>
 
 <div class="contain">
 	<div class="sub-topcontent">
@@ -15,18 +15,21 @@
 		그래서 일본 취업하는 방법즘 알려 주세요</p>
 		<p></p>
 	</div>
-	
+	<div class="qareply" style="padding-bottom:30px;">
+		<h2 style="padding-bottom:16px;">답변</h2>
+		답변내용
+	</div>
 	<div class="sub-view-bottom">
-		<a href="qareply.do" class="btn-modify">답변</a>&nbsp;&nbsp;
+		<a href="/qa/qareply.jsp?no=" class="btn-delete">답변</a>&nbsp;&nbsp;
 		<a href="javascript:void(0)" class="btn-delete" onclick="avent();">삭제</a>&nbsp;&nbsp;
-		<a href="qa.do" class="btn-list">목록</a>&nbsp;&nbsp;
+		<a href="/qa/qa.jsp" class="btn-list">목록</a>&nbsp;&nbsp;
 	</div>
 		
 </div>
 <script>
 function avent(){
 	if(confirm("후회안해? 삭제?") == true) {
-		location.href="qadelete.do";
+		location.href="qadelete.do?no=";
 	}else {
 		return;
 	}
@@ -34,7 +37,7 @@ function avent(){
 </script>
 
 
-<%@ include file="../footer.jsp"%>
+<%@ include file="/footer.jsp"%>
 
 
 

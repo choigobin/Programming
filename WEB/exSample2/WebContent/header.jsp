@@ -81,21 +81,13 @@
 							</li>
 							<li><a href="/portfolio/portfolio.jsp">포트폴리오</a>
 								<ul class="navi2">
-									<li><a href="#">웹개발</a></li>
-								</ul>
-							</li>
-							<li><a href="/gallery/gallery.jsp">학습공간</a>
-								<ul class="navi2">
-									<li><a href="#">JAVA</a></li>
-									<li><a href="#">SerVlet</a></li>
-									<li><a href="#">JSP</a></li>
-									<li><a href="#">Oracle</a></li>
+									<li><a href="/portfolio/portfolio.jsp">웹개발</a></li>
 								</ul>
 							</li>
 							<li><a href="/qa/qa.jsp">질문답변</a>
 								<ul class="navi2">
-									<li><a href="#">FAQ</a></li>
 									<li><a href="#">질문게시판</a></li>
+									<li><a href="#">답변완료</a></li>
 								</ul>
 							</li>
 							<li><a href="/notice/notice.jsp">공지사항</a></li>

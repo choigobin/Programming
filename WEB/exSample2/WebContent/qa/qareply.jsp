@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
-<%@ include file="../header.jsp"%>
+<%@ include file="/header.jsp"%>
 
 <div class="contain">
 	<div class="sub-topcontent">
@@ -18,22 +18,18 @@
 	
 	<div class="qareply" style="padding-bottom:30px;">
 		<h2 style="padding-bottom:16px;">답변</h2>
-		<textarea name="reply" style="width:100%; height:300px;">
-		</textarea>
-	</div>
-	
-	
-	
+		<textarea name="reply" style="width:100%; height:300px;"></textarea>
+	</div>	
 	<div class="sub-view-bottom">
-		<a href="qareply.do" class="btn-modify">답변저장</a>&nbsp;&nbsp;
-		<a href="qa.do" class="btn-list">목록</a>&nbsp;&nbsp;
+		<input type="submit" value="답변 저장" class="btn-write">
+		<input type="button" value="목록"  class="btn-reset" onclick="javascript:location.href='/qa/qa.jsp'">
 	</div>
 		
 </div>
 
 
 
-<%@ include file="../footer.jsp"%>
+<%@ include file="/footer.jsp"%>
 
 
 

@@ -1,11 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
-<%@ include file="../header.jsp"%>
+<%@ include file="/header.jsp"%>
 
 <div class="contain">
 	<div class="sub-topcontent">
-		<h2 class="sub-title">장수하늘소 질문답변</h2>
+		<h2 class="sub-title">질문답변</h2>
 		<div class="sub-search">
 			<form name="my" method="post" action="qasearch.do" onsubmit="return check()">
 				<select name="sel" class="sel">
@@ -149,7 +149,7 @@
 	}
 </script>
 
-<%@ include file="../footer.jsp"%>
+<%@ include file="/footer.jsp"%>
 
 
 
