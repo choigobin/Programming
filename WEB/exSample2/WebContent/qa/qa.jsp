@@ -6,16 +6,6 @@
 <div class="contain">
 	<div class="sub-topcontent">
 		<h2 class="sub-title">질문답변</h2>
-		<div class="sub-search">
-			<form name="my" method="post" action="qasearch.do" onsubmit="return check()">
-				<select name="sel" class="sel">
-					<option value="title">제목</option>
-					<option value="content">내용</option>
-				</select>
-				<input type="text" name="cont" class="text">
-				<input type="submit" value="검색" class="btn">
-			</form>
-		</div>
 	</div>
 	
 	<div class="content-body">
