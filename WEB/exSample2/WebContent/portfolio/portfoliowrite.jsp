@@ -59,8 +59,8 @@ $(function(){
 				}); 
 	}); 
 $("#save").click(function(){
-	oEditors.getById["ir1"].exec("UPDATE_CONTENTS_FIELD", []); 
+	oEditors.getById["ir1"].exec("UPDATE_CONTENTS_FIELD", []);
 	$("#frm").submit();
 })
-	</script>
+</script>
 <%@ include file="/footer.jsp"%>
