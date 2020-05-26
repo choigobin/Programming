@@ -1,14 +1,26 @@
 package com.jslhrd.controller;
 
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.InitBinder;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.jslhrd.domain.SampleDTO;
+import com.jslhrd.domain.TodoDTO;
 
 @Controller
 @RequestMapping("/sample/")
@@ -43,10 +55,19 @@ public class SampleController {
 	}
 	
 	@GetMapping("ex01")
-	public String ex01(SampleDTO dto) {
+	public String ex01(SampleDTO dto, @ModelAttribute("page") int page) {
 		log.info("SampleDTO : " + dto);
+		log.info("Page : " + page);
 		
-		return "sample/ex01"; // 리턴 타입이 String 이면 view 를 기준으로 jsp 실행
+		return "ex01"; // 리턴 타입이 String 이면 view 를 기준으로 jsp 실행
+	}
+	
+	@GetMapping("exRedirect")
+	public String exRedirect(RedirectAttributes rttr) {
+		rttr.addFlashAttribute("page", 10);
+		log.info("rttr : " + rttr);
+		
+		return "redirect:/sample/ex01";
 	}
 	
 	@GetMapping("ex02")
@@ -55,5 +76,56 @@ public class SampleController {
 		log.info("age: "+ age );
 		return "page";
 	}
+	
+	@GetMapping("ex02List")
+	public String ex02List(@RequestParam("ids") List<String> list) {
+		log.info("list : " + list);
+		
+		return "ex02List";
+	}
+	
+	@GetMapping("ex02ArrayList")
+	public String ex02List(@RequestParam("ids") ArrayList<String> alist) {
+		log.info("alist : " + alist);
+		
+		return "ex02List";
+	}
+	
+	@GetMapping("ex02String")
+	public String ex02List(@RequestParam("ids") String[] str) {
+		log.info("str : " + Arrays.toString(str));
+		
+		return "ex02List";
+	}
+	
+	
+	@InitBinder public void initBinder(WebDataBinder binder) { SimpleDateFormat
+		dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+		binder.registerCustomEditor(java.util.Date.class, new CustomDateEditor(dateFormat, false)); }
+	 
+	@GetMapping("ex03")
+	public String ex03(TodoDTO dto) {
+		log.info("TodoDTO : " + dto);
+		
+		return "sample/exSample"; // 리턴 타입이 String 이면 view 를 기준으로 jsp 실행
+	}
+	
+	@GetMapping("exModel")
+	public String ex04(Model model) {
+		List<String> list = new ArrayList<String>();
+		list.add("홍길동");
+		list.add("이길동");
+		list.add("강길동");
+		list.add("박길동");
+		list.add("우길동");
+		
+		model.addAttribute("list", list);
+		
+		log.info("list : " + list);
+		log.info("model : " + model);
+		
+		return "exModel";
+	}
+	
 	
 }
