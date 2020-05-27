@@ -17,6 +17,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.jslhrd.domain.SampleDTO;
@@ -125,6 +127,36 @@ public class SampleController {
 		log.info("model : " + model);
 		
 		return "exModel";
+	}
+	
+	@GetMapping("ex05")
+	public @ResponseBody SampleDTO ex05() {
+		log.info("ex05()......");
+		SampleDTO dto = new SampleDTO();
+		dto.setAge(10);
+		dto.setName("홍길동");
+		
+		return dto;
+	}
+	
+	//등록폼
+	@GetMapping("exUpload")
+	public void exUpload() {
+		log.info("exUpload()......");
+	}
+	
+	//등록 처리
+	@PostMapping("exUploadPro")
+	public String exUploadPro(ArrayList<MultipartFile> files) {
+		log.info("exUploadPro()......");
+		
+		files.forEach(file -> {
+			log.info("---------------------------");
+			log.info("name: " + file.getOriginalFilename());
+			log.info("size: " + file.getSize());
+		});
+		
+		return "test";
 	}
 	
 	
