@@ -25,4 +25,15 @@
 		values(#{idx},#{name},#{subject},#{contents})
 	</insert>
 	
+	<select id="guestSelect" resultType="com.jslhrd.domain.GuestVO">
+		select * from tbl_guest where idx=#{idx}
+	</select>
+	
+	<update id="guestModify">
+		update tbl_guest set name=#{name},subject=#{subject},contents=#{contents} where idx=#{idx}
+	</update>
+	
+	<delete id="guestDelete">
+		delete from tbl_guest where idx=#{idx}
+	</delete>
 </mapper>
