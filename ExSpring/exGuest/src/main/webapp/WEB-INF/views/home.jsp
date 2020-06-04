@@ -7,7 +7,7 @@
 </head>
 <body>
 <h1>
-	Hello world! Exam_04
+	Hello world!  exGuest Project
 </h1>
 
 <P>  The time on the server is ${serverTime}. </P>
