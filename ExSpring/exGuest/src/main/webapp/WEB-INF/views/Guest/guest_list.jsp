@@ -41,7 +41,9 @@
         <td align="center" height="25">
         <font face="돋움" size="2" color="#000000">${guest.idx}</font></td>
         <td align="left" height="20">
-        	<font face="돋움" size="2" color="#000000">${guest.subject}</td>
+        	<font face="돋움" size="2" color="#000000">
+        		<a href="guestHits?idx=${guest.idx}">${guest.subject}</a>
+        	</font></td>
         <td align="center" height="20"><font face="돋움" size="2">
         <a class="list" href="mailto:ein1027@nate.com">${guest.name}</a></font></td>
         <td align="center" height="20"><font face="돋움" size="2">${guest.regdate.substring(0,10)}</font></td>

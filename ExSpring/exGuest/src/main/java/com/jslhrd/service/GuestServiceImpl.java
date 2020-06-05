@@ -5,6 +5,11 @@ package com.jslhrd.service;
 
 import java.util.List;
 
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.xml.ws.ServiceMode;
+
 import org.springframework.stereotype.Service;
 
 import com.jslhrd.domain.GuestVO;
@@ -34,8 +39,23 @@ public class GuestServiceImpl implements GuestService {
 	}
 
 	@Override
-	public void guestHits(int idx) {
-		mapper.guestCount();
+	public void guestHits(int idx,HttpServletRequest request, HttpServletResponse response) {
+		boolean bool=false;
+		Cookie info = null;
+		Cookie[] cookies = request.getCookies();
+		for(int i=0; i<cookies.length; i++) {
+			info = cookies[i];
+			if(info.getName().equals("guestCookie"+idx)) {
+				bool = true;
+				break;
+			}
+		}
+		String str= ""+System.currentTimeMillis();
+		if(!bool) {
+			info=new Cookie("guestCookie"+idx, str);
+			response.addCookie(info);
+			mapper.guestHits(idx);
+		}
 	}
 
 	@Override

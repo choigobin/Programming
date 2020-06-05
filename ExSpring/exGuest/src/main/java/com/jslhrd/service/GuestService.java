@@ -2,6 +2,9 @@ package com.jslhrd.service;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import com.jslhrd.domain.GuestVO;
 
 public interface GuestService {
@@ -15,7 +18,10 @@ public interface GuestService {
 	public GuestVO guestSelect(int idx);
 	
 	// 특정 게시물 조회수 증가
-	public void guestHits(int idx);
+	//public void guestHits(int idx);
+	
+	// 특정 게시물 조회수 증가(서비스에서 쿠키생성)
+	public void guestHits(int idx, HttpServletRequest request, HttpServletResponse response);
 	
 	// 게시물 등록
 	public int guestWrite(GuestVO vo);
