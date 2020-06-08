@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.jslhrd.mapper.GuestMapper">
+	<!-- 전체 게시물 카운트 -->
+	<select id="guestCount" resultType="int">
+		select count(*) from tbl_guest
+	</select>
+	
+	<!-- 게시물 전체 목록 검색 -->
+	<select id="guestList" resultType="com.jslhrd.domain.GuestVO">
+		select * from tbl_guest order by idx desc
+	</select>
+	
+	<!-- 게시물 특정 목록 검색 -->
+	<select id="guestListSearch" resultType="com.jslhrd.domain.GuestVO">
+		select * from tbl_guest where 
+			<choose>
+				<when test="search=='name'">
+					name like '%' || #{key} || '%'
+				</when>
+				<when test="search=='subject'">
+					subject like '%' || #{key} || '%'
+				</when>
+				<when test="search=='contents'">
+					contents like '%' || #{key} || '%'
+				</when>
+			</choose>
+		order by idx desc
+	</select>
+	
+	<!-- 특정 게시물 검색 -->
+	<select id="guestSelect" resultType="com.jslhrd.domain.GuestVO">
+		select * from tbl_guest where idx=#{idx}
+	</select>
+	
+	<!-- 특정 게시물 조회수 증가 -->
+	<update id="guestHits">
+		update tbl_guest set readcnt=readcnt+1 where idx=#{idx}
+	</update>
+	
+	<!-- 게시물 등록 -->
+	<insert id="guestWrite">
+		insert into tbl_guest(idx,name,subject,contents)
+			values((select idx+1 from (select idx from tbl_guest order by idx desc) where rownum = 1)
+			,#{name},#{subject},#{contents})
+	</insert>
+	
+	<!-- 게시물 수정 -->
+	<update id="guestModify">
+		update tbl_guest set subject=#{subject}, contents=#{contents} 
+				where idx=#{idx}
+	</update>
+	
+	<!--  게시물 삭제 -->
+	<delete id="guestDelete">
+		delete from tbl_guest where idx=#{idx}
+	</delete>
+
+
+</mapper>
