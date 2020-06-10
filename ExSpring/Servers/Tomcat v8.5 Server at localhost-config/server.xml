@@ -151,7 +151,7 @@
 
 		<Resource auth="Container" driverClassName="oracle.jdbc.driver.OracleDriver" maxIdle="10" maxTotal="20" maxWaitMillis="-1" name="jdbc/myoracle" password="1234" type="javax.sql.DataSource" url="jdbc:oracle:thin:@localhost:1521:orcl" username="jsldb"/>
 
-      <Context docBase="exGuestPage" path="/" reloadable="true" source="org.eclipse.jst.jee.server:exGuestPage"/></Host>
+      <Context docBase="exGuestSearchPage" path="/" reloadable="true" source="org.eclipse.jst.jee.server:exGuestSearchPage"/><Context docBase="exBoard" path="/controller" reloadable="true" source="org.eclipse.jst.jee.server:exBoard"/></Host>
     </Engine>
   </Service>
 </Server>
