@@ -23,11 +23,11 @@ td   { font-family: 돋움, Verdana; font-size: 9pt; text-decoration: none; colo
 		  <td height="298"> 
 		    <table width="100%" border="0" cellspacing="0" cellpadding="0">
 			  <tr> 
-			    <td width="9"><img src="./img/h_b02.gif" width="9" height="21"></td>
+			    <td width="9"><img src="/img/h_b02.gif" width="9" height="21"></td>
 				<td bgcolor="7aaad5"> 
-				 <div align="center"><font color="#FFFFFF"><b>회원가입을 환영합니다</b></font></div>
+				 <div align="center"><font color="#FFFFFF"><b>로그인 되었습니다</b></font></div>
 				 </td>
-				 <td width="9"><img src="./img/f_b03.gif" width="9" height="21"></td>
+				 <td width="9"><img src="/img/f_b03.gif" width="9" height="21"></td>
 			  </tr>
 			 </table>
 			 <table border="0" cellpadding="0" cellspacing="0" width="550">
@@ -35,11 +35,14 @@ td   { font-family: 돋움, Verdana; font-size: 9pt; text-decoration: none; colo
 			     <td bgcolor="#7aaad5"> 
 				   <table border="0" cellpadding="3" cellspacing="1" width="99%" height="321">
 				     <tr bgcolor="#FFFFFF"> 
-					   <td align=CENTER bgcolor="#eff4f8" height="92"> xxx님 환영합니다 
+					   <td align=CENTER bgcolor="#eff4f8" height="92"> ${user.name}님 환영합니다 
 						</td>
 					  </tr>
 				     <tr bgcolor="#FFFFFF"> 
-					   <td align=CENTER bgcolor="#eff4f8" height="92"> [내정보수정] [로그아웃] [메인 페이지이동] 
+					   <td align=CENTER bgcolor="#eff4f8" height="92"> 
+					   <a href="userinfo_modify">[내정보수정]</a> 
+					   <a href="logout">[로그아웃]</a>
+					   <a href="userinfo_list">[메인 페이지이동]</a> 
 						</td>
 					 </tr>
 					  <tr bgcolor="#FFFFFF"> 
@@ -73,11 +76,11 @@ td   { font-family: 돋움, Verdana; font-size: 9pt; text-decoration: none; colo
 			         </table>
 			  <table width="100%" border="0" cellspacing="0" cellpadding="0">
 				<tr> 
-				  <td width="9"><img src="./img/h_b04.gif" width="12" height="11"></td>
+				  <td width="9"><img src="/img/h_b04.gif" width="12" height="11"></td>
 				  <td bgcolor="7aaad5" width="612"> 
 					<div align="center"></div>
 				  </td>
-				  <td width="10"><img src="./img/h_b05.gif" width="12" height="11"></td>
+				  <td width="10"><img src="/img/h_b05.gif" width="12" height="11"></td>
 				</tr>
 			  </table>
 			</td>

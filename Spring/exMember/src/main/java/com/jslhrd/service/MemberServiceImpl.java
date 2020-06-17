@@ -23,4 +23,18 @@ public class MemberServiceImpl implements MemberService {
 		return mapper.memList();
 	}
 
+	@Override
+	public String userIdSearch(MemberVO vo) {
+		return mapper.userIdSearch(vo);
+	}
+	
+	@Override
+	public MemberVO userLogin(MemberVO vo) {
+		return mapper.userLogin(vo);
+	}
+	
+	@Override
+	public void lastTimeUpdate(MemberVO vo) {
+		mapper.lastTimeUpdate(vo);
+	}
 }

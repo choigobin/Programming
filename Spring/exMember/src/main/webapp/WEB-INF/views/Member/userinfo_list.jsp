@@ -1,5 +1,12 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
+<c:if test="${empty user}">
+	<script>
+		alert("회원전용공간입니다");
+		location.href="userlogin_form";
+	</script>
+</c:if>
 <html>
 <head>
 <title>회원목록 보여주기</title>
@@ -59,7 +66,7 @@ td   { font-family: 돋움, Verdana; font-size: 9pt; text-decoration: none; colo
     <td></td>
    </tr>
   <tr>
-    <td>로그인 페이지 이동
+    <td><a href="userlogin_form">로그인 페이지 이동</a>
     </td>
     <td><a href="userinfo_insert">[회원가입페이지 이동]</a></td>
    </tr>

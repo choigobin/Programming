@@ -8,4 +8,18 @@
 		select * from tbl_member order by first_time desc
 	</select>
 
+	<!-- id검색 존재하면 비번 리턴 -->
+	<select id="userIdSearch" resultType="string">
+		select passwd from tbl_member where userid=#{userid}
+	</select>
+	
+	<!-- 로그인 정보 (사용정보 리턴) 세션정보활용 -->
+	<select id="userLogin" resultType="com.jslhrd.domain.MemberVO">
+		select * from tbl_member where userid=#{userid}
+	</select>
+	
+	<!--  마지막날자 업데이트 -->
+	<update id="lastTimeUpdate">
+		update tbl_member set last_time=sysdate where userid=#{userid}
+	</update>
 </mapper>
