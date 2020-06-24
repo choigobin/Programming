@@ -4,6 +4,7 @@ import java.awt.Container;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+@SuppressWarnings("serial")
 public class Exam_04 extends JFrame{
 	public Exam_04() {
 		setTitle("프레임에 컴포넌트 부착하기");

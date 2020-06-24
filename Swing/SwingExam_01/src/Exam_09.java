@@ -4,6 +4,7 @@ import java.awt.GridLayout;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
+@SuppressWarnings("serial")
 public class Exam_09 extends JFrame{
 	public Exam_09() {
 		setTitle("GridLayout");

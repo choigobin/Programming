@@ -7,6 +7,7 @@ import java.awt.GridLayout;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+@SuppressWarnings("serial")
 public class Exam_08 extends JFrame{
 	public Exam_08() {
 		setTitle("GradLayout");

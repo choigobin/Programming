@@ -10,6 +10,7 @@ import java.awt.Container;
 
 import javax.swing.*;
 
+@SuppressWarnings("serial")
 public class Exam_07 extends JFrame{
 	public Exam_07() {
 		setTitle("BorderLayout 테스트");

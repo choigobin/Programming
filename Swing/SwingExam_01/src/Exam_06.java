@@ -10,6 +10,7 @@ import java.awt.FlowLayout;
 
 import javax.swing.*;
 
+@SuppressWarnings("serial")
 public class Exam_06 extends JFrame{
 	public Exam_06() {
 		setTitle("FlowLayout 테스트");

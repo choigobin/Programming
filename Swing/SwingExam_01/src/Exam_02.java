@@ -1,5 +1,5 @@
 import javax.swing.*;
-
+@SuppressWarnings("serial")
 class AA extends JFrame{
 	AA(){
 		this.setTitle("두번째 프레임");

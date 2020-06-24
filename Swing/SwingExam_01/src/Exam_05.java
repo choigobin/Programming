@@ -1,8 +1,8 @@
 import java.awt.Color;
-import java.awt.Container;
 import java.awt.FlowLayout;
 
 import javax.swing.*;
+@SuppressWarnings("serial")
 public class Exam_05 extends JFrame{
 	Exam_05(){
 		setTitle("컴포넌트 배치 테스트");

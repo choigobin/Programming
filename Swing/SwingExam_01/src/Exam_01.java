@@ -4,7 +4,7 @@
  * 3. FX
  */ 
 import javax.swing.*;
-
+@SuppressWarnings("serial")
 public class Exam_01 extends JFrame{
 	public Exam_01() {
 		setTitle("첫번째 프레임");
