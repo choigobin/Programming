@@ -10,9 +10,9 @@ public class Exam08 {
 	ButtonGroup btng;
 	JButton btn1, btn2, btn3;
 	JPanel panel,panel1, panel2, panel3, panel4, panel5, panel6, panel7, panel8, panel9;
-	JList list;
+	JList<?> list;
 	JTextArea txar;
-	JComboBox combo;
+	JComboBox<String> combo;
 	JRadioButton rad1, rad2;
 //이제 간격벌어지는 이유는 grid로 정렬했을 때 가장 큰 칸 기준으로 전부다 크키가 같아져버려서 자기소개부분때문에 저렇게 되요
 	//자기소개만 지우면 잘 돌아가죠 저는 grid에서 자기소개 빼고 처리했어요. North에 회원가입부터 자기소개앞까지 넣고 center에는 자기소개만 넣었어요
@@ -62,7 +62,7 @@ public class Exam08 {
 		frm.add(BorderLayout.NORTH, panel5);
 
 		// 직업
-		combo = new JComboBox();
+		combo = new JComboBox<String>();
 		combo.addItem("직업을 선택하세요");
 		combo.addItem("교사");
 		combo.addItem("교원");

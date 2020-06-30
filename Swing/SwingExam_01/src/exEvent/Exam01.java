@@ -10,6 +10,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 	
+@SuppressWarnings("serial")
 public class Exam01 extends JFrame{
 	
 	JTextField tx1; //입력받기 위한 컴포넌트

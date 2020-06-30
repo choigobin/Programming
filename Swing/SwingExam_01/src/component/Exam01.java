@@ -7,6 +7,7 @@ import javax.swing.JLabel;
 
 
 //J프레임 상속받아서 쓰는 방법
+@SuppressWarnings("serial")
 public class Exam01 extends JFrame {
 	public Exam01() {
 		JLabel lbl1 = new JLabel();

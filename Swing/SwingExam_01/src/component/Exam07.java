@@ -17,11 +17,14 @@ import javax.swing.JTextArea;
 
 public class Exam07 {
 	JFrame frm;
+	@SuppressWarnings("rawtypes")
 	JComboBox combo1, combo2;
 	JPanel panel1, panel2, panel3, panel4, panelCenter, panel5;
+	@SuppressWarnings("rawtypes")
 	JList list1, list2;
 	JTextArea txar;
 	
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public Exam07() {
 		//하나씩 넣어서 보여주는 방식
 		frm = new JFrame("컴포넌트 테스트 1.1");

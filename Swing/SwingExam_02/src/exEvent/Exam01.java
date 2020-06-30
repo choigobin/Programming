@@ -5,13 +5,14 @@ import java.awt.FlowLayout;
 
 import javax.swing.*;
 
-public class Exam_01 extends JFrame{
+@SuppressWarnings("serial")
+public class Exam01 extends JFrame{
 	JTextField tx1; //이름 입력을 위한 컴포넌트
 	JTextArea txar1;//이름 출력을 위한 컴포넌트
 	JPanel p1,p2,p3;//컴포넌트를 묶기위한 컨테이너
 	JButton btn1,btn2;
 	
-	public Exam_01() {
+	public Exam01() {
 		tx1 = new JTextField(10);
 		p1 = new JPanel(new FlowLayout(FlowLayout.LEFT));
 		p1.add(new JLabel("이름"));
@@ -37,6 +38,6 @@ public class Exam_01 extends JFrame{
 		setVisible(true);
 	}
 	public static void main(String[] args) {
-		new Exam_01();
+		new Exam01();
 	}
 }

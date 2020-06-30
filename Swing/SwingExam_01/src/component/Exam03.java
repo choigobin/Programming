@@ -5,7 +5,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-
+@SuppressWarnings("serial")
 public class Exam03 extends JFrame{
 	public Exam03() {
 		setTitle("로그인 폼 만들기");

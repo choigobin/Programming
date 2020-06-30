@@ -5,6 +5,7 @@ import java.awt.*;
 
 //Checkbox
 //라디오버튼
+@SuppressWarnings("serial")
 public class Exam06 extends JFrame{
 	JCheckBox chk1, chk2, chk3;
 	JPanel panel; // 부착하고 싶은거-> 패널 모아서 -> 프레임에 붙임
