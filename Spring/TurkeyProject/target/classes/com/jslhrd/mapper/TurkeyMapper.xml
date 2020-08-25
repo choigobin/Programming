@@ -1,0 +1,745 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.jslhrd.mapper.TurkeyMapper">
+	
+	<!-- 문환 -->
+	<!-- 학생 학번 검색 후 존재하면 비밀번호 리턴 -->
+	<select id="stuIdSearch" resultType="string">
+		select stu_pw from student where stu_code=#{stu_code}
+	</select>
+	
+	<!-- 로그인(학번,pass) - Session추가용 -->
+	<select id="stuLogin"  resultType="com.jslhrd.domain.StudentVO">
+		select * from student where stu_code=#{stu_code}
+	</select>
+
+	<!-- 교수 학번 검색 후 존재하면 비밀번호 리턴 -->
+	<select id="proIdSearch" resultType="string">
+		select pro_pw from professor where pro_code=#{pro_code}
+	</select>
+
+	<!-- 로그인(학번,pass) - Session추가용 -->
+	<select id="proLogin"  resultType="com.jslhrd.domain.ProfessorVO">
+		select * from professor where pro_code=#{pro_code}
+	</select>
+	
+	<!-- 전공코드로 전공이름 가져오기 -->
+	<select id="getMajorName" resultType="String">
+		select major_name from major where major_code=#{major_code}
+	</select>
+
+	<!-- 학과 등록 -->
+	<insert id="majorInsert">
+		insert into major values(#{major_code},#{major_name})
+	</insert>
+	
+	<!-- 학과 리스트 -->
+	<select resultType="com.jslhrd.domain.MajorVO" id="majorList">
+		select * from major order by major_name
+	</select>
+
+	<!-- 과목 등록 -->
+	<insert id="subInsert">
+		insert into subject values(#{sub_code},#{major_code},#{sub_name},#{sub_credit})
+	</insert>
+
+	<!-- 과목 리스트 -->
+	<select resultType="com.jslhrd.domain.SubjectVO" id="subList">
+		select * from subject where major_code=#{major_code}
+		
+	</select>
+
+	<!-- 과목코드로 정보 불러오기 -->
+	<select resultType="com.jslhrd.domain.SubjectVO" id="subjectOne">
+		select * from subject where sub_code=#{sub_code}
+		<trim prefix="AND">
+			<![CDATA[
+				major_code=#{major_code}
+			]]>
+		</trim>
+	</select>
+
+	<!-- 학기별 과목 등록 -->
+	<insert id="sub2Insert">
+		insert into subject2(sub_code,major_code,pro_code,sub_name,time_a,time_b,max_inwon,semester,year,gubun,sub_credit)
+			values(#{sub_code},#{major_code},#{pro_code},#{sub_name},#{time_a},#{time_b},#{max_inwon},#{semester},#{year},#{gubun},#{sub_credit})
+	</insert>
+
+	<!-- 학기별 개설 과목 조회 -->
+	<select id="sub2List" resultType="com.jslhrd.domain.Subject2VO">
+		select s.*,p.pro_name from subject2 s , professor p where s.major_code=#{major_code}
+		<trim prefix="AND">
+			<![CDATA[
+				s.year=#{year}	
+			]]>
+		</trim>
+		<trim prefix="AND">
+			<![CDATA[
+				s.semester=#{semester}	
+			]]>
+		</trim>
+		<trim prefix="AND">
+			<![CDATA[
+				s.pro_code = p.pro_code	
+			]]>
+		</trim>
+	</select>
+	
+   <!-- 과목코드로 과목정보 불러오기 -->
+   <select id ="findSubjectInfo" resultType="com.jslhrd.domain.Subject2VO">
+      select * from subject2 where sub_code=#{sub_code} and major_code=#{major_code} and year=#{year} and semester=#{semester}
+
+   </select>
+   
+   <!-- 수강과목 중복 확인 -->
+   <select id="subListCheck" resultType="com.jslhrd.domain.SubListVO">
+   		select * from sublist where stu_code=#{stu_code} and sub_code=#{sub_code} and major_code=#{major_code} and list_semester=#{semester} and list_year=#{year}
+   </select>
+   
+   <!-- 과목정보를 학생 수강목록에 등록 -->
+   <insert id = "applyDo">
+      insert into sublist(stu_code,sub_code,major_code,pro_code,list_semester,list_year,sub_credit) 
+         values(#{stu_code},#{sub_code},#{major_code},#{pro_code},#{semester},#{year},#{sub_credit})
+   </insert>
+   
+   <!-- 수강신청시 학생인원 증가 -->
+   <update id="inwonUP">
+   		update subject2 set inwon=inwon+1 where sub_code=#{sub_code} and major_code=#{major_code} and year=#{year} and semester=#{semester}
+   </update>
+   
+   <!-- 수강신청시 출석부 생성 -->
+   <insert id="insertATT">
+   		insert into attendance(stu_code,sub_code,major_code,pro_code,year,semester,att_time) 
+   			values(#{stu_code},#{sub_code},#{major_code},#{pro_code},#{year},#{semester},#{att_time})
+   </insert>
+   
+   <!-- 우편번호 검색 -->
+   	<select id="zipCodeList" resultType="com.jslhrd.domain.ZipVO">
+		select * from zipcode where dong like '%' || #{addr} || '%'
+	</select>
+	
+	<!-- 쪽지리스트 불러오기 -->
+	<select id="listMail" resultType="com.jslhrd.domain.MailVO">
+		select * from mail where reception=#{code} order by regdate desc
+	</select>
+	
+	<!-- 학생학번 있는지 없는지 -->
+	<select id="stuCodeCheck" resultType="com.jslhrd.domain.StudentVO">
+		select * from student where stu_code=#{reception}
+	</select>
+	
+	<!-- 교수학번 있는지 없는지 -->
+   	<select id="proCodeCheck" resultType="com.jslhrd.domain.ProfessorVO">
+		select * from professor where pro_code=#{reception}
+	</select>
+	
+	<!-- 쪽지 보내기 -->
+	<insert id="sendMail">
+		insert into mail(idx,contents,reception,sending,sending_name) 
+			values(mail_seq.nextval,#{contents},#{reception},#{sending},#{sending_name})
+	</insert>
+	
+	<!-- 보낸 쪽지 리스트 -->
+	<select id="sendMailList" resultType="com.jslhrd.domain.MailVO">
+		select * from mail where sending=#{code} order by regdate desc
+	</select>
+	
+	<!-- 쪽지 보기 -->
+	<select id="viewMail" resultType="com.jslhrd.domain.MailVO">
+		select * from mail where idx=#{idx}
+	</select>
+	
+	<!-- 쪽지 볼때 수신체크-->
+	<update id="mail_check">
+		update mail set mail_check=1 where idx=#{idx}
+	</update>
+
+	<!-- 미확인 쪽지 갯수 불러오기 -->
+	<select id="mail_count" resultType="int">
+		select count(*) from mail where reception=#{code} and mail_check=0
+	</select>
+	
+	<!-- 자게글 5개 -->
+	<select resultType="com.jslhrd.domain.BoardVO" id="main_freeboard_list">
+		<![CDATA[
+			select * from free_board where ROWNUM <= 10 order by idx desc
+		]]>
+	</select>
+
+	<!-- 공지글 5개 -->
+	<select resultType="com.jslhrd.domain.NoticeVO" id="main_noticeboard_list">
+		<![CDATA[
+			select * from notice_board where ROWNUM <= 5 order by idx desc
+		]]>
+	</select>
+   
+	<!-- 일정 등록 -->
+	<insert id="illjung_insert">
+		insert into illjung values(illjung_seq.nextval,#{day},#{contents})
+	</insert>
+	
+	<!-- 일정 삭제 -->
+	<delete id="illjung_delete">
+		delete from illjung where idx=#{idx}
+	</delete>
+	
+	<!-- 일정 리스트 -->
+	<select id="illjung_list" resultType="com.jslhrd.domain.ILLJUNGVO">
+		select * from illjung order by day
+	</select>
+	
+	<!-- 연도별 일정 -->
+	<select id="illjung_list_year" resultType="com.jslhrd.domain.ILLJUNGVO">
+		select * from illjung where to_char(day,'YYYY')=#{year} order by day
+	</select>
+	
+	<!-- 주리 -->
+	<!-- Notice - 게시물 총 개수 카운트 -->
+	<select id="noticeCount" resultType="int">
+		select count(*) from notice_board
+	</select>
+
+	<!-- Notice - 검색 조건에 맞는 게시물 총 개수 카운트 -->
+	<select id="noticeSearchCount" resultType="int">
+		select count(*) from notice_board where
+		<choose>
+			<when test="search == 'title'">
+				title like '%' || #{key} || '%'
+			</when>
+			
+			<when test="search == 'contents'">
+				contents like '%' || #{key} || '%'
+			</when>			
+		</choose>
+	</select>
+	
+	<!-- Notice - 전체 게시물 조회(List) -->
+	<select id="noticeList" resultType="com.jslhrd.domain.NoticeVO">
+		<![CDATA[
+			select X.* from (select rownum as rnum, a.* from(
+				select * from notice_board order by idx desc) A
+					where rownum <= #{endpage}) X where X.rnum >= #{startpage}
+		]]>
+	</select>
+
+	<!-- Notice - 검색 조건에 맞는 게시물 조회(List) -->
+	<select id="noticeSearchList" resultType="com.jslhrd.domain.NoticeVO">
+		select X.* from (select rownum as rnum, A.* from (
+			select * from notice_board order by idx desc) A where 
+			<choose>
+				<when test="search == 'title'">
+					title like '%' || #{key} || '%'
+				</when>
+				
+				<when test="search == 'contents'">
+					contents like '%' || #{key} || '%'
+				</when>			
+			</choose>
+			<trim prefix="AND">
+				<![CDATA[
+					rownum <= #{endpage}) X where 
+				]]>
+			</trim> 
+			<choose>
+				<when test="search == 'title'">
+					title like '%' || #{key} || '%'
+				</when>
+				
+				<when test="search == 'contents'">
+					contents like '%' || #{key} || '%'
+				</when>			
+			</choose>
+			<trim prefix="AND">
+				<![CDATA[
+					X.rnum >= #{startpage} 
+				]]>
+			</trim> 
+	</select>
+	
+	<!-- Notice - 게시물 등록 -->
+	<insert id="noticeInsert">
+		insert into
+		notice_board(idx, title, contents, filename, ori_filename)
+		values(notice_board_seq_idx.nextval, #{title}, #{contents}, #{filename}, #{ori_filename})
+	</insert>
+	
+	<!-- Notice - 게시물 조회수 증가 -->
+	<update id="noticeReadcnt">
+		update notice_board set readcnt = readcnt + 1 where idx = #{idx} 
+	</update>
+	
+	<!-- Notice - 특정 게시물 선택 -->
+	<select id="noticeSelect" resultType="com.jslhrd.domain.NoticeVO">
+		select * from notice_board where idx=#{idx}
+	</select>
+	
+	<!-- Notice - 게시물 수정 -->
+	<insert id="noticeModify">
+		update notice_board
+		set title = #{title}, contents = #{contents}, filename = #{filename}, ori_filename = #{ori_filename}
+		where idx = #{idx}
+	</insert>
+	
+	<!-- Notice - 게시물 삭제 -->
+	<delete id="noticeDelete">
+		delete from notice_board where idx = #{idx}
+	</delete>
+	
+	<!-- Board - 게시물 총 개수 카운트 -->
+	<select id="boardCount" resultType="int">
+		select count(*) from free_board
+	</select>
+
+	<!-- Board - 검색 조건에 맞는 게시물 총 개수 카운트 -->
+	<select id="boardSearchCount" resultType="int">
+		select count(*) from free_board where
+		<choose>
+			<when test="search == 'stu_code'">
+				stu_code like '%' || #{key} || '%'
+			</when>
+			<when test="search == 'title'">
+				title like '%' || #{key} || '%'
+			</when>
+			
+			<when test="search == 'contents'">
+				contents like '%' || #{key} || '%'
+			</when>			
+		</choose>
+	</select>
+	
+	<!-- Board - 전체 게시물 조회(List) -->
+	<select id="boardList" resultType="com.jslhrd.domain.BoardVO">
+		<![CDATA[
+			select X.* from (select rownum as rnum, a.* from(
+				select * from free_board order by idx desc) A
+					where rownum <= #{endpage}) X where X.rnum >= #{startpage}
+		]]>
+	</select>
+
+	<!-- Board - 검색 조건에 맞는 게시물 조회(List) -->
+	<select id="boardSearchList" resultType="com.jslhrd.domain.BoardVO">
+		select X.* from (select rownum as rnum, A.* from (
+			select * from free_board order by idx desc) A where 
+			<choose>
+				<when test="search == 'stu_code'">
+					stu_code like '%' || #{key} || '%'
+				</when>
+				<when test="search == 'title'">
+					title like '%' || #{key} || '%'
+				</when>
+				
+				<when test="search == 'contents'">
+					contents like '%' || #{key} || '%'
+				</when>			
+			</choose>
+			<trim prefix="AND">
+				<![CDATA[
+					rownum <= #{endpage}) X where 
+				]]>
+			</trim> 
+			<choose>
+				<when test="search == 'stu_code'">
+					stu_code like '%' || #{key} || '%'
+				</when>
+				<when test="search == 'title'">
+					title like '%' || #{key} || '%'
+				</when>
+				
+				<when test="search == 'contents'">
+					contents like '%' || #{key} || '%'
+				</when>			
+			</choose>
+			<trim prefix="AND">
+				<![CDATA[
+					X.rnum >= #{startpage} 
+				]]>
+			</trim> 
+	</select>
+	
+	<!-- Board - 게시물 등록 -->
+	<insert id="boardWrite">
+		insert into
+		free_board(idx, stu_code, title, contents)
+		values(free_board_seq_idx.nextval, #{stu_code}, #{title}, #{contents})
+	</insert>
+	
+	<!-- Board - 게시물 조회수 증가 -->
+	<update id="boardReadcnt">
+		update free_board set readcnt = readcnt + 1 where idx = #{idx} 
+	</update>
+	
+	<!-- Board - 특정 게시물 선택 -->
+	<select id="boardSelect" resultType="com.jslhrd.domain.BoardVO">
+		select * from free_board where idx=#{idx}
+	</select>
+	
+	<!-- Board - 게시물 수정 -->
+	<insert id="boardModify">
+		update free_board
+		set title = #{title}, contents = #{contents}
+		where idx = #{idx}
+	</insert>
+	
+	<!-- Board - 게시물 삭제 -->
+	<delete id="boardDelete">
+		delete from free_board where idx = #{idx}
+	</delete>
+	
+	<!-- Comment - 댓글 등록 -->
+	<insert id="commentWrite">
+		insert into
+		free_comment(c_idx, idx, stu_code, comments)
+		values(free_comment_seq_c_idx.nextval, #{idx}, #{stu_code}, #{comments})
+	</insert>
+	
+	<!--  Comment - 댓글 조회(List) -->
+	<select id="commentList" resultType="com.jslhrd.domain.CommentVO">
+		select c.*, s.stu_name 
+			from free_comment c, student s 
+				where c.stu_code = s.stu_code 
+					<trim prefix="AND">
+						<![CDATA[
+							idx = #{idx} 
+						]]>
+					</trim> 
+	</select>
+	
+	<!-- Comment - 댓글 삭제 -->
+	<delete id="commentDelete">
+		delete from free_comment where c_idx = #{c_idx}
+	</delete>
+	
+	<!-- Comment - 특정 댓글 선택 -->
+	<select id="commentSelect" resultType="com.jslhrd.domain.CommentVO">
+		select * from free_comment where c_idx = #{c_idx}
+	</select>
+	
+	<!-- Comment - 댓글 수정 -->
+	<update id="commentModify">
+		update free_comment set comments = #{comments} where c_idx = #{c_idx}
+	</update>
+
+   <!-- 학생 번호 찾기 -->
+   <select id ="find_code" resultType="com.jslhrd.domain.StudentVO">
+      select * from student where stu_name = #{stu_name} and stu_birth = #{stu_birth} and stu_email = #{stu_email}
+   </select>
+   
+   <!-- 학생 비밀번호 찾기 -->
+   <select id ="find_pass" resultType="com.jslhrd.domain.StudentVO">
+      select * from student where stu_code = #{stu_code} and stu_name = #{stu_name} and stu_birth = #{stu_birth}
+   </select>
+   
+   <!-- 학생 비밀번호 변경 -->
+	<update id="updatePass">
+      update student
+      set stu_pw = #{stu_pw}
+      where stu_code = #{stu_code}
+	</update>
+   
+	<!-- 준배 -->
+	<!-- 관리자 학생 등록-->
+	<insert id="stdinsert">
+		insert into student (stu_code,major_code,stu_pw,stu_name,stu_sex,stu_email,stu_birth,stu_phone,stu_condition,stu_level,stu_eng,stu_nt,stu_img,pro_code,stu_zip,stu_addr) 
+		values(#{stu_code},#{major_code},#{stu_pw},#{stu_name},#{stu_sex},#{stu_email},#{stu_birth},#{stu_phone},#{stu_condition},#{stu_level},#{stu_eng},#{stu_nt},#{stu_img},#{pro_code},#{stu_zip},#{stu_addr})
+	</insert>
+	
+	<!-- 관리자 교수 등록-->
+	<insert id="proinsert">
+		insert into professor (pro_code,major_code,pro_pw,pro_name,pro_sex,pro_email,pro_birth,pro_phone,pro_grade,pro_eng,pro_nt,pro_img) 
+		values(#{pro_code},#{major_code},#{pro_pw},#{pro_name},#{pro_sex},#{pro_email},#{pro_birth},#{pro_phone},#{pro_grade},#{pro_eng},#{pro_nt},#{pro_img})		
+	</insert>
+	
+	<!-- 전공 코드, 이름 불러오기 -->
+	<select id="MajorView"  resultType="com.jslhrd.domain.MajorVO">
+		select * from Major order by major_code
+	</select>
+	
+	<!-- 학생 전원 불러오기 -->
+	<select id="StuSelect"  resultType="com.jslhrd.domain.StudentVO">
+		select a.*,b.major_name from Student a,major b where a.major_code=b.major_code order by a.stu_code
+	</select>
+	
+	<!-- 학생 정보 수정 불러오기(관리자) -->
+	<select id="StuAdModi"  resultType="com.jslhrd.domain.StudentVO">
+		select a.*,b.major_name from Student a,major b where a.major_code=b.major_code and stu_code=#{stu_code} order by a.stu_code
+	</select>
+	
+	<!-- 학생 정보 수정 하기(관리자) -->
+	<update id="StuAdModify">
+		update Student set major_code=#{major_code},stu_name=#{stu_name},stu_sex=#{stu_sex},stu_email=#{stu_email},stu_birth=#{stu_birth},stu_phone=#{stu_phone},
+		stu_condition=#{stu_condition},stu_level=#{stu_level},stu_eng=#{stu_eng},stu_nt=#{stu_nt},stu_img=#{stu_img},pro_code=#{pro_code},stu_zip=#{stu_zip},stu_addr=#{stu_addr}
+		where stu_code=#{stu_code}
+	</update>
+	
+	<!-- 교수 전원 불러오기 -->
+	<select id="ProSelect"  resultType="com.jslhrd.domain.ProfessorVO">
+		select a.*,b.major_name from Professor a,major b where a.major_code=b.major_code order by a.pro_code
+	</select>
+	
+	<!-- 교수 학과별 불러오기 -->
+	<select id="ProSelectSearch"  resultType="com.jslhrd.domain.ProfessorVO">
+		select a.*,b.major_name from Professor a,major b where a.major_code=b.major_code and a.major_code=#{major} order by a.pro_code
+	</select>
+	
+	<!-- 교수 정보 수정 불러오기(관리자) -->
+	<select id="ProAdModi"  resultType="com.jslhrd.domain.ProfessorVO">
+		select a.*,b.major_name from Professor a,major b where a.major_code=b.major_code and pro_code=#{pro_code} order by a.pro_code
+	</select>
+	
+	<!-- 교수 정보 수정 하기(관리자) -->
+	<update id="ProAdModify">
+		update Professor set major_code=#{major_code},pro_name=#{pro_name},pro_sex=#{pro_sex},pro_email=#{pro_email},pro_birth=#{pro_birth},
+		pro_phone=#{pro_phone},pro_grade=#{pro_grade},pro_eng=#{pro_eng},pro_nt=#{pro_nt},pro_img=#{pro_img}
+		where pro_code=#{pro_code}
+	</update>
+	
+	 <!-- 교수 정보 수정 하기(교수) -->
+   <update id="ProModify">
+      update Professor set pro_email=#{pro_email},pro_phone=#{pro_phone}
+      where pro_code=#{pro_code}
+   </update>
+   
+   <!-- 교수 비밀번호 수정 하기(교수) -->
+	<update id="ProModiPass">
+		update professor set pro_pw=#{pro_pw} where
+		pro_code=#{pro_code}
+	</update>
+	
+	<!-- 학사일정 검색 캘린더(main) -->
+	<select id="IlljungSelect"  resultType="com.jslhrd.domain.ILLJUNGVO">
+		select * from Illjung where day=#{day} order by idx
+	</select>
+	
+	<!-- 강민 -->
+	<!-- 교수 강의목록 검색 -->
+	<select id="proClassSearch" resultType="com.jslhrd.domain.ProClassVO">
+		select * from subject2 where pro_code=#{pro_code} and year=#{year} and semester=#{semester}
+	</select>
+	
+	<!-- 교수 출석 학생 검색 -->
+	<select id="classAtt" resultType="com.jslhrd.domain.AttVO">
+		select a.*,(select stu_name from student where stu_code = a.stu_code) stu_name from (select * from attendance where pro_code=#{pro_code} and year=#{year} and semester=#{semester} and att_time=#{att_time}) a
+	</select>
+	
+	<!--  출석 강의정보 검색 -->
+	<select id="proclassSearchOne" resultType="com.jslhrd.domain.ProClassVO">
+		select * from subject2 where pro_code=#{pro_code} and year=#{year} and semester=#{semester} and sub_code=#{sub_code} and major_code=#{major_code}
+	</select>
+	
+	<!-- 출석정보 수정 -->
+	<update id="attUpdate">
+		update attendance set week1=#{week1},week2=#{week2},week3=#{week3},week4=#{week4},week5=#{week5},week6=#{week6},week7=#{week7},
+				week8=#{week8},week9=#{week9},week10=#{week10},week11=#{week11},week12=#{week12},week13=#{week13},week14=#{week14},week15=#{week15} 
+		where stu_code=#{stu_code} and sub_code=#{sub_code} and major_code=#{major_code} and year=#{year} and semester=#{semester} and att_time=#{att_time}
+	</update>
+	
+	<!--  교수담당 학생 조회 -->
+	 <select id="proStudentSearch" resultType="com.jslhrd.domain.StudentVO">
+	 	select * from student where pro_code = #{pro_code}
+	 </select>
+	
+	<select id="proStuGradeSearch" resultType="com.jslhrd.domain.SubListVO">
+		select a.*,(select stu_name from student where stu_code = a.stu_code) stu_name from 
+		(select * from sublist where list_year = #{list_year} and list_semester=#{list_semester} and major_code=#{major_code} and sub_code=#{sub_code}) a
+		order by (list_mid + list_last) desc
+	</select>
+	
+	<update id="subListUpdate">
+		update sublist set list_mid=#{list_mid},list_last=#{list_last},list_score=#{list_score}
+		where stu_code=#{stu_code} and sub_code=#{sub_code} and major_code=#{major_code} and list_year=#{year} and list_semester=#{semester}
+	</update>
+	
+	<select id="gubunCheck" resultType="String">
+		select gubun from subject2 where sub_code=#{sub_code} and major_code=#{major_code} and year=#{year} and semester=#{semester}
+	</select>
+	
+	<update id="isuUpdate">
+		update sublist set isu = 'Y' 
+		where stu_code=#{stu_code} and sub_code=#{sub_code} and major_code=#{major_code} and list_year=#{year} and list_semester=#{semester}
+	</update>
+	
+	<select id="isuCheck" resultType="String">
+		select isu from sublist 
+		where stu_code=#{stu_code} and sub_code=#{sub_code} and major_code=#{major_code} and list_year=#{year} and list_semester=#{semester}
+	</select>
+	
+	<update id="stuisuup">
+		update student set stu_${gubun} = stu_${gubun}+${credit} where stu_code = #{stu_code}
+	</update>
+	
+	<!-- 설화 -->
+	<!-- 학생정보조회 -->
+	<select id="studentSelecet"
+		resultType="com.jslhrd.domain.StudentVO">
+		select a.*,b.major_name from (select * from student where
+		stu_code = #{stu_code} )a , major b where a.major_code = b.major_code
+
+	</select>
+
+	<!-- 학생정보수정 -->
+	<update id="studentModify">
+		update student set stu_zip=#{stu_zip},
+		stu_addr=#{stu_addr},
+		stu_phone=#{stu_phone},stu_email=#{stu_email}
+		where stu_code=#{stu_code}
+	</update>
+
+	<!-- 학생비번 수정 -->
+	<update id="studentModifyPass">
+		update student set stu_pw=#{stu_pw} where
+		stu_code=#{stu_code}
+	</update>
+
+	<!-- 성적 전체조회 -->
+	<select id="studentScoreSearch"
+		resultType="com.jslhrd.domain.SubListVO">
+		select a.*,b.sub_name,b.gubun from (select * from sublist
+		where
+		stu_code = #{stu_code} and list_semester = #{list_semester} and
+		list_year = #{list_year}) a,subject2 b where a.sub_code=b.sub_code and
+		a.major_code = b.major_code and a.list_year = b.year and a.list_semester = b.semester order by a.list_year desc
+	</select>
+
+	<!-- 성적 학기조회 -->
+	<select id="studentScoreSearchSemester"
+		resultType="com.jslhrd.domain.SubListVO">
+
+		select a.*,b.sub_name,b.gubun from (select * from sublist
+		where
+		stu_code = #{stu_code} and list_semester = #{list_semester})
+		a,subject2 b where a.sub_code=b.sub_code and a.major_code =
+		b.major_code and a.list_year = b.year and a.list_semester = b.semester order by a.list_year desc
+	</select>
+	
+	<!-- 성적 년도조회 -->
+	<select id="studentScoreSearchYear"
+		resultType="com.jslhrd.domain.SubListVO">
+
+		select a.*,b.sub_name,b.gubun from (select * from sublist
+		where
+		stu_code = #{stu_code} and list_year = #{list_year}) a,subject2 b
+		where a.sub_code=b.sub_code and a.major_code = b.major_code and a.list_year = b.year 
+		and a.list_semester = b.semester order by
+		a.list_year desc
+
+	</select>
+	
+	<!-- 성적 둘다없는 조회 -->
+	<select id="studentScoreSearchNo"
+		resultType="com.jslhrd.domain.SubListVO">
+
+		select a.*,b.sub_name,b.gubun from (select * from sublist
+		where
+		stu_code = #{stu_code}) a,subject2 b where a.sub_code=b.sub_code
+		and a.major_code = b.major_code and a.list_year = b.year and a.list_semester = b.semester order by a.list_year desc
+
+	</select>
+
+	<!-- 년도자동조회 -->
+	<select id="listYearCode"
+		resultType="com.jslhrd.domain.SubListVO">
+		select distinct list_year from sublist where stu_code =
+		#{stu_code} order by list_year desc
+	</select>
+
+	<!-- 출결조회 -->
+	<select id="studentAttSearch"
+		resultType="com.jslhrd.domain.AttVO">
+		select a.year, a.semester , a.sub_code, a.sub_name,
+		a.sub_credit, c.pro_name, b.att_time, b.week1 ,b.week2 ,
+		b.week3 , b.week4 , b.week5 , b.week6 , b.week7 , b.week8 , b.week9 ,
+		b.week10 , b.week11 , b.week12 , b.week13 , b.week14 , b.week15 
+		from ( select * from attendance where stu_code = #{stu_code} and semester = #{semester}
+		and year = #{year}) b, subject2 a, professor c
+		where a.sub_code = b.sub_code and a.pro_code = c.pro_code and a.major_code = 
+		b.major_code and a.year = b.year and a.semester = b.semester 
+        order by a.year desc
+	</select>
+	
+	<select id="studentAttSearchSemester"
+		resultType="com.jslhrd.domain.AttVO">
+		select a.year, a.semester , a.sub_code, a.sub_name,
+		a.sub_credit, c.pro_name, b.att_time, a.time_A, a.time_b, b.week1 ,b.week2 ,
+		b.week3 , b.week4 , b.week5 , b.week6 , b.week7 , b.week8 , b.week9 ,
+		b.week10 , b.week11 , b.week12 , b.week13 , b.week14 , b.week15 
+		from ( select * from attendance where stu_code = #{stu_code} and semester = #{semester}) b, 
+		subject2 a , professor c
+		where a.sub_code = b.sub_code and a.major_code = c.major_code order and a.year = b.year and a.semester = b.semester
+		 by a.year desc
+	</select>
+	
+	<select id="studentAttSearchYear"
+		resultType="com.jslhrd.domain.AttVO">
+		select a.year, a.semester , a.sub_code, a.sub_name,
+		a.sub_credit, c.pro_name, b.att_time, a.time_A, a.time_b, b.week1 ,b.week2 ,
+		b.week3 , b.week4 , b.week5 , b.week6 , b.week7 , b.week8 , b.week9 ,
+		b.week10 , b.week11 , b.week12 , b.week13 , b.week14 , b.week15 
+		from ( select * from attendance where stu_code = #{stu_code} and year = #{year}) b, 
+		subject2 a , professor c 
+		where a.sub_code = b.sub_code and a.major_code = c.major_code and a.year = b.year and a.semester = b.semester
+		 order by a.year desc
+	</select>
+	
+	<select id="studentAttSearchNo"
+		resultType="com.jslhrd.domain.AttVO">
+		select a.year, a.semester , a.sub_code, a.sub_name,
+		a.sub_credit, c.pro_name, b.att_time, a.time_A, a.time_b, b.week1 ,b.week2 ,
+		b.week3 , b.week4 , b.week5 , b.week6 , b.week7 , b.week8 , b.week9 ,
+		b.week10 , b.week11 , b.week12 , b.week13 , b.week14 , b.week15 
+		from ( select * from attendance where stu_code = #{stu_code}) b, subject2 a , professor c 
+		where a.sub_code = b.sub_code and a.major_code = c.major_code and a.year = b.year and a.semester = b.semester 
+		order by a.year desc
+	</select>
+	
+	<!-- att 년도자동조회 -->
+	<select id="attYearCode"
+		resultType="com.jslhrd.domain.AttVO">
+		select distinct year from attendance where stu_code = #{stu_code} order by year desc
+	</select>
+	
+	<!-- 은별 -->
+	<!-- 시간표 조회 -->
+	<select id="stuSub" resultType="com.jslhrd.domain.SubjectVO">
+		select sub2.year, sub2.semester, stu.stu_code, sub.sub_code, sub.sub_name, sub2.time_a, sub2.time_b
+		from (select * from student where stu_code = #{stu_code}) stu, subject sub, (select * from subject2 where year=#{year} and semester=#{semester}) sub2, sublist list
+		where sub.sub_code = sub2.sub_code
+		and stu.stu_code = list.stu_code
+        and sub2.year = list.list_year
+        and sub2.semester = list.list_semester
+        and sub2.major_code = sub.major_code
+        and list.major_code = sub.major_code
+		and list.sub_code = sub2.sub_code
+	</select>
+	
+	<!-- 메인 시간표 조회(학생) -->
+	<select id="stuSubMain" resultType="com.jslhrd.domain.SubjectVO">
+		select sub2.year, sub2.semester, stu.stu_code, sub.sub_code, sub.sub_name, sub2.time_a, sub2.time_b
+		from (select * from student where stu_code = #{stu_code, jdbcType=VARCHAR}) stu, subject sub, (select * from subject2 where year=2020 and semester=1) sub2, sublist list
+		where sub.sub_code = sub2.sub_code
+		and stu.stu_code = list.stu_code
+        and sub2.year = list.list_year
+        and sub2.semester = list.list_semester
+        and sub2.major_code = sub.major_code
+        and list.major_code = sub.major_code
+		and list.sub_code = sub2.sub_code
+	</select>
+	
+	<!-- 메인 시간표 조회(교수) -->
+	<select id="proSubMain" resultType="com.jslhrd.domain.Subject2VO" >
+		select sub2.year, sub2.semester, pro.pro_code, sub.sub_code, sub.sub_name, sub2.time_a, sub2.time_b
+		from (select * from professor where pro_code = #{pro_code, jdbcType=VARCHAR}) pro, subject sub, (select * from subject2 where year=2020 and semester=1) sub2
+		where sub.sub_code = sub2.sub_code
+        and pro.pro_code = sub2.pro_code
+	</select>
+	
+	<!-- 년도자동조회 -->
+	<select id="listYearCode2" resultType="com.jslhrd.domain.SubjectVO">
+		select distinct sub2.year 
+		from subject2 sub2, student stu
+		where stu.stu_code = #{stu_code}
+		order by sub2.year desc
+	</select>
+   
+</mapper>

@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0px;
+	font-family: "Yu Gothic Medium";
+}
+
+.all {
+	height: 955px;
+	width: 100%;
+	background-color: #EDEDED;
+}
+
+a {
+	text-decoration: none; /* 밑줄 생략 */
+	color: #000; /* 글자 색상 */
+}
+
+a:hover {
+	text-decoration: none !important;
+	color: #fff;
+}
