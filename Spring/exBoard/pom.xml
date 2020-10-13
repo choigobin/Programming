@@ -190,7 +190,7 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.12</version> <!-- JUnit 버젼 수정 -->
+			<version>4.13.1</version> <!-- JUnit 버젼 수정 -->
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
