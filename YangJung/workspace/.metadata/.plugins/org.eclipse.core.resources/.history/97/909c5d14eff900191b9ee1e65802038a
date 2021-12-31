@@ -1,0 +1,10 @@
+package p1029;
+
+public class GridDemo extends JFrame {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,66 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@include file="header.jsp" %>
+<%@include file="dbconn.jsp" %>
+	<br />
+	<h3 align="center">회원매출조회</h3>
+	<br />
+	<form action="process_insert.jsp" name="insert">
+	<table align="center">
+		<tr>
+			<th>회원번호</th>
+			<th>회원성명</th>
+			<th>고객등급</th>
+			<th>매출</th>
+		</tr>
+		<%
+	String sql = "select m.custno,m.custname,m.grade,sum(n.price) from member_tbl_02 m join money_tbl_02 n on m.custno = n.custno";
+		sql + = "";
+		try{
+		pstmt=conn.prepareStatement(sql);
+		rs = pstmt.executeQuery();
+		while(rs.next()){
+			String custno = rs.getString(1);
+			String custname = rs.getString(2);
+			String grade = rs.getString(3);
+			String price = rs.getString(4);
+			if(grade!=null){
+			switch(grade){
+			case "A" :
+				grade = "VIP";
+				break;
+			case "B" :
+				grade = "일반";
+				break;
+			case "C" :
+				grade = "직원";
+				break;
+			}}
+			%>
+			<tr>
+				<td align="center">
+					<%=custno%>
+				</td>
+				<td align="center">
+					<%=custname%>
+				</td>
+				<td align="center">
+					<%=grade%>
+				</td>
+				<td align="center">
+					<%=price%>
+				</td>
+			</tr>
+			<%
+		}
+	}catch(SQLException e){
+		e.getMessage();
+	}finally{
+		if(rs!=null){rs.close();}
+		if(pstmt!=null){pstmt.close();}
+		if(conn!=null){conn.close();}
+	}
+%>
+	</table>
+	</form>
+<%@include file="footer.jsp" %>

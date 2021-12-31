@@ -1,0 +1,55 @@
+package p1029;
+
+import java.awt.*;
+import javax.swing.*;
+
+public class Exam01 extends JFrame {
+	Exam01(){
+		setTitle("예제");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		setLayout(new FlowLayout());
+		JCheckBox apple = new JCheckBox("사과");
+		JCheckBox banana = new JCheckBox("바나나",true);
+		JCheckBox pear = new JCheckBox("배");
+		add(apple);
+		add(banana);
+		add(pear);
+		
+		ButtonGroup g = new ButtonGroup();
+		JRadioButton apple1 = new JRadioButton("사과");
+		JRadioButton banana1 = new JRadioButton("바나나",true);
+		JRadioButton pear1 = new JRadioButton("배");
+		g.add(apple1);
+		g.add(banana1);
+		g.add(pear1);
+		
+		add(apple1);
+		add(banana1);
+		add(pear1);
+		
+		JLabel la = new JLabel("이름");
+		JTextField tf = new JTextField(20);
+		add(la);
+		add(tf);
+		
+		JLabel la1 = new JLabel("설명");
+		JTextArea ta = new JTextArea(7,20);
+		add(la1);
+		add(new JScrollPane(ta));
+		
+		ImageIcon img = new ImageIcon("images/bear.png");
+		JLabel icon = new JLabel(img);
+		add(icon);
+		
+		setSize(200,300);
+		setVisible(true);
+	}
+	
+	
+	public static void main(String[] args) {
+		new Exam01();
+
+	}
+
+}

@@ -1,0 +1,7 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<tr height="5%">
+<td bgcolor="blue" align="left">
+<span style="color: white;">쇼핑몰 회원 관리 ver 1.0</span>
+</td>
+</tr>

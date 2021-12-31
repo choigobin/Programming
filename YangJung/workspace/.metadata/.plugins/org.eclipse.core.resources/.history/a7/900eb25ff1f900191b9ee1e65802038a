@@ -1,0 +1,18 @@
+package p1029;
+
+import java.awt.CardLayout;
+
+import javax.swing.JFrame;
+
+public class CardDemo extends JFrame{
+	
+	CardDemo(){
+		setTitle("카드 레이아웃");
+		CardLayout layout = new CardLayout();
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

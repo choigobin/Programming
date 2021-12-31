@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>block span</title>
+  <style>
+  span {display: block; width: 60px; height: 80px; width: 100px; height: 60px;background:yellow;}
+  div div{display: inline-block; width: 60px; height: 80px; width: 100px; height: 60px;
+    background: skyblue; padding: 10px; border:dotted 2px;margin: 10px; }
+  div {border: 2px solid yellowgreen; color: blue; background:aliceblue;
+    display: inline-block; height: 50px;width: 50px; text-align: center;} 
+    #down:hover{position:relative;left:20px;top: 20px;background: green;}
+    #up:hover{position:relative;right: 20px;bottom: 20px;background: green;} 
+  </style>  
+</head>
+<body>
+    <div>
+        <span>blcok span</span>
+        <span>block span</span>
+    </div>
+  <div style="background: orange">
+    <div>inline DIV</div>
+    <div>inline DIV</div>
+    <div>inline DIV</div>
+  </div>
+ <h3>인라인, 인라인 블록, 블록</h3>
+ <hr>
+ 나는 <div style="display: none">div(none)</div>입니다.<br><br>
+ 나는 <div style="display: inline">div(inline)</div>입니다.<br><br>
+ 나는 <div style="display: inline-block; height:50px">div(inline-block)</div>입니다
+ <BR><br>나는<div>div<span>span(block)</span>입니다.</div>
+<br><br><hr>
+<h3>상대 배치, relative</h3>
+<hr>
+<div>T</div>
+<div id="down">h</div>
+<div>a</div>
+<div>n</div>
+<div id="up">K</div>
+<div>s</div>
+</body>
+</html>

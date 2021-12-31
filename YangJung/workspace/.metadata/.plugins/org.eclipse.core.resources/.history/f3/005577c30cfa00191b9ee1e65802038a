@@ -1,0 +1,27 @@
+package p1029;
+
+import javax.swing.*;
+
+public class MenuDemo extends JFrame{
+	MenuDemo(){
+		setTitle("메뉴 아이템");
+		createMenu();
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setSize(250,200);
+		setVisible(true);
+	}
+	void createMenu() {
+		JMenuBar mb = new JMenuBar();
+		JMenu screenMenu = new JMenu("Screen");
+		
+		screenMenu.add(new JMenuItem("Load"));
+		screenMenu.add(new JMenuItem("Hide"));
+		screenMenu.add(new JMenuItem("ReShow"));
+		screenMenu.add(new JMenuItem("Exit"));
+	}
+	public static void main(String[] args) {
+		new MenuDemo();
+
+	}
+
+}

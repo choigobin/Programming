@@ -1,0 +1,21 @@
+package p1029;
+
+import java.awt.*;
+import javax.swing.*;
+
+public class Exam01 extends JFrame {
+	Exam01(){
+		setTitle("예제");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		setLayout(new FlowLayout());
+		JCheckBox apple = new JCheckBox("사과");
+	}
+	
+	
+	public static void main(String[] args) {
+		new Exam01();
+
+	}
+
+}

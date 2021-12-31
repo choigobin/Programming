@@ -1,0 +1,26 @@
+package p1029;
+
+import java.awt.CardLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+public class CardDemo extends JFrame{
+	
+	CardDemo(){
+		setTitle("카드 레이아웃");
+		CardLayout c = new CardLayout();
+		setLayout(c);
+		add("0",new JButton("버튼1"));
+		add("1",new JButton("버튼2"));
+		add("2",new JButton("버튼3"));
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setSize(300,110);
+		setVisible(true);
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

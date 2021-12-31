@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    function fu(){
+        document.getElementById("exam").innerHTML = 
+        "<font color=red>변경 후</font>"
+    }
+    function cl(){
+        document.getElementById("exam").innerHTML = 
+        "변경 전"
+    }
+    </script>
+</head>
+<body>
+    <h1>자바 스크립트 구현 예</h1>
+    <p id="exam">변경 전</p>
+    <button type="button" onclick="fu()">변경</button>
+    <button type="button" onclick="cl()">초기화</button>
+</body>
+</html>

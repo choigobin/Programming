@@ -1,0 +1,30 @@
+package p1029;
+
+import java.awt.*;
+import javax.swing.*;
+
+public class Exam01 extends JFrame {
+	Exam01(){
+		setTitle("예제");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		setLayout(new FlowLayout());
+		JCheckBox apple = new JCheckBox("사과");
+		JCheckBox banana = new JCheckBox("바나나",true);
+		JCheckBox pear = new JCheckBox("배");
+		add(apple);
+		add(banana);
+		add(pear);
+		
+		ButtonGroup g = new ButtonGroup();
+		setSize(250,150);
+		setVisible(true);
+	}
+	
+	
+	public static void main(String[] args) {
+		new Exam01();
+
+	}
+
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>실습3</title>
+</head>
+<body>
+    <script>
+    var x=prompt("국어점수를 입력하세요","0");
+    var y=prompt("영어점수를 입력하세요","0");
+    var z=prompt("수학점수를 입력하세요","0");
+    var sum=parseInt(x)+parseInt(y)+parseInt(z);
+    var avg= sum/3;
+    document.write("국어점수 : "+x+"<br>");
+    document.write("영어점수 : "+y+"<br>");
+    document.write("수학점수 : "+z+"<br>"); 
+    document.write("평균점수 : "+avg+"<br>");
+    if (avg>90){msg="성적은 수입니다.";}
+    else if(avg>80){msg="성적은 우입니다.";}
+    else if(avg>70){msg="성적은 미입니다.";}
+    else if(avg>60){msg="성적은 양입니다.";}
+    else {msg="성적은 가입니다.";}
+    document.write(msg+"<br>");
+    </script>
+</body>
+</html>

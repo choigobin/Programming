@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>자바스크립트</title>
+</head>
+<body>
+    <h3>지역변수와 전역변수</h3>
+    <hr>
+    <script>
+    /*
+    var now=new Date
+    document.write(now)
+    */
+   // document.write("조금만 있으면 밥 먹는다.")
+   /*var pi=3.14159265;
+   alert(pi);*/
+   var x=100;//전역변수 x
+   function f() {//함수 f()선언
+    var x=1; //지역변수 x
+   document.write("지역변수x="+x);
+   document.write("<br>");
+   document.write("전역함수x="+this.x+"<br>");
+   }
+   f();//함수 f() 호출
+   var a=4;
+   var b=4;
+   var c=++a + b;
+   document.write("a="+a+"<br>");
+   document.write("c="+c);
+   var s="hello World";
+   var t="How are you"+"today?";
+   document.write(s+"<br>");
+   document.write(s.toUpperCase()+"<br>")
+   var mycar={model:"bmz", color:"red", hp:100};
+   document.write(mycar.model+"<br>");
+   document.write(mycar.color+"<br>");
+   document.write(mycar.hp+"<br>");
+   /*var food=prompt("니가 좋아하는 음식은","짜장면");
+   document.write(food);*/
+   var input=prompt("input number","0");
+   x=parseInt(input);
+   //document.write(typeof(input));
+   var input1=prompt("input number","0");
+   y=parseInt(input1);
+   document.write("두 수의 합은"+(input+input1)+"<br>");
+   document.write("두 수의 합은"+(x+y)+"<br>");
+    </script>
+   <br><hr>
+   <button type="button" onclick="alert('16분만 기다리시오')">버튼을 누르세요</button>
+</body>
+</html>

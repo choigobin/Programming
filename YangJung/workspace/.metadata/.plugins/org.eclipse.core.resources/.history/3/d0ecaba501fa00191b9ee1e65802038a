@@ -1,0 +1,18 @@
+package p1029;
+
+import javax.swing.*;
+
+public class test01 extends JFrame{
+	test01(){
+		setTitle("레이블 예제");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		setSize(300,500);
+	}
+	
+	
+	public static void main(String[] args) {
+		new test01();
+
+	}
+}

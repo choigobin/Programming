@@ -1,0 +1,6 @@
+
+8월 26, 2019 15:57:25.96 NEW SESSION
+8월 26, 2019 15:57:25.96 [2700:6780:0826/155725.949:ERROR:browser_process_sub_thread.cc(203)] Waited 45 ms for network service
+8월 26, 2019 15:59:15.19 [9836:4632:0826/155915.195:ERROR:browser_process_sub_thread.cc(203)] Waited 112 ms for network service
+8월 26, 2019 16:19:57.82 [10684:4448:0826/161957.825:ERROR:browser_process_sub_thread.cc(203)] Waited 39 ms for network service
+8월 26, 2019 16:27:01.54 [6128:4688:0826/162701.546:ERROR:browser_process_sub_thread.cc(203)] Waited 15 ms for network service

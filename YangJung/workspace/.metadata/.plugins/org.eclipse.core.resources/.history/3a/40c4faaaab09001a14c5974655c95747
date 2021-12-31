@@ -1,0 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<html>
+<head>
+<style>
+td,tr {border: solid black 1px;
+		border-collapse: collapse;}
+</style>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<table height="100%" width="100%">
+<jsp:include page="header.jsp"/>
+<jsp:include page="nav.jsp"/>
+</table>
+</body>
+</html>

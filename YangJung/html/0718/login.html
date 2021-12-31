@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>로그인 미완성</title>
+    <script>
+    function enterMemberPopup(){
+        alert("회원가입 ㅊㅋ")
+    }
+    function idFindPopup(){
+        alert("이름도 몰라요")
+    }
+    function passFindPopup(){
+        alert("전화번호 없어요")
+    }
+    </script>
+</head>
+<body>
+    <div class="sitemap_container">
+        <h2>로그인</h2>
+        <div class="member_login_container">
+        <div class="member_login_box">
+        <form name="loginForm2" id="loginForm2" autocomplete="off" method="post“
+         onSubmit="return false;">
+        <input type="hidden" name="returnUrl" id="returnUrl“
+         value="http://www.Login.do" />
+        <input type="hidden" name="failUrl" id="failUrl“
+         value="http://www.FailLogin.do" />
+        <input type="hidden" name="act" id="act" value="userLogin" />
+        <fieldset class="member_loginForm">
+        <legend>로그인</legend>
+        <div class="items">
+        <div class="item">
+        <label for="user_id" class="i_label"></label>
+        <input type="text" id="user_id" name="user_id" class="i_text" value=""
+         placeholder="아이디" />
+        </div>
+        <div class="item">
+        <label for="Password" class="i_label"></label>
+        <input type="password" id="Password" name="password" class="i_text“
+         value=" placeholder="비밀번호" />
+        </div></div>
+        <button class="member_join" onclick="javascript:actionSSOLogin2();">로그인
+        </button>
+        <button class="member_join" onclick="javascript:actionSSOreset();">초기화
+        </button>
+        </fieldset>
+        <div class="member">
+        <ul>
+        <li><a href="javascript:;" onclick="enterMemberPopup()">회원가입</a></li>
+        <li><a href="javascript:;" onclick="idFindPopup()">아이디 찾기</a></li>
+        <li><a href="javascript:;" onclick="passFindPopup()">비밀번호 찾기</a></li>
+        </ul></div></form></div></div>
+        
+</body>
+</html>

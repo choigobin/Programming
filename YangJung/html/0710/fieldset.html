@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>필드셋,레전드</title>
+    <style>
+    .container{width: 600px;margin: 0 auto;}
+    ul{list-style-type: none;}
+    label.title{font-weight: bold;width: 8px;float: left;}
+    div.centered{text-align: center;}
+    fieldset{margin: 15px 10px;}
+    fieldset legend{font-weight: bold; font-size: 18px;
+    color: purple;}
+    ul li{margin-bottom: 10px;}
+    </style>
+</head>
+<body>
+   <div>
+       <h1>상품 주문서</h1>
+       <from>
+           <fieldset>
+               <legend>개인 정보</legend>
+               <ul>
+                   <li>
+                       <label >이름</label>
+                       <input type="text" placeholder="여백없이 입력" required>
+                   </li>
+                   <li>
+                       <laber for="tell" class="title">연락처</laber>
+                       <input type="tel" placeholder="연락가능한 번호">
+                   </li>
+               </ul>
+           </fieldset>
+       <fieldset>
+           <legend>배송지 정보</legend>
+       </fieldset>
+       <fieldset>
+           <legend>주문 정보</legend>
+       </fieldset>
+        </from>
+   </div> 
+   <form oninput="result.value=parseInt(num1.value)+parseInt(num2.value)">
+    <input type="number" name="num1" value="0">+
+    <input type="number" name="num2" value="0">
+    =<output name="result" for="num"></output>
+</form>
+</body>
+</html>

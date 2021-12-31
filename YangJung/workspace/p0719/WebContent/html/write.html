@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form name="writeform" method="post" action="write.jsp">
+        <table border="1">
+    <caption>
+       고객관리
+    </caption>
+    <tr>
+        <th>아이디</th>
+        <td><input type="text" name="id" size="15">
+            <button>중복체크</button>
+            *문자+숫자 10자리이내
+        </td>
+    </tr>
+    <tr>
+        <th>비밀번호</th>
+        <td><input type="password" name="pswd" size="15"></td>
+        </tr>
+    <tr>
+        <th>이름</th>
+        <td><input type="text" name="name" size="15"></td>
+    </tr>
+    <tr>
+        <th>차량번호</th>
+        <td><input type="text" name="carnum" size="15"></td>
+    </tr>
+    <tr>
+        <th>차량종류</th>
+        <td><input type="text" name="car" size="15"></td>
+    </tr>
+    <tr>
+        <th>핸드폰</th>
+        <td><input type="tel" name="hp1" size="5">
+            - <input type="tel" name="hp2" size="5">
+            - <input type="tel" name="hp3" size="5"></td>
+    </tr>
+    <tr>
+        <th>전화번호</th>
+        <td><input type="tel" name="tel1" size="5">
+        - <input type="tel" name="tel2" size="5">
+        - <input type="tel" name="tel3" size="5"></td>
+    </tr>
+    <tr>
+        <th>주소</th>
+        <td><input type="text" name="adr" size="50"></td>
+    </tr>
+    <tr>
+        <th colspan="2">
+            <input type="submit" value="회원가입">
+            <input type="reset" value="다시작성">
+        </th>
+    </tr>
+</table>
+</form>
+</body>
+</html>

@@ -1,0 +1,12 @@
+package p1029;
+
+import javax.swing.*;
+
+public class test02 extends JFrame {
+
+	public static void main(String[] args) {
+		new test02();
+
+	}
+
+}

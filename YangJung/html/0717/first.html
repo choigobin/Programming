@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>실습1</title>
+</head>
+<body>
+    <script>
+    var input=prompt("숫자를 입력하세요","0");
+    x=parseInt(input);
+    if(x>0){msg='양수입니다.';}
+    else if(x==0){msg='0입니다';}
+    else {msg='음수입니다';}
+    document.write(x+"="+msg+"<br>");
+    var n1=x%2;
+    if(n1==1)
+    document.write("홀수입니다");
+    else
+    document.write("짝수입니다");
+    </script>
+
+</body>
+</html>

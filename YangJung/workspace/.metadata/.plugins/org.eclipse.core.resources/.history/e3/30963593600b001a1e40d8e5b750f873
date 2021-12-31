@@ -1,0 +1,40 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@include file="header.jsp" %>
+<%@include file="dbconn.jsp" %>
+	<br />
+	<h3 align="center">회원목록조회/수정</h3>
+	<br />
+	<form action="process_insert.jsp" name="insert">
+	<table align="center">
+		<tr>
+			<th>회원번호</th>
+			<th>회원성명</th>
+			<th>전화번호</th>
+			<th>주소</th>
+			<th>가입일자</th>
+			<th>고객등급</th>
+			<th>거주지역</th>
+		</tr>
+		
+		
+		<%
+	int number = 0;
+	String sql = "select custno from member_tbl_02 order by custno desc";
+	try{
+		pstmt=conn.prepareStatement(sql);
+		rs = pstmt.executeQuery();
+		if(rs.next()){
+			number = rs.getInt(1)+1;
+		}
+	}catch(SQLException e){
+		e.getMessage();
+	}finally{
+		if(rs!=null){rs.close();}
+		if(pstmt!=null){pstmt.close();}
+		if(conn!=null){conn.close();}
+	}
+%>
+	</table>
+	</form>
+<%@include file="footer.jsp" %>

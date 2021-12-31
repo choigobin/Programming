@@ -1,0 +1,22 @@
+package p1104;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class MouseMotionAdapterDemo extends JFrame{
+	MouseMotionAdapterDemo(){
+		setTitle("마우스 이동 어댑터");
+		JLabel label = new JLabel("움직이는 레이블");
+		label.setForeground(Color.red);
+		add(label);
+		addMouseListener(new MyMouseMotionAdapter(label));
+		
+		
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

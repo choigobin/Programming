@@ -1,0 +1,32 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<html>
+<head>
+<style>
+#tb1{
+	height: 100%; width:100%;
+	border-collapse: collapse;
+	border: solid 0px;
+	}
+#t1{
+	border: solid 0px;
+	}
+tr,td{
+	border: solid black 1px;
+	}
+#tb2{
+	border-collapse: separate;
+	border: solid black 1px;
+	}	
+a{
+	color: white;
+	text-decoration: none;
+}
+</style>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+#tb1 {
+		height:100%; width:100%;
+		border: 0px;
+		border-collapse: collapse;
+		}
+#tb2{
+	border: solide black 1px;
+	border-collapse: separate;
+	}
+#t1 {
+	border: 0px;
+	}
+tr,td,th{
+	border: solid black 1px;
+	}
+</style>
+<title>쇼핑몰 회원관리</title>
+</head>
+<body>
+<table id="tb1">
+<tr id="t1" height="10%"><%-- header --%>
+	<td id="t1" bgcolor="blue" align=center;>
+		<span align=center; style="font-size:20px; color:white;">쇼핑몰 회원관리 ver1.0</span>
+	</td>
+</tr>
+<tr id="t1" height="5%"><%-- nav --%>
+	<td id="t1">
+	
+	</td>
+</tr>
+<tr id="t1">
+	<td id="t1">
+	
+	</td>
+</tr>
+<tr id="t1" height="5%"><%-- footer --%>
+	<td id="t1">
+	
+	</td>
+</tr>
+</table>
+</body>
+</html>

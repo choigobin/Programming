@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>셀렉터</title>
+    <style>
+    h3, li{color:brown;}
+    .warning{color:red;}
+    body.main{background: aliceblue;}
+    #list {background: mistyrose;}
+    #list span{color:forestgreen;}
+    ul strong {color: dodgerblue;} /*자손 셀렉터*/
+    div > strong {background:yellow;} /*자식 셀렉터*/
+    h3::first-letter {color:blue;}
+    li:hover {background:red;} /*hover=마우스를 올리면(가져다 대면)*/
+    div.box{background:yellow;border-style:solid;border-color: peru;
+    margin: 40px;border-width:30px;padding: 20px;width: 150px;}
+    div.dog{background:skyblue;padding : 20px;border:5px dotted black; 
+        margin:30px;}
+    #round1 {border-radius: 50px;width: 500px;}
+    div.bg{background-color: skyblue;background-size: 100px 100px;
+    background-image: url(../images/dog.jpg);background-repeat: no-repeat; 
+    background-position: left center;width:500px;height: 500px;}
+    div.bb{background: skyblue url(../images/dog.jpg) center center/500px 500px repeat-y;height: 1000px;} 
+    </style>
+</head>
+<body class="main">
+    <h3>Web Programming</h3>
+    <hr>
+    <div>
+        <div>2학기<strong>학습내용</strong></div>
+        <ul id="list">
+            <li><span>HTML5</span></li>
+            <li><strong>CSS</strong></li>
+            <li>JAVASCRIPT</li>
+        </ul>
+    <div class="warning"> 60점 이하는 F!</div>
+    </div>
+    <br>
+    <a href="https://www.naver.com" style="text-decoration:line-through">네이버</a>
+    <a href="https://www.naver.com" style="text-decoration:none">네이버</a>
+    <a href="https://www.naver.com">네이버</a>
+<div class='box'>
+    <span>DIVDIVDIV</span>
+</div>
+<hr>
+<h3>박스 모델</h3>
+<div class="dog"><img src="../images/dog.JPG"></div><br>
+<p style="border:3px solid black"id=round1>가나다라</p>
+<hr>
+<h3>DIV 배경 이미지 넣기</h3>
+<div class="bg">
+    강아지 사진
+    배경이미지
+</div>
+<hr>
+<div class="bb">
+    한번에 처리하기
+</div>
+<hr>
+<p style="cursor: progress"> 프로그레스 모양</p>
+</body>
+</html>

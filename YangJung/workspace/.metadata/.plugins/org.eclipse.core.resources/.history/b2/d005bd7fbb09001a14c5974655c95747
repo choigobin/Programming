@@ -1,0 +1,5 @@
+package DBPKG;
+
+public interface C {
+
+}

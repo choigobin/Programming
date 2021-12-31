@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>for/in</title>
+</head>
+<body>
+    <script>
+    var myCar={make:"BMW", model:"X5",year:2013};
+    var txt=""
+    var output=0;
+    for(var x in myCar) {
+        txt+=myCar[x]+"";
+    }
+    document.write(txt);
+
+    for (var i=0; i<10; i++){
+        if(i%2==1){continue;}
+        output += i;
+    }
+    alert(output);
+    </script>
+</body>
+</html>

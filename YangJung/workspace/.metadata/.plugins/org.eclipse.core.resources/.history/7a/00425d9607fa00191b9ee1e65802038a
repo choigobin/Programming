@@ -1,0 +1,10 @@
+package p1029;
+
+public class test04 extends JFrame{
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

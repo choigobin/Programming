@@ -1,0 +1,12 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<tr height="5%">
+<td bgcolor="blue" align="left">
+<span style="color: white;">
+	<a href="#">회원등록</a>
+	<a href="#">회원등록</a>
+	<a href="#">회원등록</a>
+	<a href="#">회원등록</a>
+</span>
+</td>
+</tr>

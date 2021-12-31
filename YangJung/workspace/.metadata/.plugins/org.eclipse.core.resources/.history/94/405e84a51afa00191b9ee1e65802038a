@@ -1,0 +1,20 @@
+package p1029;
+
+import javax.swing.*;
+
+public class Exam02 extends JFrame {
+	Exam02(){
+		setTitle("액션 지정");
+		JButton b = new JButton("버튼");
+		
+		add(b);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setSize(200,100);
+		setVisible(true);
+	}
+	public static void main(String[] args) {
+		new Exam02();
+
+	}
+
+}

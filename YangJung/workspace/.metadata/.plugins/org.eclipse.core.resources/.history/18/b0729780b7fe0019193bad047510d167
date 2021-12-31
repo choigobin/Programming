@@ -1,0 +1,15 @@
+package p1104;
+
+import javax.swing.*;
+
+public class KeyAdapterDemo extends JFrame {
+	public KeyAdapterDemo() {
+		
+	}
+	
+	public static void main(String[] args) {
+		new KeyAdapterDemo();
+
+	}
+
+}

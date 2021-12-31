@@ -1,0 +1,1 @@
+document.write("조금만 있으면 밥 먹는다.")

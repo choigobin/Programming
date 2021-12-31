@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>배열만들기</title>
+</head>
+<body>
+    <script>
+    /* var fruits=["apple","banana",'peach'] */
+    var fruits=new Array("apple","banana","peach")
+    /*var fruits=new Array()
+     fruits[0]="apple"
+    fruits[1]="banana"
+    fruits[2]="peach" */
+   for(var i=0;i<fruits.length; i++){
+       document.write(fruits[i]+",");
+   }
+function cle(){
+    for (var i=0; i<2; i++){
+        document.myForm["a"+i].value=i;
+    }
+}
+   </script>
+   <form name="myForm">
+       아이디　<input type="text" name="a0"><br>
+       비밀먼호<input type="text" name="a1"><br>
+       <input type="button" value="초기화" onclick="cle()">
+   </form>
+</body>
+</html>

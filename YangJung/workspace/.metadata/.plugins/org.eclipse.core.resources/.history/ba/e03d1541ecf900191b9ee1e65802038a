@@ -1,0 +1,16 @@
+package p1029;
+
+import javax.swing.JFrame;
+
+public class BorderDemo extends JFrame {
+
+	BorderDemo(){
+		setTitle
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

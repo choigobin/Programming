@@ -1,0 +1,19 @@
+package p1029;
+
+import javax.swing.*;
+
+public class MenuDemo extends JFrame{
+	MenuDemo(){
+		setTitle("메뉴 아이템");
+		
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setSize(250,200);
+		setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

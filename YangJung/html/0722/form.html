@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    th{background: #8f8d8d; text-align: left; height: 2em;}
+    </style>
+    <script>
+        function passConfirm() {
+		var password = document.getElementById('password');					
+		var passwordConfirm = document.getElementById('passwordConfirm');	
+		var confrimMsg = document.getElementById('confirmMsg');				
+		var correctColor = "#00ff00";	
+		var wrongColor ="#ff0000";
+		if(password.value == passwordConfirm.value){
+            confirmMsg.style.color = correctColor;
+			confirmMsg.innerHTML ="비밀번호 일치";
+		}else{
+			confirmMsg.style.color = wrongColor;
+			confirmMsg.innerHTML ="비밀번호 불일치";
+		}
+	}
+</script>
+</head>
+<body>
+    <form name="form">
+        <table border="1";>
+    <caption>
+       회원등록
+    </caption>
+    <tr>
+        <th>*아이디</th>
+        <td><input type="text" name="id" size="15">
+            <button name="idcheck">중복확인</button>
+            4~12자의 영문 소문자,숫자와 특수기호(_)만 사용　　　
+        </td>
+    </tr>
+    <tr>
+        <th>*이름</th>
+        <td><input type="text" name="name" size="15"></td>
+    </tr>
+    <tr>
+        <th>*비밀번호</th>
+        <td><input type="password" name="pswd" id="password" size="15"></td>
+    </tr>
+    <tr>
+        <th>*비밀번호 확인</th>
+        <td><input type="password" id="passwordConfirm" size="15">
+            <button type="button" onclick="passConfirm()">확인</button>
+            <span id="confirmMsg"></span>
+        </td>
+    </tr>
+    <tr>
+        <th>*성별</th>
+        <td><form>
+            <input type="radio" name="sex" checked="checked" value="남" />남
+            <input type="radio" name="sex" value="여" />여
+          </form>
+        </td>
+    </tr>
+    <tr>
+        <th>*휴대폰</th>
+        <td><select name="hp1">
+            <option value="010">010</option>
+            <option value="011">011</option>
+            <option value="016">016</option>
+            <option value="017">017</option>
+            <option value="018">018</option>
+            <option value="019">019</option>
+            </select> 
+            - <input type="tel" maxlength="4" name="hp2" size="5">
+            - <input type="tel" maxlength="4" name="hp3" size="5"></td>
+    </tr>
+    <tr>
+        <th>주소</th>
+        <td><input type="text" name="adr" size="50"></td>
+    </tr>
+    <tr>
+        <th>자기소개</th>
+        <td><textarea style=resize:horizontal; cols="60"; rows="8";>
+            </textarea> 
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+        　　　*는 필수 입력항목입니다.^^
+        </td>
+    </tr>
+    <tr align="right";>
+        <td colspan="2">
+            <input type="submit" value="확인">
+            <input type="reset" value="새로작성">
+        </td>
+    </tr>
+</table>
+</form>
+</body>
+</html>

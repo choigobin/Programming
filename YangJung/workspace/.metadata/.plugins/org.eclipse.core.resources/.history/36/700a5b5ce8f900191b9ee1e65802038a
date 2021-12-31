@@ -1,0 +1,23 @@
+package p1029;
+import javax.swing.JFrame;
+
+class MyFrame extends JFrame{
+	MyFrame(){
+		setTitle("안녕, 스윙!!!");
+		
+		JButton b = new JButton("버튼");
+		
+		setSize(300, 100);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
+	}
+}
+
+public class JFrameDemo {
+
+	public static void main(String[] args) {
+		new MyFrame();
+
+	}
+
+}

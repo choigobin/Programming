@@ -1,0 +1,55 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<html>
+<head>
+<style>
+#tb1{
+	height: 100%; width:100%;
+	border-collapse: collapse;
+	border: solid 0px;
+	}
+#t1{
+	border: solid 0px;
+	}
+tr,td{
+	border: solid black 1px;
+	}
+#tb2{
+	width:75%;
+	border-collapse: separate;
+	border: solid black 1px;
+	}	
+a{
+	color: white;
+	text-decoration: none;
+}
+</style>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<table id="tb1">
+<jsp:include page="header.jsp"/>
+<jsp:include page="nav.jsp"/>
+<tr id="t1">
+<td id="t1" valign="top" bgcolor="gray">
+<br />
+<h1 align="center">홈쇼핑 회원 등록</h1>
+<form action="">
+<table id="tb2" align="center">
+<tr>
+	<td>
+		회원번호(자동발생)
+	</td>
+	<td>
+		<input type="text" size="20" name=custno/>
+	</td>
+</tr>
+</table>
+</form>
+</td>
+</tr>
+<jsp:include page="footer.jsp"/>
+</table>
+</body>
+</html>

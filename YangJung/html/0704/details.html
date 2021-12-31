@@ -1,0 +1,94 @@
+﻿<html>
+<head>
+<title>디테일,서머리</title>
+</head>
+<body>
+<h3>details와 summary 태그</h3>
+Q & A 리스트
+<hr>
+<details>
+<summary>Question 1</summary>
+<p>웹 개발자가 알아야 하는 언어 3가지는?</p>
+</details>
+<details>
+<summary>Answer 1</summary>
+<p>HTML5, CSS, JAVA</p>
+</details>
+<hr>
+<h3>인라인 시맨틱 태그 사례</h3>
+<hr>
+<p>내일 <mark>HTML5 시험</mark><br>
+시간은 <time>09:00</time><br>
+난이도 <meter value="0.8">80%</meter><br>
+자료 업로딩 20% <progress value="2" max="10">20%</progress><br>
+</p>
+<hr>
+<--! 폼만들기 -->
+<form name="login" method="get">
+사용자 ID : <input type="text" size="15" value=""><br>
+비밀 번호 : <input type="password" size="15" value=""><input type="submit" value="완료">
+</form>
+<form name="self">
+이름 : <input type="text" value=""><br>
+암호 : <input type="password" value="" maxlength="4"><br>
+자소서 : <textarea cols="20" rows="5">
+이곳에 자기소개서 작성
+</textarea><br>
+국적 : <input type="text" list="countries">
+<datalist id="countries">
+<option value="한국">
+<option value="일본">
+<option value="중국">
+<option value="미국">
+<option value="영국">
+<option value="홍콩">
+<option value="대만">
+<option value="독일">
+<option value="프랑스">
+<option value="이탈리아">
+<option value="스위스">
+<option value="제주도">
+</datalist><br>
+검색: <input type="text" size="10">
+<input type="button" value="Q1">
+<button type="button">Q2</button><br>
+이미지버튼 : <input type="image" src="../images/chrome.jpg" alt="이미지 버튼">
+<button type="button"><img src="../images/chrome.jpg"></button><br>
+리셋: <input type="reset" value="리셋1"><button type="reset">리셋2</button><br>
+짜장면<input type="checkbox" value="1">
+짬뽕<input type="checkbox" value="2" checked>
+탕수육<input type="checkbox" value="3"><br>
+라디오 버튼<br>
+영어<input type="radio" name="a">
+중국어<input type="radio" name="a" checked>
+일본어<input type="radio" name="a"><br>
+<!--셀렉트 -->
+국적 : <select name="nara">
+<option value=1>한국</option>
+<option value=2>중국</option>
+<option value=3>일본</option>
+<option value=4>미국</option>
+<option value=5>영국</option>
+<option value=6>독일</option>
+<option value=7>프랑스</option>
+<option value=8>이탈리아</option>
+<option value=9>스위스</option></select><br>
+<!--레이블 처리-->
+<label>
+<input type="radio" name="b" value="1">짜장면<img src="../images/jajang.jpg"></label><br>
+<label><input type="radio" name="b" value="2" checked>짬봉<img src="../images/jambbong.jpg"></label><br>
+<label><input type=radio name=b value=3>탕수육<img src=../images/tang.jpg></laber><br>
+<!--컬러 다이얼로그로 색 입력 응용-->
+글자색<input type="color" value="#00BFFF" onchange="document.body.style.color=this.value"><br>
+배경색<input type="color" value="#00BFFF" onchange="document.body.style.background=this.value"><br>
+<!--시간 정보 입력 폼-->
+<pre>
+month : <input type="month" value="2019-07">
+week : <input type="week" value="2019-W27">
+data : <input type="data" value="2016-09-01">
+time : <input type="time" value="13:24">
+local : <input type="datetime-loacl" value="2019-07-04T13:26:10.32"></pre>
+</form>
+색 변경은 바디전체!
+</body>
+</html>

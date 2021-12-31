@@ -1,0 +1,80 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@include file="header.jsp" %>
+<%@include file="dbconn.jsp" %>
+	<br />
+	<h3 align="center">회원목록조회/수정</h3>
+	<br />
+	<form action="process_insert.jsp" name="insert">
+	<table align="center">
+		<tr>
+			<th>회원번호</th>
+			<th>회원성명</th>
+			<th>전화번호</th>
+			<th>주소</th>
+			<th>가입일자</th>
+			<th>고객등급</th>
+			<th>거주지역</th>
+		</tr>
+		<%
+	String sql = "select custno,custname,phone,address,to_char(joindate,'yyyy-mm-dd'),grade,city from member_tbl_02";
+	try{
+		pstmt=conn.prepareStatement(sql);
+		rs = pstmt.executeQuery();
+		while(rs.next()){
+			String custno = rs.getString(1);
+			String custname = rs.getString(2);
+			String phone = rs.getString(3);
+			String address = rs.getString(4);
+			String joindate = rs.getString(5);
+			String grade = rs.getString(6);
+			String city = rs.getString(7);
+			if(grade!=null){
+			switch(grade){
+			case "A" :
+				grade = "VIP";
+				break;
+			case "B" :
+				grade = "일반";
+				break;
+			case "C" :
+				grade = "직원";
+				break;
+			}}
+			%>
+			<tr>
+				<td align="center">
+					<a href="update.jsp?custno=<%=custno%>"><%=custno%></a>
+				</td>
+				<td align="center">
+					<%=custname%>
+				</td>
+				<td align="center">
+					<%=phone%>
+				</td>
+				<td align="center">
+					<%=address%>
+				</td>
+				<td align="center">
+					<%=joindate%>
+				</td>
+				<td align="center">
+					<%=grade%>
+				</td>
+				<td align="center">
+					<%=city%>
+				</td>
+			</tr>
+			<%
+		}
+	}catch(SQLException e){
+		e.getMessage();
+	}finally{
+		if(rs!=null){rs.close();}
+		if(pstmt!=null){pstmt.close();}
+		if(conn!=null){conn.close();}
+	}
+%>
+	</table>
+	</form>
+<%@include file="footer.jsp" %>

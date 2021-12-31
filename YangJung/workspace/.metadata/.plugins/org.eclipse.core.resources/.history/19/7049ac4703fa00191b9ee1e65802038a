@@ -1,0 +1,23 @@
+package p1029;
+
+import javax.swing.*;
+
+public class test01 extends JFrame{
+	test01(){
+		setTitle("레이블 예제");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		add(new JLabel("제임스 고슬링 입니더!"));
+		add(new JLabel(new ImageIcon("images/gosling.png")));
+		//add(new JLabel("커피한잔 하실래예,전화주이소",new ImageIcon("images/java1.png"),1));
+		JLabel la = new JLabel("이름");
+		add(la);
+		setSize(300,500);
+		setVisible(true);
+	}
+	
+	
+	public static void main(String[] args) {
+		new test01();
+
+	}
+}
